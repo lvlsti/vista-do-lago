@@ -1,0 +1,16 @@
+# Dependencies / build noise
+node_modules/
+.wrangler/
+wrangler.jsonc
+wrangler.toml
+
+# Never deploy these (source/originals, not used by the live site)
+uploads/
+screenshots/
+scraps/
+*.csv
+"Textos do Site"*.html
+
+# OS / editor
+.DS_Store
+Thumbs.db

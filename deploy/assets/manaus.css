@@ -1,0 +1,66 @@
+/* ============================================================
+   manaus.css — "What to Do in Manaus" page (builds on styles.css)
+   ============================================================ */
+
+/* ---------- hero ---------- */
+.m-hero{position:relative;min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:linear-gradient(160deg,#1d1825 0%,#2a2030 55%,#3a2a30 100%)}
+.m-hero::before{content:"";position:absolute;inset:0;background:url(manaus-hero.jpg) center 40%/cover;z-index:0}
+.m-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,24,.5),rgba(20,16,24,.42) 48%,rgba(20,16,24,.78));z-index:1}
+.m-hero .inner{position:relative;z-index:2;max-width:980px;padding:160px 24px 90px;color:#fff}
+.m-hero .eyebrow{display:inline-block;font:700 11px var(--sans);letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.m-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.2vw,55px);line-height:1.1;margin-bottom:22px}
+.m-hero h1 em{font-style:italic;color:var(--accent)}
+.m-hero p{font-size:clamp(13px,1.3vw,15px);color:rgba(255,255,255,.8);max-width:580px;margin:0 auto;line-height:1.65}
+
+/* ---------- spots grid ---------- */
+.spots{padding:100px 0;background:var(--bg)}
+.spots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:54px}
+.spot{background:#fff;border:1px solid rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s ease,box-shadow .4s ease}
+.spot:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.1)}
+.spot-photo{position:relative;display:block;height:210px;overflow:hidden;cursor:pointer}
+.spot-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.spot:hover .spot-photo img{transform:scale(1.06)}
+.spot-photo::after{content:"";position:absolute;inset:0;background:var(--veil);z-index:1}
+/* placeholder until a real photo is added */
+.spot-photo.empty{background:repeating-linear-gradient(135deg,#ece3d6,#ece3d6 13px,#e4d9ca 13px,#e4d9ca 26px);display:flex;align-items:center;justify-content:center}
+.spot-photo.empty::after{display:none}
+.spot-photo.empty .slot{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);text-align:center;padding:16px}
+.spot-photo.empty .slot i{font-size:26px;color:var(--rose)}
+.spot-photo.empty .slot span{font:600 9px var(--sans);letter-spacing:1.5px;text-transform:uppercase}
+.spot-photo .tagnum{position:absolute;top:14px;left:14px;z-index:2;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--dark);font:700 13px var(--serif)}
+.spot-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.spot-body .cat{font:700 9px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--rose);margin-bottom:9px}
+.spot-body h3{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);line-height:1.2;margin-bottom:10px}
+.spot-body p{font-size:13px;color:var(--body);line-height:1.62;margin-bottom:16px}
+.spot-meta{margin-top:auto;display:flex;flex-direction:column;gap:7px}
+.spot-meta span,.spot-meta a{display:flex;align-items:center;gap:9px;font-size:11.5px;color:var(--muted);text-decoration:none}
+.spot-meta a.map-link:hover{color:var(--rose)}
+.spot-meta a.map-link:hover span{text-decoration:underline}
+.spot-meta i{color:var(--rose);font-size:12px;width:14px;text-align:center}
+
+/* ---------- concierge / contacts ---------- */
+.concierge{padding:96px 0;background:var(--dark);color:#fff}
+.concierge .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.concierge .label{color:var(--accent)}
+.concierge h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1.14;margin:10px 0 16px}
+.concierge p{font-size:14px;color:rgba(255,255,255,.74);line-height:1.7;margin-bottom:28px;max-width:480px}
+.concierge .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:34px 32px}
+.contact-card h4{font-family:var(--serif);font-weight:500;font-size:18px;margin-bottom:20px}
+.contact-list{display:flex;flex-direction:column;gap:16px}
+.contact-list a,.contact-list span{display:flex;align-items:flex-start;gap:13px;font-size:13px;color:rgba(255,255,255,.82);line-height:1.5}
+.contact-list i{color:var(--accent);font-size:15px;margin-top:2px;width:18px;text-align:center}
+.contact-list a:hover{color:#fff}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .spots-grid{grid-template-columns:repeat(2,1fr)}
+  .concierge .wrap{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:768px){
+  .spots{padding:64px 0}
+  .concierge{padding:64px 0}
+}
+@media(max-width:560px){
+  .spots-grid{grid-template-columns:1fr}
+}
