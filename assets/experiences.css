@@ -55,7 +55,7 @@
 .act-photo{position:relative;height:150px;overflow:hidden}
 .act-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .act-card:hover .act-photo img{transform:scale(1.07)}
-.act-photo::after{content:"";position:absolute;inset:0;background:var(--veil);z-index:1}
+.act-photo::after{content:"";position:absolute;inset:0;background:var(--veil);z-index:1;pointer-events:none}
 /* placeholder when no photo yet */
 .act-photo.empty{background:repeating-linear-gradient(135deg,#ece3d6,#ece3d6 12px,#e4d9ca 12px,#e4d9ca 24px);display:flex;align-items:center;justify-content:center}
 .act-photo.empty::after{display:none}
