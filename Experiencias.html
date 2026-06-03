@@ -27,6 +27,15 @@
 
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/experiences.css">
+
+<style>
+.lightbox-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;cursor:pointer}
+.lightbox-overlay.open{display:flex}
+.lightbox-overlay img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5);cursor:default}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;background:none;border:none;cursor:pointer;line-height:1;opacity:.8}
+.lightbox-close:hover{opacity:1}
+.act-photo img{cursor:zoom-in}
+</style>
 </head>
 <body id="topo">
 
@@ -246,7 +255,7 @@
         <div class="act-body"><span class="ic">🛖</span><h4 data-i18n="exp.a4">Cassava Flour House</h4></div>
       </div>
       <div class="act-card">
-        <div class="act-photo"><img src="assets/act-trilha.jpg" alt="Jungle trail" loading="lazy"></div>
+        <div class="act-photo"><img src="assets/exp-trilha-2.jpg" alt="Jungle trail" loading="lazy"></div>
         <div class="act-body"><span class="ic">🧭</span><h4 data-i18n="exp.a5">Jungle Trail</h4></div>
       </div>
       <div class="act-card">
@@ -258,7 +267,7 @@
         <div class="act-body"><span class="ic">🌄</span><h4 data-i18n="exp.a7">Sunset Watching</h4></div>
       </div>
       <div class="act-card">
-        <div class="act-photo"><img src="assets/act-pesca.jpg" alt="Piranha fishing" loading="lazy"></div>
+        <div class="act-photo"><img src="assets/exp-pesca-2.jpg" alt="Piranha fishing" loading="lazy"></div>
         <div class="act-body"><span class="ic">🎣</span><h4 data-i18n="exp.a8">Piranha Fishing</h4></div>
       </div>
       <div class="act-card">
@@ -402,5 +411,24 @@
 <script src="assets/i18n.js"></script>
 <script src="assets/i18n-pages.js"></script>
 <script src="assets/app.js" defer></script>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll('.act-photo img').forEach(function(img){
+  img.addEventListener('click', function(){
+    document.getElementById('lightbox-img').src = this.src;
+    document.getElementById('lightbox-img').alt = this.alt;
+    document.getElementById('lightbox').classList.add('open');
+  });
+});
+function closeLightbox(e){
+  if(e.target === document.getElementById('lightbox')) document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open'); });
+</script>
 </body>
 </html>
