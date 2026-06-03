@@ -635,3 +635,130 @@
     "gr.all":"Todas as avaliações"
   });
 })();
+
+/* ============================================================
+   BLOG + POST ACAJATUBA — translations
+   ============================================================ */
+(function(){
+  if(typeof I18N === "undefined") return;
+
+  /* ---- NAV ---- */
+  Object.assign(I18N.en, { "nav.blog":"Blog" });
+  Object.assign(I18N.es, { "nav.blog":"Blog" });
+  Object.assign(I18N.pt, { "nav.blog":"Blog" });
+
+  /* ---- BLOG INDEX ---- */
+  Object.assign(I18N.en, {
+    "blog.eyebrow":"Amazon Travel Blog",
+    "blog.h1":"Stories from the Rio Negro",
+    "blog.sub":"Travel guides, community stories and insider tips about the Amazon — written from the heart of the jungle.",
+    "blog.cat.tourism":"Amazon Tourism",
+    "blog.p1.title":"Acajatuba: The Hidden Amazon Village on the Rio Negro",
+    "blog.p1.excerpt":"A riverside community where the jungle meets the river, football unites neighbours and time moves differently. Everything you need to know before you visit.",
+    "blog.p1.meta":"June 2026 · 5 min read",
+    "blog.readmore":"Read More →"
+  });
+  Object.assign(I18N.es, {
+    "blog.eyebrow":"Blog de Viajes por la Amazonia",
+    "blog.h1":"Historias desde el Río Negro",
+    "blog.sub":"Guías de viaje, historias de comunidades y consejos internos sobre la Amazonia — escritos desde el corazón de la selva.",
+    "blog.cat.tourism":"Turismo Amazónico",
+    "blog.p1.title":"Acajatuba: El Pueblo Amazónico Escondido en el Río Negro",
+    "blog.p1.excerpt":"Una comunidad ribereña donde la selva se encuentra con el río, el fútbol une a los vecinos y el tiempo fluye diferente. Todo lo que necesitas saber antes de visitar.",
+    "blog.p1.meta":"Junio 2026 · 5 min de lectura",
+    "blog.readmore":"Leer Más →"
+  });
+  Object.assign(I18N.pt, {
+    "blog.eyebrow":"Blog de Viagem na Amazônia",
+    "blog.h1":"Histórias do Rio Negro",
+    "blog.sub":"Guias de viagem, histórias da comunidade e dicas sobre a Amazônia — escritas de dentro da floresta.",
+    "blog.cat.tourism":"Turismo Amazônico",
+    "blog.p1.title":"Acajatuba: A Comunidade Amazônica Escondida no Rio Negro",
+    "blog.p1.excerpt":"Uma comunidade ribeirinha onde a floresta encontra o rio, o futebol une os vizinhos e o tempo passa diferente. Tudo o que você precisa saber antes de visitar.",
+    "blog.p1.meta":"Junho 2026 · 5 min de leitura",
+    "blog.readmore":"Leia Mais →"
+  });
+
+  /* ---- POST: ACAJATUBA ---- */
+  Object.assign(I18N.en, {
+    "post.acajatuba.h1":"Acajatuba: The Hidden Amazon Village on the Rio Negro",
+    "post.acajatuba.meta":"June 2026 · Vista do Lago Jungle Lodge · 5 min read",
+    "post.acajatuba.p1":"There are places in the Amazon that do not appear on tourist maps, do not trend on social media and do not need to. Acajatuba is one of them. Sitting on the right bank of the Rio Negro — the world's largest blackwater river — about 75 km from Manaus, this small riverside community of around 200 people carries within it something rare: a way of life shaped entirely by the jungle, the river and centuries of Amazonian tradition.",
+    "post.acajatuba.h2":"Where Exactly Is Acajatuba?",
+    "post.acajatuba.p2":"Acajatuba is located within the Rio Negro Sustainable Development Reserve (RDS Rio Negro), a protected conservation area in the state of Amazonas, Brazil. From Manaus, the journey takes approximately 1 hour and 30 minutes by speedboat, or around 4 hours by regional river boat — a slow, beautiful crossing across dark mirror-like waters flanked by dense rainforest.",
+    "post.acajatuba.h3":"The Community: Nossa Senhora do Perpétuo Socorro",
+    "post.acajatuba.p3":"The official name is Comunidade Nossa Senhora do Perpétuo Socorro, but ask anyone in the region and they will call it the Comunidade do Corinthians. In the Amazon, riverside communities often pledge allegiance to a football club — and here, the passion for Corinthians runs deep. When there is a match, the whole community feels it.",
+    "post.acajatuba.p4":"Beyond the football colours, the community has a Catholic church and several evangelical churches, a municipal school, a health post, a community centre, a craft shop and a football field where visitors are sometimes invited to join a spontaneous game with the locals.",
+    "post.acajatuba.h4":"What to Do in Acajatuba",
+    "post.acajatuba.p5":"Acajatuba is not the kind of place where you follow a set itinerary. The best experiences happen naturally. Still, here is what awaits you:",
+    "post.acajatuba.li1":"Walk through the community — The locals are known for their warmth and openness. A stroll often turns into conversation, laughter and an impromptu invitation.",
+    "post.acajatuba.li2":"Cross the wooden bridge — A tall wooden bridge built to ease daily life, especially during flood season when water levels rise dramatically.",
+    "post.acajatuba.li3":"Visit the craft shop — Local artisans produce handmade pieces using Amazonian materials. Buying directly supports the families who make them.",
+    "post.acajatuba.li4":"Play football or volleyball — If the locals are out on the field, they will likely wave you over.",
+    "post.acajatuba.li5":"Explore the jungle trails — With a local guide, venture into the surrounding rainforest to learn about medicinal plants and jungle survival.",
+    "post.acajatuba.li6":"Swim with pink river dolphins — The Rio Negro is home to the boto vermelho. Its naturally acidic waters are free of piranha, making it one of the safest rivers in the Amazon to swim in.",
+    "post.acajatuba.li7":"Night caiman spotting — After dark, guided boat trips with spotlights reveal caimans resting along the banks.",
+    "post.acajatuba.h5":"The Festival de Verão do Acajatuba",
+    "post.acajatuba.p6":"Every July, Acajatuba comes alive with the Festival de Verão — the Summer Festival, when the river recedes and sandy beaches emerge. Music, local food and community pride fill the air. If you can plan your trip for July, the experience is entirely different.",
+    "post.acajatuba.h6":"Why the Rio Negro Is Special",
+    "post.acajatuba.p7":"The Rio Negro's dark colour comes from tannins released by decomposing vegetation. This acidity creates a unique ecosystem: fewer mosquitoes, no piranha, and water so calm that at sunset it reflects the sky like a black mirror. Swimming here feels unlike any other river on earth.",
+    "post.acajatuba.h7":"Where to Stay: Vista do Lago Jungle Lodge",
+    "post.acajatuba.p8":"Vista do Lago Jungle Lodge sits within the Acajatuba community, on the banks of the Rio Negro. Every stay includes guided activities, full board with Amazonian cuisine and river transfers from Manaus.",
+    "post.acajatuba.cta":"Ready to experience Acajatuba for yourself? Vista do Lago Jungle Lodge is your home in the Amazon — surrounded by jungle, river and the real warmth of a riverside community.",
+    "post.acajatuba.ctabtn":"Book Your Stay"
+  });
+  Object.assign(I18N.es, {
+    "post.acajatuba.h1":"Acajatuba: El Pueblo Amazónico Escondido en el Río Negro",
+    "post.acajatuba.meta":"Junio 2026 · Vista do Lago Jungle Lodge · 5 min de lectura",
+    "post.acajatuba.p1":"Hay lugares en la Amazonia que no aparecen en los mapas turísticos, que no son tendencia en las redes sociales y que no lo necesitan. Acajatuba es uno de ellos. Ubicado en la margen derecha del Río Negro — el río de aguas negras más grande del mundo — a unos 75 km de Manaos, esta pequeña comunidad ribereña de cerca de 200 personas guarda algo poco común: una forma de vida moldeada completamente por la selva, el río y siglos de tradición amazónica.",
+    "post.acajatuba.h2":"¿Dónde Está Exactamente Acajatuba?",
+    "post.acajatuba.p2":"Acajatuba se encuentra dentro de la Reserva de Desarrollo Sostenible del Río Negro (RDS Río Negro), un área de conservación protegida en el estado de Amazonas, Brasil. Desde Manaos, el viaje dura aproximadamente 1 hora y 30 minutos en lancha rápida, o unas 4 horas en barco regional.",
+    "post.acajatuba.h3":"La Comunidad: Nossa Senhora do Perpétuo Socorro",
+    "post.acajatuba.p3":"El nombre oficial es Comunidade Nossa Senhora do Perpétuo Socorro, pero en la región todos la llaman Comunidade do Corinthians. En la Amazonia, las comunidades ribereñas suelen tener lealtad a un club de fútbol — y aquí la pasión por el Corinthians es profunda.",
+    "post.acajatuba.p4":"Además de los colores del fútbol, la comunidad cuenta con una iglesia católica y varias iglesias evangélicas, una escuela municipal, un puesto de salud, un centro comunitario, una tienda de artesanías y una cancha donde los visitantes a veces son invitados a jugar.",
+    "post.acajatuba.h4":"Qué Hacer en Acajatuba",
+    "post.acajatuba.p5":"Acajatuba no es el tipo de lugar donde se sigue un itinerario fijo. Las mejores experiencias ocurren de forma natural. Aún así, esto es lo que te espera:",
+    "post.acajatuba.li1":"Caminar por la comunidad — Los locales son conocidos por su calidez. Un paseo suele terminar en conversación, risas e invitaciones espontáneas.",
+    "post.acajatuba.li2":"Cruzar el puente de madera — Un alto puente de madera construido para facilitar la vida cotidiana, especialmente en la época de crecida del río.",
+    "post.acajatuba.li3":"Visitar la tienda de artesanías — Artesanos locales crean piezas a mano con materiales amazónicos. Comprar directamente apoya a las familias.",
+    "post.acajatuba.li4":"Jugar fútbol o vóley — Si los locales están en la cancha, seguramente te invitarán a unirte.",
+    "post.acajatuba.li5":"Explorar los senderos de la selva — Con un guía local, adentrarse en la selva para conocer plantas medicinales y técnicas de supervivencia.",
+    "post.acajatuba.li6":"Nadar con delfines rosados — El Río Negro alberga al boto vermelho. Sus aguas ácidas no tienen pirañas, lo que lo convierte en uno de los ríos más seguros de la Amazonia.",
+    "post.acajatuba.li7":"Avistamiento nocturno de caimanes — De noche, excursiones en bote con linternas revelan caimanes descansando en las orillas.",
+    "post.acajatuba.h5":"El Festival de Verano de Acajatuba",
+    "post.acajatuba.p6":"Cada julio, Acajatuba se llena de vida con el Festival de Verão — el Festival de Verano, cuando el río baja y aparecen playas de arena. Música, comida local y orgullo comunitario llenan el ambiente.",
+    "post.acajatuba.h6":"Por Qué el Río Negro Es Especial",
+    "post.acajatuba.p7":"El color oscuro del Río Negro proviene de los taninos liberados por la vegetación en descomposición. Esta acidez crea un ecosistema único: menos mosquitos, sin pirañas, y un agua tan tranquila que al atardecer refleja el cielo como un espejo negro.",
+    "post.acajatuba.h7":"Dónde Alojarse: Vista do Lago Jungle Lodge",
+    "post.acajatuba.p8":"Vista do Lago Jungle Lodge está ubicado dentro de la comunidad de Acajatuba, a orillas del Río Negro. Cada estadía incluye actividades guiadas, pensión completa con cocina amazónica y traslados fluviales desde Manaos.",
+    "post.acajatuba.cta":"¿Listo para vivir Acajatuba? Vista do Lago Jungle Lodge es tu hogar en la Amazonia — rodeado de selva, río y la genuina calidez de una comunidad ribereña.",
+    "post.acajatuba.ctabtn":"Reserva Tu Estadía"
+  });
+  Object.assign(I18N.pt, {
+    "post.acajatuba.h1":"Acajatuba: A Comunidade Amazônica Escondida no Rio Negro",
+    "post.acajatuba.meta":"Junho 2026 · Vista do Lago Jungle Lodge · 5 min de leitura",
+    "post.acajatuba.p1":"Existem lugares na Amazônia que não aparecem nos mapas turísticos, não viram tendência nas redes sociais e não precisam disso. Acajatuba é um deles. Situada na margem direita do Rio Negro — o maior rio de águas negras do mundo — a cerca de 75 km de Manaus, essa pequena comunidade ribeirinha de aproximadamente 200 pessoas guarda algo raro: uma forma de vida moldada pela floresta, pelo rio e por séculos de tradição amazônica.",
+    "post.acajatuba.h2":"Onde Fica Exatamente Acajatuba?",
+    "post.acajatuba.p2":"Acajatuba está localizada dentro da Reserva de Desenvolvimento Sustentável do Rio Negro (RDS Rio Negro), uma área de conservação protegida no estado do Amazonas. De Manaus, o trajeto dura cerca de 1 hora e 30 minutos de barco rápido, ou aproximadamente 4 horas de barco regional.",
+    "post.acajatuba.h3":"A Comunidade: Nossa Senhora do Perpétuo Socorro",
+    "post.acajatuba.p3":"O nome oficial é Comunidade Nossa Senhora do Perpétuo Socorro, mas na região todos conhecem como Comunidade do Corinthians. No interior do Amazonas, as comunidades ribeirinhas costumam ter lealdade a um time de futebol — e aqui a paixão pelo Corinthians é forte. Quando tem jogo, a comunidade inteira sente.",
+    "post.acajatuba.p4":"Além das cores do futebol, a comunidade tem igreja católica e igrejas evangélicas, escola municipal, posto de saúde, centro comunitário, loja de artesanato e campo de futebol onde visitantes às vezes são convidados para uma pelada espontânea.",
+    "post.acajatuba.h4":"O Que Fazer em Acajatuba",
+    "post.acajatuba.p5":"Acajatuba não é o tipo de lugar onde se segue um roteiro fixo. As melhores experiências acontecem naturalmente. Ainda assim, veja o que te espera:",
+    "post.acajatuba.li1":"Caminhar pela comunidade — Os moradores são conhecidos pela hospitalidade. Um passeio frequentemente vira conversa, risada e convite espontâneo.",
+    "post.acajatuba.li2":"Atravessar a ponte de madeira — Uma ponte alta de madeira construída para facilitar o dia a dia, especialmente na época da cheia quando o nível do rio sobe muito.",
+    "post.acajatuba.li3":"Visitar o artesanato — Artesãos locais produzem peças à mão com materiais amazônicos. Comprar diretamente apoia as famílias.",
+    "post.acajatuba.li4":"Jogar futebol ou vôlei — Se os moradores estiverem no campo, é bem provável que chamem você para jogar.",
+    "post.acajatuba.li5":"Explorar trilhas na floresta — Com guia local, adentre a mata para conhecer plantas medicinais e técnicas de sobrevivência na selva.",
+    "post.acajatuba.li6":"Nadar com botos — O Rio Negro abriga o boto vermelho. Suas águas ácidas são naturalmente livres de piranha, tornando-o um dos rios mais seguros da Amazônia para nadar.",
+    "post.acajatuba.li7":"Focagem noturna de jacarés — À noite, passeios de barco com lanterna revelam jacarés descansando nas margens.",
+    "post.acajatuba.h5":"O Festival de Verão do Acajatuba",
+    "post.acajatuba.p6":"Todo mês de julho, Acajatuba ganha vida com o Festival de Verão do Acajatuba — quando o rio baixa e surgem praias de areia. Música, comida típica e orgulho comunitário tomam conta do lugar. Se puder planejar a viagem para julho, a experiência é completamente diferente.",
+    "post.acajatuba.h6":"Por Que o Rio Negro É Especial",
+    "post.acajatuba.p7":"A cor escura do Rio Negro vem dos taninos liberados pela vegetação em decomposição — o mesmo processo que escurece o chá. Essa acidez cria um ecossistema único: menos mosquitos, sem piranhas, e uma água tão calma que ao pôr do sol reflete o céu como um espelho negro.",
+    "post.acajatuba.h7":"Onde Ficar: Vista do Lago Jungle Lodge",
+    "post.acajatuba.p8":"A Vista do Lago Jungle Lodge fica dentro da comunidade de Acajatuba, às margens do Rio Negro. Cada estadia inclui atividades guiadas, pensão completa com culinária amazônica e traslado fluvial de Manaus.",
+    "post.acajatuba.cta":"Pronto para conhecer o Acajatuba? A Vista do Lago Jungle Lodge é sua casa na Amazônia — cercada de floresta, rio e o acolhimento genuíno de uma comunidade ribeirinha.",
+    "post.acajatuba.ctabtn":"Reserve Sua Estadia"
+  });
+})();
