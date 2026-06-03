@@ -418,14 +418,12 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.act-photo img').forEach(function(img){
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function(){
-      document.getElementById('lightbox-img').src = this.src;
-      document.getElementById('lightbox-img').alt = this.alt;
-      document.getElementById('lightbox').classList.add('open');
-    });
+document.querySelectorAll('.act-photo img').forEach(function(img){
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', function(){
+    document.getElementById('lightbox-img').src = this.src;
+    document.getElementById('lightbox-img').alt = this.alt;
+    document.getElementById('lightbox').classList.add('open');
   });
 });
 function closeLightbox(e){
