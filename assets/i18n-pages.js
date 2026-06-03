@@ -762,3 +762,88 @@
     "post.acajatuba.ctabtn":"Reserve Sua Estadia"
   });
 })();
+
+/* ---- BLOG INDEX: card seringueiras ---- */
+(function(){
+  if(typeof I18N === "undefined") return;
+  Object.assign(I18N.en, {
+    "blog.p2.title":"The 100-Year-Old Rubber Trees of Vista do Lago",
+    "blog.p2.excerpt":"A grove planted over a century ago by one Amazonian family, still standing between the bungalows on the banks of the Rio Negro.",
+    "blog.p2.meta":"June 2026 · 4 min read"
+  });
+  Object.assign(I18N.es, {
+    "blog.p2.title":"Los Árboles de Caucho Centenarios de Vista do Lago",
+    "blog.p2.excerpt":"Un bosque plantado hace más de un siglo por una familia amazónica, aún en pie entre los bungalows a orillas del Río Negro.",
+    "blog.p2.meta":"Junio 2026 · 4 min de lectura"
+  });
+  Object.assign(I18N.pt, {
+    "blog.p2.title":"As Seringueiras Centenárias da Vista do Lago",
+    "blog.p2.excerpt":"Um bosque plantado há mais de um século por uma família amazônica, ainda de pé entre os bangalôs às margens do Rio Negro.",
+    "blog.p2.meta":"Junho 2026 · 4 min de leitura"
+  });
+
+  /* ---- POST: SERINGUEIRAS ---- */
+  Object.assign(I18N.en, {
+    "post.sering.h1":"The 100-Year-Old Rubber Trees of Vista do Lago",
+    "post.sering.meta":"June 2026 · Vista do Lago Jungle Lodge · 4 min read",
+    "post.sering.p1":"Most visitors arrive at Vista do Lago for the river, the dolphins or the jungle. But there is something standing quietly between the wooden bungalows that stops people mid-step: a grove of rubber trees so old, so tall and so rooted that they seem to belong to a different era of the Amazon entirely. They do.",
+    "post.sering.h2":"Planted by Hand, More Than a Century Ago",
+    "post.sering.p2":"The rubber trees of Vista do Lago are over 100 years old. They were planted by Seu Pedro Alves da Silva, the uncle of the man who would later build this lodge on the same land. He planted them and never cut them — never tapped them for latex. In the Amazon, they call this sagrar: to make the cut, to draw the life from the tree. He chose not to.",
+    "post.sering.p3":"The practice of sangria — tapping rubber trees — was once the economic backbone of the entire Amazon. The rubber boom of the late 1800s transformed Manaus into one of the wealthiest cities on earth, built on seringueiros working deep in the forest. Seu Pedro lived through the tail end of that era. He knew what these trees were worth. And still, he let them grow.",
+    "post.sering.h3":"Three Generations, One Grove",
+    "post.sering.p4":"When the land was purchased to build Vista do Lago, the new owner — Seu Pedro's nephew — made his own mark. He began the sangria to produce handmade crafts from the latex. Today that practice has paused. The lodge came first. No one has tapped the trees since opening. They are resting.",
+    "post.sering.p5":"Three generations have watched over this grove. The trees have outlived floods, seasons of plenty and seasons of scarcity. They keep standing.",
+    "post.sering.h4":"The Brazil Nut Trees: Giants of the Same Era",
+    "post.sering.p6":"The rubber trees are not alone. More than 15 castanheiras — Brazil nut trees — from the same generation stand across the grounds, reaching between 40 and 70 metres into the sky. "I am 70 years old and they were already this size when I was born," says the family elder. "When my uncle died — over 70 years ago — they were already enormous."",
+    "post.sering.p7":"Every year, the castanheiras produce fruit. Heavy pods fall from great height. Inside: the Brazil nuts sold in supermarkets around the world, collected here by the same family that has always collected them.",
+    "post.sering.h5":"A Living Forest, Not a Decoration",
+    "post.sering.p8":"What makes this grove different is precisely this: nobody designed it for guests. It was simply here, cared for by people who loved it before tourism arrived in Acajatuba. The trees stand because Seu Pedro chose not to cut them, and every generation after made the same quiet choice.",
+    "post.sering.p9":"Walk through the grove in the early morning — light through the canopy, the smell of earth and bark and river in the air — and you are walking through a hundred years of decisions made in favour of preservation.",
+    "post.sering.h6":"Can Guests Visit the Grove?",
+    "post.sering.p10":"Yes. The grove is part of the lodge grounds and open to guests at any time. The family is considering guided visits with a demonstration of the traditional sangria technique and the full history of the grove. For now, it is simply there: open, quiet and extraordinary.",
+    "post.sering.cta":"Vista do Lago is not just a place to sleep in the Amazon. It is a place where the Amazon has been living for over a century. Come walk among the oldest rubber trees on the Rio Negro.",
+    "post.sering.ctabtn":"Book Your Stay"
+  });
+  Object.assign(I18N.es, {
+    "post.sering.h1":"Los Árboles de Caucho Centenarios de Vista do Lago",
+    "post.sering.meta":"Junio 2026 · Vista do Lago Jungle Lodge · 4 min de lectura",
+    "post.sering.p1":"La mayoría de los visitantes llegan a Vista do Lago por el río, los delfines o la selva. Pero hay algo que se alza en silencio entre los bungalows de madera y detiene a las personas en seco: un bosque de árboles de caucho tan antiguos, tan altos y tan arraigados que parecen pertenecer a otra era de la Amazonia. Y así es.",
+    "post.sering.h2":"Plantados a Mano, Hace Más de un Siglo",
+    "post.sering.p2":"Los árboles de caucho de Vista do Lago tienen más de 100 años. Fueron plantados por Seu Pedro Alves da Silva, el tío del hombre que más tarde construiría este lodge en la misma tierra. Los plantó y nunca los cortó — nunca los sangró para extraer el látex. En la Amazonia llaman a esto sagrar: hacer el corte, extraer la vida del árbol. Él eligió no hacerlo.",
+    "post.sering.p3":"La sangría — el sangrado de los árboles de caucho — fue una vez la columna vertebral económica de toda la Amazonia. El auge del caucho de finales del siglo XIX transformó Manaos en una de las ciudades más ricas del mundo. Seu Pedro vivió el final de esa era. Sabía lo que valían estos árboles. Y aun así, los dejó crecer.",
+    "post.sering.h3":"Tres Generaciones, Un Bosque",
+    "post.sering.p4":"Cuando se compró la tierra para construir Vista do Lago, el nuevo propietario — sobrino de Seu Pedro — dejó su propio sello: comenzó la sangría para producir artesanías con el látex. Hoy esa práctica está en pausa. El lodge llegó primero. Nadie ha sangrado los árboles desde la apertura. Están descansando.",
+    "post.sering.p5":"Tres generaciones han cuidado este bosque. Los árboles han sobrevivido inundaciones, épocas de abundancia y escasez. Siguen en pie.",
+    "post.sering.h4":"Las Castañeras: Gigantes de la Misma Era",
+    "post.sering.p6":"Los árboles de caucho no están solos. Más de 15 castañeras de la misma generación se alzan en los terrenos, alcanzando entre 40 y 70 metros de altura. "Tengo 70 años y ya eran así de grandes cuando nací", dice el patriarca de la familia. "Cuando mi tío murió, hace más de 70 años, ya eran enormes."",
+    "post.sering.p7":"Cada año, las castañeras producen fruto. Pesadas vainas caen desde gran altura. Dentro: las nueces de Brasil que se venden en supermercados de todo el mundo, recogidas aquí por la misma familia que siempre las ha recogido.",
+    "post.sering.h5":"Un Bosque Vivo, No una Decoración",
+    "post.sering.p8":"Lo que hace diferente a este bosque es precisamente esto: nadie lo diseñó para los huéspedes. Simplemente estaba aquí, cuidado por personas que lo amaban antes de que el turismo llegara a Acajatuba. Los árboles permanecen porque Seu Pedro eligió no cortarlos, y cada generación posterior tomó la misma decisión silenciosa.",
+    "post.sering.p9":"Camina por el bosque en la mañana temprana — la luz entre el dosel, el olor a tierra, corteza y río en el aire — y estarás caminando a través de cien años de decisiones tomadas a favor de la preservación.",
+    "post.sering.h6":"¿Pueden los Huéspedes Visitar el Bosque?",
+    "post.sering.p10":"Sí. El bosque forma parte de los terrenos del lodge y está abierto a los huéspedes en todo momento. La familia considera visitas guiadas con demostración de la técnica tradicional de sangría. Por ahora, simplemente está ahí: abierto, tranquilo y extraordinario.",
+    "post.sering.cta":"Vista do Lago no es solo un lugar para dormir en la Amazonia. Es un lugar donde la Amazonia ha estado viva durante más de un siglo. Ven a caminar entre los árboles de caucho más antiguos del Río Negro.",
+    "post.sering.ctabtn":"Reserva Tu Estadía"
+  });
+  Object.assign(I18N.pt, {
+    "post.sering.h1":"As Seringueiras Centenárias da Vista do Lago",
+    "post.sering.meta":"Junho 2026 · Vista do Lago Jungle Lodge · 4 min de leitura",
+    "post.sering.p1":"A maioria dos visitantes chega à Vista do Lago pelo rio, pelos botos ou pela floresta. Mas há algo que se ergue em silêncio entre os bangalôs de madeira e faz as pessoas pararem no meio do caminho: um bosque de seringueiras tão antigas, tão altas e tão enraizadas que parecem pertencer a outra era da Amazônia. E pertencem mesmo.",
+    "post.sering.h2":"Plantadas à Mão, Há Mais de um Século",
+    "post.sering.p2":"As seringueiras da Vista do Lago têm mais de 100 anos. Foram plantadas por Seu Pedro Alves da Silva, tio do homem que mais tarde construiria esta pousada no mesmo terreno. Ele as plantou e nunca as cortou — nunca as sangrou para extrair o látex. Na Amazônia chamam isso de sagrar: fazer o corte, tirar a vida da árvore. Ele escolheu não fazer.",
+    "post.sering.p3":"A sangria — o corte das seringueiras para extrair látex — foi a base econômica de toda a Amazônia. O ciclo da borracha no final do século XIX transformou Manaus em uma das cidades mais ricas do mundo. Seu Pedro viveu o fim daquela era. Sabia o que essas árvores valiam. E mesmo assim, as deixou crescer.",
+    "post.sering.h3":"Três Gerações, Um Bosque",
+    "post.sering.p4":"Quando o terreno foi comprado para construir a Vista do Lago, o novo dono — sobrinho de Seu Pedro — deixou sua marca: começou a sangria para produzir artesanato com o látex. Hoje essa prática está parada. A pousada veio primeiro. Ninguém sangrou as árvores desde a abertura. Elas estão descansando.",
+    "post.sering.p5":"Três gerações cuidaram deste bosque. As árvores sobreviveram a enchentes, épocas de fartura e de escassez. Continuam de pé.",
+    "post.sering.h4":"As Castanheiras: Gigantes da Mesma Era",
+    "post.sering.p6":"As seringueiras não estão sozinhas. Mais de 15 castanheiras da mesma geração se erguem pelo terreno, alcançando entre 40 e 70 metros de altura. "Estou com 70 anos e elas já eram desse tamanho quando nasci", diz o patriarca da família. "Quando meu tio morreu — faz mais de 70 anos — já eram enormes."",
+    "post.sering.p7":"Todo ano as castanheiras produzem fruto. Pesados ouriços caem de grande altura. Dentro deles: as castanhas-do-pará vendidas em supermercados do mundo inteiro, colhidas aqui pela mesma família que sempre as colheu.",
+    "post.sering.h5":"Uma Floresta Viva, Não uma Decoração",
+    "post.sering.p8":"O que torna esse bosque diferente é exatamente isso: ninguém o planejou para os hóspedes. Ele simplesmente já estava aqui, cuidado por pessoas que o amavam antes do turismo chegar em Acajatuba. As árvores permanecem porque Seu Pedro escolheu não cortá-las, e cada geração depois fez a mesma escolha silenciosa.",
+    "post.sering.p9":"Caminhe pelo bosque de manhã cedo — a luz cortando a copa, o cheiro de terra, casca e rio no ar — e você estará caminhando por cem anos de decisões tomadas em favor da preservação.",
+    "post.sering.h6":"Os Hóspedes Podem Visitar o Bosque?",
+    "post.sering.p10":"Sim. O bosque faz parte do terreno da pousada e está aberto aos hóspedes a qualquer hora. A família considera visitas guiadas com demonstração da técnica tradicional de sangria e a história completa do bosque. Por enquanto, ele simplesmente está lá: aberto, silencioso e extraordinário.",
+    "post.sering.cta":"A Vista do Lago não é só um lugar para dormir na Amazônia. É um lugar onde a Amazônia vive há mais de um século. Venha caminhar entre as seringueiras mais antigas do Rio Negro.",
+    "post.sering.ctabtn":"Reserve Sua Estadia"
+  });
+})();
