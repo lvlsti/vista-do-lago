@@ -547,8 +547,9 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
   .review-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:768px){
-  .nav,.header-right .lang-switch,.header-right .book-btn{display:none}
+  .nav,.header-right .book-btn{display:none}
   .hamburger{display:flex}
+  .header-right .lang-switch{display:flex;position:absolute;left:50%;transform:translateX(-50%)}
   .site-header{padding:16px 22px}
   .site-header.scrolled{padding:12px 22px}
   .hero h1{font-size:30px}
