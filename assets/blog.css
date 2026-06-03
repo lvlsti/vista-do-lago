@@ -16,7 +16,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url(../assets/exp-trilha-1.jpg) center 40%/cover;
+  background: url(../assets/blog-acajatuba-cover.jpg) center center/cover;
   z-index: 0;
 }
 .blog-hero::after {
