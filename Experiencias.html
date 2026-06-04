@@ -410,7 +410,7 @@
 </footer>
 
 <!-- whatsapp FAB -->
-<a class="wa-fab" href="https://api.whatsapp.com/send?phone=5592984545630&text=Hello%2C%20I%20would%20like%20more%20details%20about%20the%20Amazon%20experiences." target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
 
 <script src="assets/i18n.js"></script>
 <script src="assets/i18n-pages.js"></script>
@@ -434,6 +434,26 @@ function closeLightbox(e){
   if(e.target === document.getElementById('lightbox')) document.getElementById('lightbox').classList.remove('open');
 }
 document.addEventListener('keydown', function(e){ if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open'); });
+</script>
+<!-- WhatsApp FAB -->
+<a class="wa-fab" id="waFab" href="https://api.whatsapp.com/send?phone=5592984545630&text=Hello%2C%20I%20would%20like%20more%20details%20about%20Vista%20do%20Lago%20Jungle%20Lodge.%20I%20found%20you%20through%20the%20website!" target="_blank" rel="noopener" aria-label="WhatsApp" style="opacity:0;pointer-events:none;transition:opacity .4s ease,transform .3s ease;"><i class="fa-brands fa-whatsapp"></i></a>
+<script>
+(function(){
+  var fab = document.getElementById("waFab");
+  var hero = document.querySelector(".about-hero,.contact-hero,.blog-hero,.m-hero,.e-hero,.post-hero,.groups-hero,.hero");
+  function checkFab(){
+    var threshold = hero ? (hero.offsetTop + hero.offsetHeight) : window.innerHeight;
+    if(window.scrollY > threshold - 80){
+      fab.style.opacity = "1";
+      fab.style.pointerEvents = "auto";
+    } else {
+      fab.style.opacity = "0";
+      fab.style.pointerEvents = "none";
+    }
+  }
+  window.addEventListener("scroll", checkFab, {passive:true});
+  checkFab();
+})();
 </script>
 </body>
 </html>
