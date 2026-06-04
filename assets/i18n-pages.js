@@ -853,7 +853,7 @@
   if(typeof I18N === "undefined") return;
   Object.assign(I18N.en, {
     "nav.about":"About",
-    "about.sub":"Our Story · Lago do Acajatuba, Amazonas",
+    "about.eyebrow":"Our Story · Lago do Acajatuba","about.herosub":"A family, a century-old land, and a jungle lodge that still carries the soul of those who built it.",
     "about.h1":"Born on the Banks of the Rio Negro",
     "about.p1":"Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.",
     "about.p2":"The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.",
@@ -873,7 +873,7 @@
   });
   Object.assign(I18N.pt, {
     "nav.about":"Sobre",
-    "about.sub":"Nossa História · Lago do Acajatuba, Amazonas",
+    "about.eyebrow":"Nossa História · Lago do Acajatuba","about.herosub":"Uma família, uma terra centenária e uma pousada que ainda carrega a alma de quem a construiu.",
     "about.h1":"Nascida nas Margens do Rio Negro",
     "about.p1":"A Vista do Lago Jungle Lodge não foi construída por uma empresa. Foi construída por uma família — numa terra que pertence às mesmas pessoas há gerações, às margens do Lago do Acajatuba, a cerca de 70 quilômetros de Manaus pelo Rio Negro.",
     "about.p2":"A história começa com o <strong>Senhor Carlos Costa</strong>, patriarca da família, que adquiriu esse pedaço da Amazônia e escolheu — desde o início — preservar, não explorar. Plantou seringueiras que ainda estão de pé hoje, com mais de um século de vida. Deixou as castanheiras crescerem. Cuidou da terra do jeito que o povo desta região sempre cuidou: devagar, com respeito, sem pressa.",
@@ -893,7 +893,7 @@
   });
   Object.assign(I18N.es, {
     "nav.about":"Sobre Nosotros",
-    "about.sub":"Nuestra Historia · Lago do Acajatuba, Amazonas",
+    "about.eyebrow":"Nuestra Historia · Lago do Acajatuba","about.herosub":"Una familia, una tierra centenaria y un lodge que todavía lleva el alma de quienes lo construyeron.",
     "about.h1":"Nacida a Orillas del Río Negro",
     "about.p1":"Vista do Lago Jungle Lodge no fue construida por una empresa. Fue construida por una familia — en tierras que han pertenecido a las mismas personas por generaciones, a orillas del Lago do Acajatuba, a unos 70 kilómetros de Manaus por el Río Negro.",
     "about.p2":"La historia comienza con el <strong>Señor Carlos Costa</strong>, patriarca de la familia, quien adquirió este rincón de la Amazonia y eligió — desde el principio — preservarlo en lugar de explotarlo. Plantó árboles de caucho que todavía están en pie hoy, con más de un siglo de vida. Dejó crecer las castañeras. Cuidó la tierra como la gente de esta región siempre lo ha hecho: despacio, con respeto, sin prisa.",
