@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/blog.css">
 <style>
-/* ---- About Hero ---- */
 .about-hero {
   position: relative;
   min-height: 88vh;
@@ -75,7 +74,7 @@
   line-height: 1.75;
 }
 
-/* ---- Gallery ---- */
+/* ---- Gallery com lightbox ---- */
 .about-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,16 +85,56 @@
   width: 100%;
   height: 260px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   display: block;
+  cursor: zoom-in;
+  transition: opacity .2s;
 }
+.about-gallery img:hover { opacity: .88; }
 .about-gallery img.wide {
   grid-column: 1 / -1;
   height: 340px;
   object-position: center 40%;
 }
+.about-gallery img.placa {
+  object-position: center 15%;
+}
 
-/* ---- Values grid ---- */
+/* ---- Lightbox ---- */
+.about-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.about-lightbox.open { display: flex; }
+.about-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  cursor: default;
+}
+.about-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: 32px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: .8;
+  line-height: 1;
+}
+.about-lightbox-close:hover { opacity: 1; }
+
+/* ---- Values ---- */
 .about-values {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -188,78 +227,85 @@
   </div>
 </div>
 
-<!-- ============================================================ HERO -->
+<!-- LIGHTBOX -->
+<div class="about-lightbox" id="aboutLightbox">
+  <button class="about-lightbox-close" id="aboutLightboxClose">&times;</button>
+  <img id="aboutLightboxImg" src="" alt="">
+</div>
+
+<!-- HERO -->
 <section class="about-hero">
   <div class="inner">
-    <span class="eyebrow" data-i18n="about.eyebrow">Our Story · Lago do Acajatuba</span>
-    <h1 data-i18n="about.h1">Born on the Banks of the Rio Negro</h1>
-    <p data-i18n="about.herosub">A family, a century-old land, and a jungle lodge that still carries the soul of those who built it.</p>
+    <span class="eyebrow" data-i18n="about.eyebrow">Nossa História &middot; Lago do Acajatuba</span>
+    <h1 data-i18n="about.h1">Nascida nas Margens do Rio Negro</h1>
+    <p data-i18n="about.herosub">Uma família, uma terra centenária e uma pousada que ainda carrega a alma de quem a construiu.</p>
   </div>
 </section>
 
-<!-- ============================================================ CONTENT -->
+<!-- CONTENT -->
 <article class="post-wrap">
-
   <div class="post-body">
 
-    <p data-i18n="about.p1">Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.</p>
+    <p data-i18n="about.p1">A Vista do Lago Jungle Lodge não foi construída por uma empresa. Foi construída por uma família, numa terra que pertence às mesmas pessoas há gerações, às margens do Lago do Acajatuba, a cerca de 70 quilômetros de Manaus pelo Rio Negro.</p>
 
-    <p data-i18n-html="about.p2">The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.</p>
-
-    <div class="about-gallery">
-      <img src="assets/about-placa.jpg" alt="Família Vista do Lago com a primeira placa do restaurante, feita à mão">
-      <img src="assets/about-cafe.jpg" alt="Primeiros encontros da equipe à mesa, na varanda da pousada">
-      <img src="assets/about-fachada-antiga.jpg" alt="Fachada antiga da pousada, bangalôs verdes sendo construídos" class="wide">
-    </div>
-
-    <h2 data-i18n="about.h2">From Restaurant to Jungle Lodge</h2>
-
-    <p data-i18n="about.p3">Before it was a lodge, it was a restaurant. The first sign — handmade, painted in red and white — simply read <em>Restaurante Vista do Lago</em>. People came by boat for the food, for the river, for the feeling of the place. The same feeling that brings guests from across the world today.</p>
-
-    <p data-i18n="about.p4">Little by little, the family transformed the space. Bungalows were built. The wooden decks were extended toward the water. The restaurant gave way to a full lodge experience — with accommodation, meals made from Amazonian ingredients, and guided excursions into the surrounding forest and river.</p>
+    <p data-i18n="about.p2">A história começa com o <strong>Senhor Carlos Costa</strong>, patriarca da família, que adquiriu esse pedaço da Amazônia e escolheu, desde o início, preservar em vez de explorar. Plantou seringueiras que ainda estão de pé hoje, com mais de um século de vida. Deixou as castanheiras crescerem. Cuidou da terra do jeito que o povo desta região sempre cuidou: devagar, com respeito, sem pressa.</p>
 
     <div class="about-gallery">
-      <img src="assets/about-rio-canoa.jpg" alt="Vista da pousada chegando de canoa pelo lago Acajatuba">
-      <img src="assets/about-deck-rio.jpg" alt="Deck sobre o lago, lugar favorito dos hóspedes">
-      <img src="assets/about-fachada.jpg" alt="Fachada atual da Vista do Lago Jungle Lodge vista do rio" class="wide">
+      <img src="assets/about-placa.jpg" alt="Família Vista do Lago com a primeira placa do restaurante" class="placa about-lightbox-trigger">
+      <img src="assets/about-cafe.jpg" alt="Primeiros encontros da equipe à mesa" class="about-lightbox-trigger">
+      <img src="assets/about-fachada-antiga.jpg" alt="Fachada antiga dos bangalôs verdes" class="wide about-lightbox-trigger">
     </div>
 
-    <h2 data-i18n="about.h3">A Family That Never Left</h2>
+    <h2 data-i18n="about.h2">Do Restaurante ao Jungle Lodge</h2>
 
-    <p data-i18n-html="about.p5">What makes Vista do Lago different from any hotel is simple: the family is still here. The same people who built it, who painted those green bungalows, who remember the first guests arriving by speedboat — they are the ones welcoming you today. <strong>Lia</strong>, who manages reservations and communication, is known by name by guests from Germany, Italy, the United States and beyond.</p>
+    <p data-i18n="about.p3">Antes de ser pousada, era restaurante. A primeira placa, feita à mão e pintada de vermelho e branco, dizia simplesmente: Restaurante Vista do Lago. As pessoas chegavam de barco pela comida, pelo rio, pelo clima do lugar. Esse mesmo clima é o que atrai hóspedes de todo o mundo até hoje.</p>
 
-    <p data-i18n="about.p6">The lodge sits inside the <em>Comunidade Nossa Senhora do Perpétuo Socorro</em>, a riverside community near the Anavilhanas Archipelago — the largest freshwater archipelago in the world. When you stay here, you are not just a guest at a lodge. You are a visitor to a living community, welcomed by the people who call it home.</p>
+    <p data-i18n="about.p4">Aos poucos, a família foi transformando o espaço. Os bangalôs foram erguidos pelo <strong>Carlos Costa Junior</strong>, que pensou, desenhou e construiu com as próprias mãos tudo que aparece nas fotos que correm o mundo. Sua esposa, <strong>Adriana</strong>, trouxe uma bagagem que poucos têm: anos de experiência no lendário Hotel Ariaú Towers, onde aprendeu de perto o que um hóspede de selva espera encontrar. Foi ela quem moldou o Vista do Lago para ser exatamente aquilo que faltava no lugar onde ela trabalhou. Adriana cuida da recepção e comanda a cozinha com o mesmo carinho de sempre.</p>
 
-    <h2 data-i18n="about.h4">What We Believe In</h2>
+    <p data-i18n="about.p5">A família cresceu. <strong>Abel</strong>, sobrinho do Senhor Carlos Costa, entrou para cuidar de tudo que é tecnologia: integrações, parcerias, inovações e o caminho completo do hóspede, desde o primeiro contato até a chegada na pousada. E com ele veio <strong>Lia</strong>, sua esposa, a mais nova integrante desse time. Lia cuida do contato com os hóspedes e já conversou com pessoas espalhadas por todo o mundo, em vários idiomas, com a ajuda da tecnologia. Muita gente a conhece pelo nome antes mesmo de chegar aqui.</p>
+
+    <div class="about-gallery">
+      <img src="assets/about-rio-canoa.jpg" alt="Vista da pousada chegando pelo lago" class="about-lightbox-trigger">
+      <img src="assets/about-deck-rio.jpg" alt="Deck sobre o lago Acajatuba" class="about-lightbox-trigger">
+      <img src="assets/about-fachada.jpg" alt="Fachada atual do Vista do Lago vista do rio" class="wide about-lightbox-trigger">
+    </div>
+
+    <h2 data-i18n="about.h3">Uma Família Que Nunca Foi Embora</h2>
+
+    <p data-i18n="about.p6">O que faz da Vista do Lago diferente de qualquer hotel é simples: a família ainda está aqui. O <strong>Senhor Carlos Costa</strong> e <strong>Dona Miracy</strong> são os patriarcas. Pais do Carlos Junior, sogros da Adriana e tios do Abel. Os filhos do Carlos Junior e da Adriana, <strong>Fernanda</strong> e <strong>Heitor</strong>, já fazem parte do dia a dia. A Fernanda ajuda na operação do hotel e o Heitor, ainda pequeno, já adora conversar com os visitantes. O ciclo continua.</p>
+
+    <p data-i18n="about.p7">A pousada fica dentro da Comunidade Nossa Senhora do Perpétuo Socorro, uma comunidade ribeirinha próxima ao Arquipélago de Anavilhanas, o maior arquipélago de água doce do mundo. A decisão de construir dentro da própria comunidade foi intencional: a gente queria que o hóspede sentisse esse calor amazônico de verdade, com liberdade de andar pela comunidade e interagir com os moradores, que são sempre receptivos. Quando você se hospeda aqui, não é só hóspede de uma pousada. É visita de uma comunidade viva.</p>
+
+    <h2 data-i18n="about.h4">O Que Acreditamos</h2>
 
     <div class="about-values">
       <div class="val">
         <i class="fa-solid fa-tree"></i>
-        <h3 data-i18n="about.v1t">Preservation</h3>
-        <p data-i18n="about.v1p">A century-old grove of rubber trees and Brazil nut trees still stands on our grounds — untouched, respected, alive.</p>
+        <h3 data-i18n="about.v1t">Preservação</h3>
+        <p data-i18n="about.v1p">Um bosque centenário de seringueiras e castanheiras ainda está de pé no nosso terreno, intocado e vivo.</p>
       </div>
       <div class="val">
         <i class="fa-solid fa-people-group"></i>
-        <h3 data-i18n="about.v2t">Community</h3>
-        <p data-i18n="about.v2p">Our excursions support local guides, artisans and community projects. Tourism here means something to real people.</p>
+        <h3 data-i18n="about.v2t">Comunidade</h3>
+        <p data-i18n="about.v2p">Nossos passeios apoiam guias locais e projetos comunitários. O turismo aqui tem um significado real para pessoas reais.</p>
       </div>
       <div class="val">
         <i class="fa-solid fa-utensils"></i>
-        <h3 data-i18n="about.v3t">Authentic Food</h3>
-        <p data-i18n="about.v3p">Every meal is made from Amazonian flavours — tambaqui, açaí, pupunha, tapioca — cooked with the same care as always.</p>
+        <h3 data-i18n="about.v3t">Comida de Verdade</h3>
+        <p data-i18n="about.v3p">Cada refeição é feita com sabores da Amazônia: tambaqui, açaí, pupunha, tapioca, preparada com o mesmo cuidado de sempre.</p>
       </div>
       <div class="val">
         <i class="fa-solid fa-water"></i>
-        <h3 data-i18n="about.v4t">The River</h3>
-        <p data-i18n="about.v4p">The Rio Negro is not a backdrop. It is the reason we are here. Everything at Vista do Lago flows from this river.</p>
+        <h3 data-i18n="about.v4t">O Rio</h3>
+        <p data-i18n="about.v4p">O Rio Negro não é cenário. É a razão de existirmos aqui. Tudo na Vista do Lago vem deste rio.</p>
       </div>
     </div>
 
   </div>
 
   <div class="post-cta">
-    <p data-i18n="about.cta">This is not just a place to stay in the Amazon. It is a place that has been alive for over a century — waiting to show you what the Rio Negro really is.</p>
-    <a href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="about.ctabtn">Book Your Stay</a>
+    <p data-i18n="about.cta">Este não é só um lugar para se hospedar na Amazônia. É um lugar que está vivo há mais de um século, esperando para te mostrar o que o Rio Negro realmente é.</p>
+    <a href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="about.ctabtn">Reserve Sua Estadia</a>
   </div>
 
 </article>
@@ -314,5 +360,22 @@
 <script src="assets/i18n.js"></script>
 <script src="assets/i18n-pages.js"></script>
 <script src="assets/app.js"></script>
+<script>
+(function(){
+  var lb = document.getElementById("aboutLightbox");
+  var lbImg = document.getElementById("aboutLightboxImg");
+  var lbClose = document.getElementById("aboutLightboxClose");
+  document.querySelectorAll(".about-lightbox-trigger").forEach(function(img){
+    img.addEventListener("click", function(){
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add("open");
+    });
+  });
+  lbClose.addEventListener("click", function(){ lb.classList.remove("open"); });
+  lb.addEventListener("click", function(e){ if(e.target === lb) lb.classList.remove("open"); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") lb.classList.remove("open"); });
+})();
+</script>
 </body>
 </html>
