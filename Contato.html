@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Vista do Lago Jungle Lodge</title>
+<meta name="description" content="Get in touch with Vista do Lago Jungle Lodge. Send us a message, chat on WhatsApp or find us on the map. We reply in English, Portuguese and Spanish.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vistadolagojunglelodge.com/Contato.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vista do Lago Jungle Lodge">
+<meta property="og:title" content="Contact | Vista do Lago Jungle Lodge">
+<meta property="og:description" content="Reach out to us by email, WhatsApp or SMS. We are happy to help you plan your Amazon stay.">
+<meta property="og:image" content="assets/about-hero.jpg">
+<link rel="icon" href="https://vistadolagojunglelodge.com/wp-content/uploads/2026/05/cropped-perfil-270x270.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/blog.css">
+<style>
+/* ---- Hero ---- */
+.contact-hero {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(assets/about-deck-rio.jpg) center 40%/cover;
+  z-index: 0;
+}
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,24,.55), rgba(20,16,24,.5) 50%, rgba(20,16,24,.82));
+  z-index: 1;
+}
+.contact-hero .inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 130px 24px 70px;
+  color: #fff;
+}
+.contact-hero .eyebrow {
+  display: inline-block;
+  font: 700 11px var(--sans);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+.contact-hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3.8vw, 48px);
+  line-height: 1.15;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.contact-hero p {
+  font-size: clamp(13px, 1.3vw, 15px);
+  color: rgba(255,255,255,.82);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ---- Layout principal ---- */
+.contact-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 24px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ---- Formulário ---- */
+.contact-form-block h2 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 30px);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.contact-form-block .form-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.cf-group {
+  margin-bottom: 20px;
+}
+.cf-group label {
+  display: block;
+  font: 700 10px var(--sans);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.cf-group input,
+.cf-group select,
+.cf-group textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--cream-dark);
+  background: var(--bg);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .2s;
+  border-radius: 2px;
+}
+.cf-group input:focus,
+.cf-group select:focus,
+.cf-group textarea:focus {
+  border-color: var(--rose);
+}
+.cf-group textarea { resize: vertical; min-height: 130px; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cf-submit {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--ink);
+  font: 700 11px var(--sans);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: none;
+  cursor: pointer;
+  transition: background .25s;
+  width: 100%;
+  margin-top: 8px;
+}
+.cf-submit:hover { background: var(--accent-hover); }
+.cf-success {
+  display: none;
+  background: #f0faf4;
+  border: 1px solid #b6ddc8;
+  color: #2a6045;
+  padding: 16px 20px;
+  font-size: 14px;
+  margin-top: 16px;
+  border-radius: 2px;
+}
+
+/* ---- Sidebar info ---- */
+.contact-info-block h2 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 30px);
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+.contact-channels { list-style: none; padding: 0; margin-bottom: 40px; }
+.contact-channels li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--cream-dark);
+}
+.contact-channels li:first-child { border-top: 1px solid var(--cream-dark); }
+.contact-channels .ch-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: var(--rose);
+}
+.contact-channels .ch-body { flex: 1; }
+.contact-channels .ch-label {
+  font: 700 10px var(--sans);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 4px;
+}
+.contact-channels .ch-value {
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.5;
+}
+.contact-channels .ch-value a {
+  color: var(--rose);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-channels .ch-value a:hover { text-decoration: underline; }
+.contact-channels .ch-hint {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+  display: block;
+}
+
+/* ---- Mapa ---- */
+.contact-map-block {
+  max-width: 1100px;
+  margin: 0 auto 100px;
+  padding: 0 24px;
+}
+.contact-map-block h2 {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 30px);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.contact-map-block .map-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+.contact-map-block iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 2px;
+  display: block;
+}
+.how-to-arrive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+.arrive-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--cream-dark);
+  padding: 24px 20px;
+  border-radius: 2px;
+}
+.arrive-card i {
+  font-size: 1.3rem;
+  color: var(--rose);
+  margin-bottom: 12px;
+  display: block;
+}
+.arrive-card h3 {
+  font: 700 10px var(--sans);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.arrive-card p {
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.65;
+}
+
+@media(max-width:860px){
+  .contact-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .how-to-arrive { grid-template-columns: 1fr; }
+  .cf-row { grid-template-columns: 1fr; }
+  .contact-hero { min-height: 45vh; }
+}
+</style>
+</head>
+<body id="topo">
+
+<header class="site-header">
+  <a class="header-logo" href="index.html" aria-label="Vista do Lago Jungle Lodge">
+    <img src="assets/logo-vdl.png" alt="Vista do Lago Jungle Lodge">
+  </a>
+  <nav class="nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <div class="nav-item has-sub">
+      <a href="Experiencias.html"><span data-i18n="nav.exp">Experiences</span><i class="fa-solid fa-chevron-down caret"></i></a>
+      <div class="nav-sub"><div class="panel">
+        <a href="Experiencias.html"><span data-i18n="nav.expamazon">Amazon Experiences</span></a>
+        <a href="Manaus.html"><span data-i18n="nav.manaus">What to Do in Manaus</span></a>
+      </div></div>
+    </div>
+    <a href="index.html#accommodations" data-i18n="nav.accom">Accommodations</a>
+    <a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a>
+    <a href="Blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="Sobre.html" data-i18n="nav.about">About</a>
+    <a href="Contato.html" class="active" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><span class="sep">|</span>
+      <button data-lang="es">ES</button><span class="sep">|</span>
+      <button data-lang="pt">PT</button>
+    </div>
+    <a class="book-btn" href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="nav.book">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" aria-label="Close">&times;</button>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="Experiencias.html" data-i18n="nav.expamazon">Amazon Experiences</a>
+  <a href="Manaus.html" data-i18n="nav.manaus">What to Do in Manaus</a>
+  <a href="index.html#accommodations" data-i18n="nav.accom">Accommodations</a>
+  <a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a>
+  <a href="Blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="Sobre.html" data-i18n="nav.about">About</a>
+  <a href="Contato.html" data-i18n="nav.contact">Contact</a>
+  <a class="book-btn" href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="nav.book">Book Now</a>
+  <div class="m-lang">
+    <button data-lang="en">EN</button>
+    <button data-lang="es">ES</button>
+    <button data-lang="pt">PT</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="inner">
+    <span class="eyebrow" data-i18n="contact.eyebrow">Get in Touch</span>
+    <h1 data-i18n="contact.h1">We Are Happy to Help</h1>
+    <p data-i18n="contact.herosub">Send us a message, chat on WhatsApp or drop us an email. We reply in English, Portuguese and Spanish.</p>
+  </div>
+</section>
+
+<!-- FORM + INFO -->
+<div class="contact-wrap">
+
+  <!-- Formulário -->
+  <div class="contact-form-block">
+    <h2 data-i18n="contact.formtitle">Send Us a Message</h2>
+    <p class="form-sub" data-i18n="contact.formsub">Fill in the form and we will get back to you within 24 hours. We speak English, Portuguese and Spanish.</p>
+
+    <form id="contactForm" action="https://formsubmit.co/reservas@vistadolagojunglelodge.com.br" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" data-i18n-attr="value:contact.emailsubject" value="New message from the website">
+      <input type="hidden" name="_next" value="https://vistadolagojunglelodge.com/Contato.html?sent=1">
+
+      <div class="cf-row">
+        <div class="cf-group">
+          <label data-i18n="contact.fname">First Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="cf-group">
+          <label data-i18n="contact.femail">Email</label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="cf-row">
+        <div class="cf-group">
+          <label data-i18n="contact.fcheckin">Check-in Date</label>
+          <input type="date" name="checkin">
+        </div>
+        <div class="cf-group">
+          <label data-i18n="contact.fguests">Number of Guests</label>
+          <select name="guests">
+            <option value="">--</option>
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6+</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cf-group">
+        <label data-i18n="contact.fmsg">Message</label>
+        <textarea name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="cf-submit" data-i18n="contact.fsend">Send Message</button>
+    </form>
+
+    <div class="cf-success" id="cfSuccess" data-i18n="contact.success">
+      Message sent! We will get back to you within 24 hours.
+    </div>
+  </div>
+
+  <!-- Info canais -->
+  <div class="contact-info-block">
+    <h2 data-i18n="contact.channelstitle">Other Ways to Reach Us</h2>
+    <ul class="contact-channels">
+
+      <li>
+        <div class="ch-icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="ch-body">
+          <span class="ch-label">WhatsApp</span>
+          <span class="ch-value">
+            <a href="https://api.whatsapp.com/send?phone=5592984545630&text=Hello%2C%20I%20would%20like%20more%20details%20about%20Vista%20do%20Lago%20Jungle%20Lodge." target="_blank" rel="noopener">+55 92 98454-5630</a>
+          </span>
+          <span class="ch-hint" data-i18n="contact.wahint">Best for Europe, Latin America and Brazil. Usually replies within a few hours.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="ch-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="ch-body">
+          <span class="ch-label">E-mail</span>
+          <span class="ch-value">
+            <a href="mailto:reservas@vistadolagojunglelodge.com.br">reservas@vistadolagojunglelodge.com.br</a>
+          </span>
+          <span class="ch-hint" data-i18n="contact.emailhint">Preferred in the United States. We reply within 24 hours.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="ch-icon"><i class="fa-solid fa-comment-sms"></i></div>
+        <div class="ch-body">
+          <span class="ch-label">SMS</span>
+          <span class="ch-value">
+            <a href="sms:+5592984545630">+55 92 98454-5630</a>
+          </span>
+          <span class="ch-hint" data-i18n="contact.smshint">Quick option for US guests who prefer SMS over apps.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="ch-icon"><i class="fa-solid fa-paper-plane"></i></div>
+        <div class="ch-body">
+          <span class="ch-label" data-i18n="contact.location">Location</span>
+          <span class="ch-value" data-i18n="contact.locationval">Lago do Acajatuba, Iranduba, Amazonas, Brazil</span>
+          <span class="ch-hint" data-i18n="contact.locationhint">Access by river only. See directions below.</span>
+        </div>
+      </li>
+
+    </ul>
+
+    <div style="background:var(--bg-alt);border:1px solid var(--cream-dark);padding:20px 18px;border-radius:2px;">
+      <p style="font:700 10px var(--sans);letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);margin-bottom:8px;" data-i18n="contact.hours">Response Hours</p>
+      <p style="font-size:13px;color:var(--body);line-height:1.65;" data-i18n="contact.hoursval">Monday to Sunday, 7am to 9pm (Manaus time, GMT-4). Outside these hours, leave a message and we will reply first thing in the morning.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- MAPA -->
+<div class="contact-map-block">
+  <h2 data-i18n="contact.maptitle">Find Us on the Map</h2>
+  <p class="map-sub" data-i18n="contact.mapsub">We are located on the banks of Lago do Acajatuba, about 70 km from Manaus along the Rio Negro.</p>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.1!2d-60.4061!3d-3.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b2e2b2e2b2b%3A0x1234!2sVista+do+Lago+Jungle+Lodge!5e0!3m2!1sen!2sbr!4v1"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Vista do Lago Jungle Lodge location">
+  </iframe>
+
+  <div class="how-to-arrive">
+    <div class="arrive-card">
+      <i class="fa-solid fa-ship"></i>
+      <h3 data-i18n="contact.route1title">By Speedboat (Direct)</h3>
+      <p data-i18n="contact.route1">Depart from the Manaus port area. About 1h30 by speedboat directly to the lodge pier. We can arrange transfers on request.</p>
+    </div>
+    <div class="arrive-card">
+      <i class="fa-solid fa-car"></i>
+      <h3 data-i18n="contact.route2title">By Road + Motorboat</h3>
+      <p data-i18n="contact.route2">Drive along AM-070 to the meeting point (about 1h30 from Manaus), then 25 minutes by motorboat to the lodge. Parking available at the meeting point.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo-vdl.png" alt="Vista do Lago Jungle Lodge">
+      <p data-i18n="foot.brand">Authentic Amazon experiences in the Rio Negro region, near Manaus, Brazil.</p>
+      <h5 data-i18n="foot.follow">Follow Us</h5>
+      <div class="socials">
+        <a href="https://www.facebook.com/share/15dsPbvoKL/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vistadolago_jungle_lodge" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@vistadolagojunglelodge" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://maps.app.goo.gl/RXxSnWPHWVd9oae39" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.tiktok.com/@vistadolago" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="reach">
+      <h5 data-i18n="foot.reach">Reach Out</h5>
+      <ul>
+        <li><i class="fa-solid fa-paper-plane"></i><span data-i18n="foot.addr">Rio Negro region, Near Manaus, Amazonas, Brazil</span></li>
+        <li><i class="fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5592984545630" target="_blank" rel="noopener">+55 92 98454-5630</a></li>
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:reservas@vistadolagojunglelodge.com.br">reservas@vistadolagojunglelodge.com.br</a></li>
+      </ul>
+    </div>
+    <div class="help">
+      <h5 data-i18n="foot.help">Help Center</h5>
+      <ul>
+        <li><a href="index.html" data-i18n="foot.fhome">Home</a></li>
+        <li><a href="Experiencias.html" data-i18n="foot.fexp">Experiences</a></li>
+        <li><a href="index.html#accommodations" data-i18n="foot.faccom">Accommodations</a></li>
+        <li><a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a></li>
+        <li><a href="Blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="Sobre.html" data-i18n="nav.about">About</a></li>
+        <li><a href="Contato.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h5 data-i18n="foot.plan">Plan Your Stay</h5>
+      <p data-i18n="foot.plantext">Book directly through our official reservation system or contact our team for personalized packages.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copy-block">
+      <span class="copy" data-i18n="foot.copy">© 2026 Vista do Lago Jungle Lodge. All rights reserved.</span>
+      <span class="dev"><span data-i18n="foot.dev">Developed by</span> <a href="https://lvl-solucoesti.com" target="_blank" rel="noopener">LVL Soluções em TI</a></span>
+    </div>
+    <button class="totop" id="toTop"><span data-i18n="foot.totop">Back to Top</span> <i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/i18n-pages.js"></script>
+<script src="assets/app.js"></script>
+<script>
+// Mostrar mensagem de sucesso se redirecionado após envio
+if(window.location.search.includes("sent=1")){
+  document.getElementById("cfSuccess").style.display = "block";
+  document.getElementById("contactForm").style.display = "none";
+}
+</script>
+</body>
+</html>
