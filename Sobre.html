@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Vista do Lago Jungle Lodge</title>
+<meta name="description" content="The story of Vista do Lago Jungle Lodge — a family from the Amazon, a century-old land on the Rio Negro, and the dream that became a jungle lodge.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vistadolagojunglelodge.com/Sobre.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vista do Lago Jungle Lodge">
+<meta property="og:title" content="About Us | Vista do Lago Jungle Lodge">
+<meta property="og:description" content="A family story rooted in the Amazon for generations. Meet the people behind Vista do Lago Jungle Lodge.">
+<meta property="og:image" content="assets/about-hero.jpg">
+<link rel="icon" href="https://vistadolagojunglelodge.com/wp-content/uploads/2026/05/cropped-perfil-270x270.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/blog.css">
+<style>
+.about-hero {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+.about-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.about-wrap h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--gold, #c9a96e);
+  margin-bottom: 8px;
+}
+.about-wrap .subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted, #888);
+  margin-bottom: 48px;
+}
+.about-wrap h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold, #c9a96e);
+  margin: 48px 0 16px;
+}
+.about-wrap p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1.85;
+  color: var(--text, #e8e0d4);
+  margin-bottom: 20px;
+}
+.about-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 36px 0;
+}
+.about-gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+.about-gallery img.wide {
+  grid-column: 1 / -1;
+  height: 320px;
+}
+.about-gallery img.portrait {
+  height: 340px;
+  object-position: center top;
+}
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 48px 0;
+}
+.about-values .val {
+  background: var(--card-bg, rgba(255,255,255,.04));
+  border: 1px solid var(--border, rgba(201,169,110,.15));
+  border-radius: 4px;
+  padding: 28px 20px;
+  text-align: center;
+}
+.about-values .val i {
+  font-size: 1.6rem;
+  color: var(--gold, #c9a96e);
+  margin-bottom: 12px;
+}
+.about-values .val h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold, #c9a96e);
+  margin-bottom: 8px;
+}
+.about-values .val p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--muted, #aaa);
+}
+.about-cta {
+  background: var(--card-bg, rgba(255,255,255,.04));
+  border: 1px solid var(--border, rgba(201,169,110,.2));
+  border-radius: 4px;
+  padding: 40px 32px;
+  text-align: center;
+  margin-top: 64px;
+}
+.about-cta p {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+}
+.about-cta a {
+  display: inline-block;
+  background: var(--gold, #c9a96e);
+  color: #1a1218;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.about-cta a:hover { opacity: .85; }
+@media(max-width:600px){
+  .about-gallery { grid-template-columns: 1fr; }
+  .about-gallery img.wide { height: 220px; }
+  .about-gallery img { height: 220px; }
+  .about-gallery img.portrait { height: 280px; }
+}
+</style>
+</head>
+<body id="topo">
+
+<header class="site-header">
+  <a class="header-logo" href="index.html" aria-label="Vista do Lago Jungle Lodge">
+    <img src="assets/logo-vdl.png" alt="Vista do Lago Jungle Lodge">
+  </a>
+  <nav class="nav">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <div class="nav-item has-sub">
+      <a href="Experiencias.html"><span data-i18n="nav.exp">Experiences</span><i class="fa-solid fa-chevron-down caret"></i></a>
+      <div class="nav-sub"><div class="panel">
+        <a href="Experiencias.html"><span data-i18n="nav.expamazon">Amazon Experiences</span></a>
+        <a href="Manaus.html"><span data-i18n="nav.manaus">What to Do in Manaus</span></a>
+      </div></div>
+    </div>
+    <a href="index.html#accommodations" data-i18n="nav.accom">Accommodations</a>
+    <a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a>
+    <a href="Blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="Sobre.html" class="active" data-i18n="nav.about">About</a>
+    <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="en">EN</button><span class="sep">|</span>
+      <button data-lang="es">ES</button><span class="sep">|</span>
+      <button data-lang="pt">PT</button>
+    </div>
+    <a class="book-btn" href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="nav.book">Book Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close" aria-label="Close">&times;</button>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="Experiencias.html" data-i18n="nav.expamazon">Amazon Experiences</a>
+  <a href="Manaus.html" data-i18n="nav.manaus">What to Do in Manaus</a>
+  <a href="index.html#accommodations" data-i18n="nav.accom">Accommodations</a>
+  <a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a>
+  <a href="Blog.html" data-i18n="nav.blog">Blog</a>
+  <a href="Sobre.html" data-i18n="nav.about">About</a>
+  <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+  <a class="book-btn" href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="nav.book">Book Now</a>
+  <div class="m-lang">
+    <button data-lang="en">EN</button>
+    <button data-lang="es">ES</button>
+    <button data-lang="pt">PT</button>
+  </div>
+</div>
+
+<img class="about-hero" src="assets/about-hero.jpg" alt="Vista do Lago Jungle Lodge vista do rio">
+
+<article class="about-wrap">
+
+  <span class="subtitle" data-i18n="about.sub">Our Story · Lago do Acajatuba, Amazonas</span>
+  <h1 data-i18n="about.h1">Born on the Banks of the Rio Negro</h1>
+
+  <p data-i18n="about.p1">Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.</p>
+
+  <p data-i18n="about.p2">The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.</p>
+
+  <div class="about-gallery">
+    <img src="assets/about-placa.jpg" alt="Primeira placa do Vista do Lago, feita à mão" class="portrait">
+    <img src="assets/about-cafe.jpg" alt="Café da manhã na varanda com a família" class="portrait">
+    <img src="assets/about-frente-antiga.jpg" alt="Fachada antiga da pousada Vista do Lago" class="wide">
+  </div>
+
+  <h2 data-i18n="about.h2">From Restaurant to Jungle Lodge</h2>
+  <p data-i18n="about.p3">Before it was a lodge, it was a restaurant. The first sign — handmade, painted in red and white — simply read <em>Restaurante Vista do Lago</em>. People came by boat for the food, for the river, for the feeling of the place. The same feeling that brings guests from across the world today.</p>
+  <p data-i18n="about.p4">Little by little, the family transformed the space. Bungalows were built. The wooden decks were extended toward the water. The restaurant gave way to a full lodge experience — with accommodation, meals made from Amazonian ingredients, and guided excursions into the surrounding forest and river.</p>
+
+  <div class="about-gallery">
+    <img src="assets/about-rio-canoa.jpg" alt="Vista da pousada chegando de canoa pelo lago">
+    <img src="assets/about-deck-rio.jpg" alt="Deck sobre o lago Acajatuba">
+    <img src="assets/about-fachada.jpg" alt="Fachada atual da Vista do Lago Jungle Lodge" class="wide">
+  </div>
+
+  <h2 data-i18n="about.h3">A Family That Never Left</h2>
+  <p data-i18n="about.p5">What makes Vista do Lago different from any hotel is simple: the family is still here. The same people who built it, who painted those green bungalows, who remember the first guests arriving by speedboat — they are the ones welcoming you today. <strong>Lia</strong>, who manages reservations and communication, is known by name by guests from Germany, Italy, the United States and beyond. The team are neighbours, community members, people who grew up on this lake.</p>
+  <p data-i18n="about.p6">The lodge sits inside the <em>Comunidade Nossa Senhora do Perpétuo Socorro</em>, a riverside community near the Anavilhanas Archipelago — the largest freshwater archipelago in the world. When you stay here, you are not just a guest at a lodge. You are a visitor to a living community, welcomed by the people who call it home.</p>
+
+  <h2 data-i18n="about.h4">What We Believe In</h2>
+
+  <div class="about-values">
+    <div class="val">
+      <i class="fa-solid fa-tree"></i>
+      <h3 data-i18n="about.v1t">Preservation</h3>
+      <p data-i18n="about.v1p">A century-old grove of rubber trees and Brazil nut trees still stands on our grounds — untouched, respected, alive.</p>
+    </div>
+    <div class="val">
+      <i class="fa-solid fa-people-group"></i>
+      <h3 data-i18n="about.v2t">Community</h3>
+      <p data-i18n="about.v2p">Our excursions support local guides, artisans and community projects. Tourism here means something to real people.</p>
+    </div>
+    <div class="val">
+      <i class="fa-solid fa-utensils"></i>
+      <h3 data-i18n="about.v3t">Authentic Food</h3>
+      <p data-i18n="about.v3p">Every meal is made from Amazonian flavours — tambaqui, açaí, pupunha, tapioca — cooked with the same care as always.</p>
+    </div>
+    <div class="val">
+      <i class="fa-solid fa-water"></i>
+      <h3 data-i18n="about.v4t">The River</h3>
+      <p data-i18n="about.v4p">The Rio Negro is not a backdrop. It is the reason we are here. Everything at Vista do Lago flows from this river.</p>
+    </div>
+  </div>
+
+  <div class="about-cta">
+    <p data-i18n="about.cta">This is not just a place to stay in the Amazon. It is a place that has been alive for over a century — waiting to show you what the Rio Negro really is.</p>
+    <a href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="about.ctabtn">Book Your Stay</a>
+  </div>
+
+</article>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo-vdl.png" alt="Vista do Lago Jungle Lodge">
+      <p data-i18n="foot.brand">Authentic Amazon experiences in the Rio Negro region, near Manaus, Brazil.</p>
+      <h5 data-i18n="foot.follow">Follow Us</h5>
+      <div class="socials">
+        <a href="https://www.facebook.com/share/15dsPbvoKL/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vistadolago_jungle_lodge" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@vistadolagojunglelodge" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://maps.app.goo.gl/RXxSnWPHWVd9oae39" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.tiktok.com/@vistadolago" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="reach">
+      <h5 data-i18n="foot.reach">Reach Out</h5>
+      <ul>
+        <li><i class="fa-solid fa-paper-plane"></i><span data-i18n="foot.addr">Rio Negro region, Near Manaus, Amazonas, Brazil</span></li>
+        <li><i class="fa-brands fa-whatsapp"></i><a href="https://api.whatsapp.com/send?phone=5592984545630" target="_blank" rel="noopener">+55 92 98454-5630</a></li>
+        <li><i class="fa-solid fa-envelope"></i><a href="mailto:reservas@vistadolagojunglelodge.com.br">reservas@vistadolagojunglelodge.com.br</a></li>
+      </ul>
+    </div>
+    <div class="help">
+      <h5 data-i18n="foot.help">Help Center</h5>
+      <ul>
+        <li><a href="index.html" data-i18n="foot.fhome">Home</a></li>
+        <li><a href="Experiencias.html" data-i18n="foot.fexp">Experiences</a></li>
+        <li><a href="index.html#accommodations" data-i18n="foot.faccom">Accommodations</a></li>
+        <li><a href="Grupos Amazonia.html" data-i18n="nav.groups">Group Trips</a></li>
+        <li><a href="Blog.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="Sobre.html" data-i18n="nav.about">About</a></li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h5 data-i18n="foot.plan">Plan Your Stay</h5>
+      <p data-i18n="foot.plantext">Book directly through our official reservation system or contact our team for personalized packages.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copy-block">
+      <span class="copy" data-i18n="foot.copy">© 2026 Vista do Lago Jungle Lodge. All rights reserved.</span>
+      <span class="dev"><span data-i18n="foot.dev">Developed by</span> <a href="https://lvl-solucoesti.com" target="_blank" rel="noopener">LVL Soluções em TI</a></span>
+    </div>
+    <button class="totop" id="toTop"><span data-i18n="foot.totop">Back to Top</span> <i class="fa-solid fa-arrow-up"></i></button>
+  </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/i18n-pages.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
