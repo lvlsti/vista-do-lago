@@ -847,3 +847,68 @@
     "post.sering.ctabtn":"Reserve Sua Estadia"
   });
 })();
+
+/* ---- PÁGINA SOBRE ---- */
+(function(){
+  if(typeof I18N === "undefined") return;
+  Object.assign(I18N.en, {
+    "nav.about":"About",
+    "about.sub":"Our Story · Lago do Acajatuba, Amazonas",
+    "about.h1":"Born on the Banks of the Rio Negro",
+    "about.p1":"Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.",
+    "about.p2":"The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.",
+    "about.h2":"From Restaurant to Jungle Lodge",
+    "about.p3":"Before it was a lodge, it was a restaurant. The first sign — handmade, painted in red and white — simply read Restaurante Vista do Lago. People came by boat for the food, for the river, for the feeling of the place. The same feeling that brings guests from across the world today.",
+    "about.p4":"Little by little, the family transformed the space. Bungalows were built. The wooden decks were extended toward the water. The restaurant gave way to a full lodge experience — with accommodation, meals made from Amazonian ingredients, and guided excursions into the surrounding forest and river.",
+    "about.h3":"A Family That Never Left",
+    "about.p5":"What makes Vista do Lago different from any hotel is simple: the family is still here. The same people who built it, who painted those green bungalows, who remember the first guests arriving by speedboat — they are the ones welcoming you today. <strong>Lia</strong>, who manages reservations and communication, is known by name by guests from Germany, Italy, the United States and beyond.",
+    "about.p6":"The lodge sits inside the Comunidade Nossa Senhora do Perpétuo Socorro, a riverside community near the Anavilhanas Archipelago — the largest freshwater archipelago in the world. When you stay here, you are not just a guest at a lodge. You are a visitor to a living community, welcomed by the people who call it home.",
+    "about.h4":"What We Believe In",
+    "about.v1t":"Preservation","about.v1p":"A century-old grove of rubber trees and Brazil nut trees still stands on our grounds — untouched, respected, alive.",
+    "about.v2t":"Community","about.v2p":"Our excursions support local guides, artisans and community projects. Tourism here means something to real people.",
+    "about.v3t":"Authentic Food","about.v3p":"Every meal is made from Amazonian flavours — tambaqui, açaí, pupunha, tapioca — cooked with the same care as always.",
+    "about.v4t":"The River","about.v4p":"The Rio Negro is not a backdrop. It is the reason we are here. Everything at Vista do Lago flows from this river.",
+    "about.cta":"This is not just a place to stay in the Amazon. It is a place that has been alive for over a century — waiting to show you what the Rio Negro really is.",
+    "about.ctabtn":"Book Your Stay"
+  });
+  Object.assign(I18N.pt, {
+    "nav.about":"Sobre",
+    "about.sub":"Nossa História · Lago do Acajatuba, Amazonas",
+    "about.h1":"Nascida nas Margens do Rio Negro",
+    "about.p1":"A Vista do Lago Jungle Lodge não foi construída por uma empresa. Foi construída por uma família — numa terra que pertence às mesmas pessoas há gerações, às margens do Lago do Acajatuba, a cerca de 70 quilômetros de Manaus pelo Rio Negro.",
+    "about.p2":"A história começa com o <strong>Senhor Carlos Costa</strong>, patriarca da família, que adquiriu esse pedaço da Amazônia e escolheu — desde o início — preservar, não explorar. Plantou seringueiras que ainda estão de pé hoje, com mais de um século de vida. Deixou as castanheiras crescerem. Cuidou da terra do jeito que o povo desta região sempre cuidou: devagar, com respeito, sem pressa.",
+    "about.h2":"Do Restaurante ao Jungle Lodge",
+    "about.p3":"Antes de ser uma pousada, era um restaurante. A primeira placa — feita à mão, pintada de vermelho e branco — dizia simplesmente Restaurante Vista do Lago. As pessoas chegavam de barco pela comida, pelo rio, pelo clima do lugar. O mesmo clima que traz hóspedes do mundo inteiro até hoje.",
+    "about.p4":"Aos poucos, a família foi transformando o espaço. Os bangalôs foram erguidos. Os decks de madeira foram se aproximando da água. O restaurante cedeu lugar a uma experiência completa de hospedagem — com acomodação, refeições com sabores da Amazônia e passeios guiados pela floresta e pelo rio.",
+    "about.h3":"Uma Família Que Nunca Foi Embora",
+    "about.p5":"O que faz da Vista do Lago diferente de qualquer hotel é simples: a família ainda está aqui. As mesmas pessoas que construíram tudo isso, que pintaram aqueles bangalôs verdes, que lembram dos primeiros hóspedes chegando de lancha — são elas que te recebem hoje. A <strong>Lia</strong>, que cuida das reservas e do atendimento, é conhecida pelo nome por hóspedes da Alemanha, Itália, Estados Unidos e muitos outros países.",
+    "about.p6":"A pousada fica dentro da Comunidade Nossa Senhora do Perpétuo Socorro, uma comunidade ribeirinha próxima ao Arquipélago de Anavilhanas — o maior arquipélago de água doce do mundo. Quando você se hospeda aqui, não é só hóspede de uma pousada. É visita de uma comunidade viva, recebida pelas pessoas que a chamam de lar.",
+    "about.h4":"O Que Acreditamos",
+    "about.v1t":"Preservação","about.v1p":"Um bosque centenário de seringueiras e castanheiras ainda está de pé no nosso terreno — intocado, respeitado, vivo.",
+    "about.v2t":"Comunidade","about.v2p":"Nossos passeios apoiam guias locais, artesãos e projetos comunitários. O turismo aqui tem um significado real para pessoas reais.",
+    "about.v3t":"Comida de Verdade","about.v3p":"Cada refeição é feita com sabores da Amazônia — tambaqui, açaí, pupunha, tapioca — preparada com o mesmo cuidado de sempre.",
+    "about.v4t":"O Rio","about.v4p":"O Rio Negro não é cenário. É a razão de existirmos aqui. Tudo na Vista do Lago vem deste rio.",
+    "about.cta":"Este não é só um lugar para se hospedar na Amazônia. É um lugar que está vivo há mais de um século — esperando para te mostrar o que o Rio Negro realmente é.",
+    "about.ctabtn":"Reserve Sua Estadia"
+  });
+  Object.assign(I18N.es, {
+    "nav.about":"Sobre Nosotros",
+    "about.sub":"Nuestra Historia · Lago do Acajatuba, Amazonas",
+    "about.h1":"Nacida a Orillas del Río Negro",
+    "about.p1":"Vista do Lago Jungle Lodge no fue construida por una empresa. Fue construida por una familia — en tierras que han pertenecido a las mismas personas por generaciones, a orillas del Lago do Acajatuba, a unos 70 kilómetros de Manaus por el Río Negro.",
+    "about.p2":"La historia comienza con el <strong>Señor Carlos Costa</strong>, patriarca de la familia, quien adquirió este rincón de la Amazonia y eligió — desde el principio — preservarlo en lugar de explotarlo. Plantó árboles de caucho que todavía están en pie hoy, con más de un siglo de vida. Dejó crecer las castañeras. Cuidó la tierra como la gente de esta región siempre lo ha hecho: despacio, con respeto, sin prisa.",
+    "about.h2":"Del Restaurante al Jungle Lodge",
+    "about.p3":"Antes de ser un lodge, era un restaurante. El primer letrero — hecho a mano, pintado en rojo y blanco — decía simplemente Restaurante Vista do Lago. La gente llegaba en bote por la comida, por el río, por el ambiente del lugar. El mismo ambiente que trae hoy a visitantes de todo el mundo.",
+    "about.p4":"Poco a poco, la familia fue transformando el espacio. Se construyeron bungalows. Las terrazas de madera se extendieron hacia el agua. El restaurante dio paso a una experiencia completa de alojamiento — con hospedaje, comidas con sabores amazónicos y excursiones guiadas por el bosque y el río.",
+    "about.h3":"Una Familia Que Nunca Se Fue",
+    "about.p5":"Lo que hace diferente a Vista do Lago de cualquier hotel es simple: la familia sigue aquí. Las mismas personas que lo construyeron, que pintaron esos bungalows verdes, que recuerdan a los primeros huéspedes llegando en lancha — son ellas quienes te reciben hoy. <strong>Lia</strong>, quien gestiona las reservas y la comunicación, es conocida por su nombre por huéspedes de Alemania, Italia, Estados Unidos y más.",
+    "about.p6":"El lodge se encuentra dentro de la Comunidade Nossa Senhora do Perpétuo Socorro, una comunidad ribereña cerca del Archipiélago de Anavilhanas — el mayor archipiélago de agua dulce del mundo. Cuando te hospedas aquí, no eres solo un huésped. Eres visita de una comunidad viva, recibido por las personas que la llaman hogar.",
+    "about.h4":"En Lo Que Creemos",
+    "about.v1t":"Preservación","about.v1p":"Un bosque centenario de árboles de caucho y castañas sigue en pie en nuestro terreno — intacto, respetado, vivo.",
+    "about.v2t":"Comunidad","about.v2p":"Nuestras excursiones apoyan guías locales, artesanos y proyectos comunitarios. El turismo aquí tiene un significado real.",
+    "about.v3t":"Comida Auténtica","about.v3p":"Cada comida se prepara con sabores amazónicos — tambaqui, açaí, pupunha, tapioca — cocinada con el mismo cuidado de siempre.",
+    "about.v4t":"El Río","about.v4p":"El Río Negro no es un telón de fondo. Es la razón de existir. Todo en Vista do Lago fluye de este río.",
+    "about.cta":"Este no es solo un lugar para hospedarse en la Amazonia. Es un lugar que ha estado vivo por más de un siglo — esperando para mostrarte lo que el Río Negro realmente es.",
+    "about.ctabtn":"Reserva Tu Estadía"
+  });
+})();
