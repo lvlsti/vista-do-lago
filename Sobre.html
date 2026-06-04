@@ -20,129 +20,61 @@
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/blog.css">
 <style>
-.about-hero {
-  width: 100%;
-  max-height: 520px;
-  object-fit: cover;
-  object-position: center 60%;
-  display: block;
-}
-.about-wrap {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 48px 24px 80px;
-}
-.about-wrap h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--gold, #c9a96e);
-  margin-bottom: 8px;
-}
-.about-wrap .subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .9rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--muted, #888);
-  margin-bottom: 48px;
-}
-.about-wrap h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: var(--gold, #c9a96e);
-  margin: 48px 0 16px;
-}
-.about-wrap p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  line-height: 1.85;
-  color: var(--text, #e8e0d4);
-  margin-bottom: 20px;
-}
 .about-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   margin: 36px 0;
 }
 .about-gallery img {
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 2px;
+  object-position: center top;
   display: block;
 }
 .about-gallery img.wide {
   grid-column: 1 / -1;
-  height: 320px;
-}
-.about-gallery img.portrait {
   height: 340px;
-  object-position: center top;
+  object-position: center 40%;
 }
 .about-values {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
   margin: 48px 0;
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-dark);
 }
 .about-values .val {
-  background: var(--card-bg, rgba(255,255,255,.04));
-  border: 1px solid var(--border, rgba(201,169,110,.15));
-  border-radius: 4px;
-  padding: 28px 20px;
+  background: var(--bg);
+  padding: 32px 24px;
   text-align: center;
 }
 .about-values .val i {
-  font-size: 1.6rem;
-  color: var(--gold, #c9a96e);
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: var(--rose);
+  margin-bottom: 14px;
+  display: block;
 }
 .about-values .val h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem;
-  letter-spacing: .08em;
+  font: 700 10px var(--sans);
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold, #c9a96e);
-  margin-bottom: 8px;
+  color: var(--ink);
+  margin-bottom: 10px;
 }
 .about-values .val p {
-  font-size: 1rem;
-  margin: 0;
-  color: var(--muted, #aaa);
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
 }
-.about-cta {
-  background: var(--card-bg, rgba(255,255,255,.04));
-  border: 1px solid var(--border, rgba(201,169,110,.2));
-  border-radius: 4px;
-  padding: 40px 32px;
-  text-align: center;
-  margin-top: 64px;
-}
-.about-cta p {
-  font-size: 1.15rem;
-  margin-bottom: 24px;
-}
-.about-cta a {
-  display: inline-block;
-  background: var(--gold, #c9a96e);
-  color: #1a1218;
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  padding: 14px 36px;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: opacity .2s;
-}
-.about-cta a:hover { opacity: .85; }
 @media(max-width:600px){
   .about-gallery { grid-template-columns: 1fr; }
   .about-gallery img.wide { height: 220px; }
   .about-gallery img { height: 220px; }
-  .about-gallery img.portrait { height: 280px; }
+  .about-values { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -196,63 +128,72 @@
   </div>
 </div>
 
-<img class="about-hero" src="assets/about-hero.jpg" alt="Vista do Lago Jungle Lodge vista do rio">
+<img class="post-hero" src="assets/about-hero.jpg" alt="Vista do Lago Jungle Lodge vista do rio">
 
-<article class="about-wrap">
+<article class="post-wrap">
 
-  <span class="subtitle" data-i18n="about.sub">Our Story · Lago do Acajatuba, Amazonas</span>
+  <span class="post-cat" data-i18n="about.sub">Our Story · Lago do Acajatuba, Amazonas</span>
   <h1 data-i18n="about.h1">Born on the Banks of the Rio Negro</h1>
+  <p class="post-meta" data-i18n="about.meta">Vista do Lago Jungle Lodge &middot; Acajatuba, Amazonas</p>
 
-  <p data-i18n="about.p1">Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.</p>
+  <div class="post-body">
 
-  <p data-i18n="about.p2">The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.</p>
+    <p data-i18n="about.p1">Vista do Lago Jungle Lodge was not built by a company. It was built by a family — on land that has belonged to the same people for generations, on the banks of Lago do Acajatuba, about 70 kilometres from Manaus along the Rio Negro.</p>
 
-  <div class="about-gallery">
-    <img src="assets/about-placa.jpg" alt="Primeira placa do Vista do Lago, feita à mão" class="portrait">
-    <img src="assets/about-cafe.jpg" alt="Café da manhã na varanda com a família" class="portrait">
-    <img src="assets/about-fachada-antiga.jpg" alt="Fachada antiga da pousada Vista do Lago" class="wide">
+    <p data-i18n="about.p2">The story begins with <strong>Mr. Carlos Costa</strong>, the patriarch of the family, who acquired this stretch of Amazonian land and chose — from the very beginning — to preserve it rather than exploit it. He planted rubber trees that still stand today, more than a century old. He let the castanheiras grow tall. He cared for the land the way people in this region have always cared for it: slowly, with respect, without rush.</p>
+
+    <div class="about-gallery">
+      <img src="assets/about-placa.jpg" alt="Família Vista do Lago com a primeira placa do restaurante, feita à mão">
+      <img src="assets/about-cafe.jpg" alt="Primeiros encontros da equipe à mesa, na varanda da pousada">
+      <img src="assets/about-fachada-antiga.jpg" alt="Fachada antiga da pousada, bangalôs verdes sendo construídos" class="wide">
+    </div>
+
+    <h2 data-i18n="about.h2">From Restaurant to Jungle Lodge</h2>
+
+    <p data-i18n="about.p3">Before it was a lodge, it was a restaurant. The first sign — handmade, painted in red and white — simply read <em>Restaurante Vista do Lago</em>. People came by boat for the food, for the river, for the feeling of the place. The same feeling that brings guests from across the world today.</p>
+
+    <p data-i18n="about.p4">Little by little, the family transformed the space. Bungalows were built. The wooden decks were extended toward the water. The restaurant gave way to a full lodge experience — with accommodation, meals made from Amazonian ingredients, and guided excursions into the surrounding forest and river.</p>
+
+    <div class="about-gallery">
+      <img src="assets/about-rio-canoa.jpg" alt="Vista da pousada chegando de canoa pelo lago Acajatuba">
+      <img src="assets/about-deck-rio.jpg" alt="Deck sobre o lago, lugar favorito dos hóspedes">
+      <img src="assets/about-fachada.jpg" alt="Fachada atual da Vista do Lago Jungle Lodge vista do rio" class="wide">
+    </div>
+
+    <h2 data-i18n="about.h3">A Family That Never Left</h2>
+
+    <p data-i18n="about.p5">What makes Vista do Lago different from any hotel is simple: the family is still here. The same people who built it, who painted those green bungalows, who remember the first guests arriving by speedboat — they are the ones welcoming you today. <strong>Lia</strong>, who manages reservations and communication, is known by name by guests from Germany, Italy, the United States and beyond.</p>
+
+    <p data-i18n="about.p6">The lodge sits inside the <em>Comunidade Nossa Senhora do Perpétuo Socorro</em>, a riverside community near the Anavilhanas Archipelago — the largest freshwater archipelago in the world. When you stay here, you are not just a guest at a lodge. You are a visitor to a living community, welcomed by the people who call it home.</p>
+
+    <h2 data-i18n="about.h4">What We Believe In</h2>
+
+    <div class="about-values">
+      <div class="val">
+        <i class="fa-solid fa-tree"></i>
+        <h3 data-i18n="about.v1t">Preservation</h3>
+        <p data-i18n="about.v1p">A century-old grove of rubber trees and Brazil nut trees still stands on our grounds — untouched, respected, alive.</p>
+      </div>
+      <div class="val">
+        <i class="fa-solid fa-people-group"></i>
+        <h3 data-i18n="about.v2t">Community</h3>
+        <p data-i18n="about.v2p">Our excursions support local guides, artisans and community projects. Tourism here means something to real people.</p>
+      </div>
+      <div class="val">
+        <i class="fa-solid fa-utensils"></i>
+        <h3 data-i18n="about.v3t">Authentic Food</h3>
+        <p data-i18n="about.v3p">Every meal is made from Amazonian flavours — tambaqui, açaí, pupunha, tapioca — cooked with the same care as always.</p>
+      </div>
+      <div class="val">
+        <i class="fa-solid fa-water"></i>
+        <h3 data-i18n="about.v4t">The River</h3>
+        <p data-i18n="about.v4p">The Rio Negro is not a backdrop. It is the reason we are here. Everything at Vista do Lago flows from this river.</p>
+      </div>
+    </div>
+
   </div>
 
-  <h2 data-i18n="about.h2">From Restaurant to Jungle Lodge</h2>
-  <p data-i18n="about.p3">Before it was a lodge, it was a restaurant. The first sign — handmade, painted in red and white — simply read <em>Restaurante Vista do Lago</em>. People came by boat for the food, for the river, for the feeling of the place. The same feeling that brings guests from across the world today.</p>
-  <p data-i18n="about.p4">Little by little, the family transformed the space. Bungalows were built. The wooden decks were extended toward the water. The restaurant gave way to a full lodge experience — with accommodation, meals made from Amazonian ingredients, and guided excursions into the surrounding forest and river.</p>
-
-  <div class="about-gallery">
-    <img src="assets/about-rio-canoa.jpg" alt="Vista da pousada chegando de canoa pelo lago">
-    <img src="assets/about-deck-rio.jpg" alt="Deck sobre o lago Acajatuba">
-    <img src="assets/about-fachada.jpg" alt="Fachada atual da Vista do Lago Jungle Lodge" class="wide">
-  </div>
-
-  <h2 data-i18n="about.h3">A Family That Never Left</h2>
-  <p data-i18n="about.p5">What makes Vista do Lago different from any hotel is simple: the family is still here. The same people who built it, who painted those green bungalows, who remember the first guests arriving by speedboat — they are the ones welcoming you today. <strong>Lia</strong>, who manages reservations and communication, is known by name by guests from Germany, Italy, the United States and beyond. The team are neighbours, community members, people who grew up on this lake.</p>
-  <p data-i18n="about.p6">The lodge sits inside the <em>Comunidade Nossa Senhora do Perpétuo Socorro</em>, a riverside community near the Anavilhanas Archipelago — the largest freshwater archipelago in the world. When you stay here, you are not just a guest at a lodge. You are a visitor to a living community, welcomed by the people who call it home.</p>
-
-  <h2 data-i18n="about.h4">What We Believe In</h2>
-
-  <div class="about-values">
-    <div class="val">
-      <i class="fa-solid fa-tree"></i>
-      <h3 data-i18n="about.v1t">Preservation</h3>
-      <p data-i18n="about.v1p">A century-old grove of rubber trees and Brazil nut trees still stands on our grounds — untouched, respected, alive.</p>
-    </div>
-    <div class="val">
-      <i class="fa-solid fa-people-group"></i>
-      <h3 data-i18n="about.v2t">Community</h3>
-      <p data-i18n="about.v2p">Our excursions support local guides, artisans and community projects. Tourism here means something to real people.</p>
-    </div>
-    <div class="val">
-      <i class="fa-solid fa-utensils"></i>
-      <h3 data-i18n="about.v3t">Authentic Food</h3>
-      <p data-i18n="about.v3p">Every meal is made from Amazonian flavours — tambaqui, açaí, pupunha, tapioca — cooked with the same care as always.</p>
-    </div>
-    <div class="val">
-      <i class="fa-solid fa-water"></i>
-      <h3 data-i18n="about.v4t">The River</h3>
-      <p data-i18n="about.v4p">The Rio Negro is not a backdrop. It is the reason we are here. Everything at Vista do Lago flows from this river.</p>
-    </div>
-  </div>
-
-  <div class="about-cta">
+  <div class="post-cta">
     <p data-i18n="about.cta">This is not just a place to stay in the Amazon. It is a place that has been alive for over a century — waiting to show you what the Rio Negro really is.</p>
     <a href="https://hotels.cloudbeds.com/pt-br/reservas/o94fsy/?currency=brl" target="_blank" rel="noopener" data-i18n="about.ctabtn">Book Your Stay</a>
   </div>
