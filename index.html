@@ -554,16 +554,11 @@
   var fab = document.getElementById("waFab");
   var threshold = 0;
   function calcThreshold(){
-    var hero = document.querySelector(".about-hero,.contact-hero,.blog-hero,.m-hero,.e-hero,.post-hero,.g-hero,.hero");
-    if(hero){
-      var r = hero.getBoundingClientRect();
-      threshold = window.scrollY + r.top + r.height;
-    } else {
-      threshold = window.innerHeight * 0.9;
-    }
+    var hero = document.querySelector(".about-hero,.blog-hero,.m-hero,.e-hero,.post-hero,.g-hero,.hero");
+    threshold = hero ? (hero.offsetTop + hero.offsetHeight) : window.innerHeight;
   }
   function checkFab(){
-    if(window.scrollY > threshold - 80){
+    if(window.scrollY >= threshold){
       fab.style.opacity = "1";
       fab.style.pointerEvents = "auto";
     } else {
@@ -571,9 +566,12 @@
       fab.style.pointerEvents = "none";
     }
   }
+  // Calcular após fontes e imagens carregadas
   window.addEventListener("load", function(){ calcThreshold(); checkFab(); });
   window.addEventListener("scroll", checkFab, {passive:true});
   window.addEventListener("resize", function(){ calcThreshold(); checkFab(); });
+  // Fallback caso load já tenha disparado
+  if(document.readyState === "complete"){ calcThreshold(); checkFab(); }
 })();
 </script>
 </body>
