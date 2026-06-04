@@ -20,11 +20,67 @@
 <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/blog.css">
 <style>
+/* ---- About Hero ---- */
+.about-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(assets/about-hero.jpg) center 50%/cover;
+  z-index: 0;
+}
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,16,24,.55), rgba(20,16,24,.5) 50%, rgba(20,16,24,.82));
+  z-index: 1;
+}
+.about-hero .inner {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 140px 24px 80px;
+  color: #fff;
+}
+.about-hero .eyebrow {
+  display: inline-block;
+  font: 700 11px var(--sans);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.about-hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.about-hero p {
+  font-size: clamp(13px, 1.3vw, 15px);
+  color: rgba(255,255,255,.82);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ---- Gallery ---- */
 .about-gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: 36px 0;
+  margin: 40px 0;
 }
 .about-gallery img {
   width: 100%;
@@ -38,11 +94,13 @@
   height: 340px;
   object-position: center 40%;
 }
+
+/* ---- Values grid ---- */
 .about-values {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
-  margin: 48px 0;
+  margin: 40px 0;
   background: var(--cream-dark);
   border: 1px solid var(--cream-dark);
 }
@@ -67,13 +125,15 @@
 .about-values .val p {
   font-size: 14px !important;
   color: var(--muted) !important;
-  line-height: 1.6 !important;
+  line-height: 1.65 !important;
   margin: 0 !important;
 }
+
 @media(max-width:600px){
+  .about-hero { min-height: 55vh; }
+  .about-hero h1 { font-size: 26px; }
   .about-gallery { grid-template-columns: 1fr; }
-  .about-gallery img.wide { height: 220px; }
-  .about-gallery img { height: 220px; }
+  .about-gallery img, .about-gallery img.wide { height: 220px; }
   .about-values { grid-template-columns: 1fr; }
 }
 </style>
@@ -128,13 +188,17 @@
   </div>
 </div>
 
-<img class="post-hero" src="assets/about-hero.jpg" alt="Vista do Lago Jungle Lodge vista do rio">
+<!-- ============================================================ HERO -->
+<section class="about-hero">
+  <div class="inner">
+    <span class="eyebrow" data-i18n="about.eyebrow">Our Story · Lago do Acajatuba</span>
+    <h1 data-i18n="about.h1">Born on the Banks of the Rio Negro</h1>
+    <p data-i18n="about.herosub">A family, a century-old land, and a jungle lodge that still carries the soul of those who built it.</p>
+  </div>
+</section>
 
+<!-- ============================================================ CONTENT -->
 <article class="post-wrap">
-
-  <span class="post-cat" data-i18n="about.sub">Our Story · Lago do Acajatuba, Amazonas</span>
-  <h1 data-i18n="about.h1">Born on the Banks of the Rio Negro</h1>
-  <p class="post-meta" data-i18n="about.meta">Vista do Lago Jungle Lodge &middot; Acajatuba, Amazonas</p>
 
   <div class="post-body">
 
