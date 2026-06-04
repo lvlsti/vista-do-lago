@@ -233,9 +233,17 @@
       hideTyping();
       const reply = data.reply || data.message || "...";
       addMsg(reply, "bot");
-      // Mostrar cards se vierem
+      // Mostrar cards ou foto individual
       if (data.cards && data.cards.length) {
         addCards(data.cards);
+      }
+      if (data.single_image) {
+        var imgDiv = document.createElement('div');
+        imgDiv.className = 'vdl-msg bot';
+        imgDiv.style.cssText = 'padding:0;overflow:hidden;border-radius:14px;max-width:280px;';
+        imgDiv.innerHTML = '<img src="' + data.single_image.url + '" alt="' + data.single_image.name + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
+        msgContainer.appendChild(imgDiv);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
       }
       history.push({ role: "assistant", content: reply });
     } catch (e) {
