@@ -346,32 +346,6 @@
 <script src="assets/i18n.js"></script>
 <script src="assets/i18n-pages.js"></script>
 <script src="assets/app.js" defer></script>
-<!-- WhatsApp FAB -->
-<a class="wa-fab" id="waFab" href="https://api.whatsapp.com/send?phone=5592984545630&text=Hello%2C%20I%20would%20like%20more%20details%20about%20Vista%20do%20Lago%20Jungle%20Lodge.%20I%20found%20you%20through%20the%20website!" target="_blank" rel="noopener" aria-label="WhatsApp" style="opacity:0;pointer-events:none;transition:opacity .4s ease,transform .3s ease;"><i class="fa-brands fa-whatsapp"></i></a>
-<script>
-(function(){
-  var fab = document.getElementById("waFab");
-  var threshold = 0;
-  function calcThreshold(){
-    var hero = document.querySelector(".about-hero,.blog-hero,.m-hero,.e-hero,.post-hero,.g-hero,.hero");
-    threshold = hero ? (hero.offsetTop + hero.offsetHeight) : window.innerHeight;
-  }
-  function checkFab(){
-    if(window.scrollY >= threshold){
-      fab.style.opacity = "1";
-      fab.style.pointerEvents = "auto";
-    } else {
-      fab.style.opacity = "0";
-      fab.style.pointerEvents = "none";
-    }
-  }
-  // Calcular após fontes e imagens carregadas
-  window.addEventListener("load", function(){ calcThreshold(); checkFab(); });
-  window.addEventListener("scroll", checkFab, {passive:true});
-  window.addEventListener("resize", function(){ calcThreshold(); checkFab(); });
-  // Fallback caso load já tenha disparado
-  if(document.readyState === "complete"){ calcThreshold(); checkFab(); }
-})();
-</script>
+<script src="assets/agent.js"></script>
 </body>
 </html>
