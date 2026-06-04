@@ -229,7 +229,9 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sessionId, message: text, history, lang: LANG })
       });
-      const data = await res.json();
+      const raw = await res.json();
+      // n8n lastNode pode retornar {json:{...}} ou direto
+      const data = (raw && raw.json) ? raw.json : raw;
       hideTyping();
       const reply = data.reply || data.message || "...";
       addMsg(reply, "bot");
@@ -237,11 +239,11 @@
       if (data.cards && data.cards.length) {
         addCards(data.cards);
       }
-      if (data.single_image) {
+      if (data.single_image && data.single_image.url) {
         var imgDiv = document.createElement('div');
         imgDiv.className = 'vdl-msg bot';
         imgDiv.style.cssText = 'padding:0;overflow:hidden;border-radius:14px;max-width:280px;';
-        imgDiv.innerHTML = '<img src="' + data.single_image.url + '" alt="' + data.single_image.name + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
+        imgDiv.innerHTML = '<img src="' + data.single_image.url + '" alt="' + (data.single_image.name||'Bangalô') + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
         msgContainer.appendChild(imgDiv);
         msgContainer.scrollTop = msgContainer.scrollHeight;
       }
