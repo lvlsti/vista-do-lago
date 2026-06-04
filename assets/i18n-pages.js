@@ -921,3 +921,86 @@
     "about.ctabtn":"Reserva Tu Estadía"
   });
 })();
+
+/* ---- PÁGINA CONTATO ---- */
+(function(){
+  if(typeof I18N === "undefined") return;
+  Object.assign(I18N.en, {
+    "contact.eyebrow":"Get in Touch",
+    "contact.h1":"We Are Happy to Help",
+    "contact.herosub":"Send us a message, chat on WhatsApp or drop us an email. We reply in English, Portuguese and Spanish.",
+    "contact.formtitle":"Send Us a Message",
+    "contact.formsub":"Fill in the form and we will get back to you within 24 hours.",
+    "contact.fname":"First Name","contact.femail":"Email",
+    "contact.fcheckin":"Check-in Date","contact.fguests":"Number of Guests",
+    "contact.fmsg":"Message","contact.fsend":"Send Message",
+    "contact.emailsubject":"New message from the website",
+    "contact.success":"Message sent! We will get back to you within 24 hours.",
+    "contact.channelstitle":"Other Ways to Reach Us",
+    "contact.wahint":"Best for Europe, Latin America and Brazil. Usually replies within a few hours.",
+    "contact.emailhint":"Preferred in the United States. We reply within 24 hours.",
+    "contact.smshint":"Quick option for US guests who prefer SMS over apps.",
+    "contact.location":"Location","contact.locationval":"Lago do Acajatuba, Iranduba, Amazonas, Brazil",
+    "contact.locationhint":"Access by river only. See directions below.",
+    "contact.hours":"Response Hours",
+    "contact.hoursval":"Monday to Sunday, 7am to 9pm (Manaus time, GMT-4). Outside these hours, leave a message and we will reply first thing in the morning.",
+    "contact.maptitle":"Find Us on the Map",
+    "contact.mapsub":"We are located on the banks of Lago do Acajatuba, about 70 km from Manaus along the Rio Negro.",
+    "contact.route1title":"By Speedboat (Direct)",
+    "contact.route1":"Depart from the Manaus port area. About 1h30 by speedboat directly to the lodge pier. We can arrange transfers on request.",
+    "contact.route2title":"By Road + Motorboat",
+    "contact.route2":"Drive along AM-070 to the meeting point (about 1h30 from Manaus), then 25 minutes by motorboat to the lodge. Parking available at the meeting point."
+  });
+  Object.assign(I18N.pt, {
+    "contact.eyebrow":"Fale Conosco",
+    "contact.h1":"Estamos Aqui para Ajudar",
+    "contact.herosub":"Manda uma mensagem, chama no WhatsApp ou manda um e-mail. A gente responde em português, inglês e espanhol.",
+    "contact.formtitle":"Mande uma Mensagem",
+    "contact.formsub":"Preencha o formulário e retornamos em até 24 horas.",
+    "contact.fname":"Nome","contact.femail":"E-mail",
+    "contact.fcheckin":"Data de Check-in","contact.fguests":"Número de Hóspedes",
+    "contact.fmsg":"Mensagem","contact.fsend":"Enviar Mensagem",
+    "contact.emailsubject":"Nova mensagem pelo site",
+    "contact.success":"Mensagem enviada! Retornaremos em até 24 horas.",
+    "contact.channelstitle":"Outros Canais de Contato",
+    "contact.wahint":"Melhor opção para Europa, América Latina e Brasil. Respondemos em poucas horas.",
+    "contact.emailhint":"Canal preferido nos Estados Unidos. Respondemos em até 24 horas.",
+    "contact.smshint":"Opção rápida para hóspedes americanos que preferem SMS.",
+    "contact.location":"Localização","contact.locationval":"Lago do Acajatuba, Iranduba, Amazonas, Brasil",
+    "contact.locationhint":"Acesso exclusivamente fluvial. Veja as rotas abaixo.",
+    "contact.hours":"Horário de Atendimento",
+    "contact.hoursval":"Segunda a domingo, das 7h às 21h (horário de Manaus, GMT-4). Fora desse horário, deixe sua mensagem e respondemos logo cedo.",
+    "contact.maptitle":"Onde Estamos",
+    "contact.mapsub":"Ficamos às margens do Lago do Acajatuba, a cerca de 70 km de Manaus pelo Rio Negro.",
+    "contact.route1title":"De Lancha (Direto)",
+    "contact.route1":"Saída da área portuária de Manaus. Cerca de 1h30 de lancha direto até o pier da pousada. Podemos organizar o traslado mediante solicitação.",
+    "contact.route2title":"De Carro + Barco",
+    "contact.route2":"Percurso pela AM-070 até o ponto de encontro (cerca de 1h30 de Manaus), depois 25 minutos de barco até a pousada. Estacionamento disponível no ponto."
+  });
+  Object.assign(I18N.es, {
+    "contact.eyebrow":"Contáctanos",
+    "contact.h1":"Estamos Aquí para Ayudar",
+    "contact.herosub":"Envíanos un mensaje, escríbenos por WhatsApp o manda un correo. Respondemos en español, inglés y portugués.",
+    "contact.formtitle":"Envíanos un Mensaje",
+    "contact.formsub":"Completa el formulario y te respondemos en menos de 24 horas.",
+    "contact.fname":"Nombre","contact.femail":"Correo electrónico",
+    "contact.fcheckin":"Fecha de llegada","contact.fguests":"Número de huéspedes",
+    "contact.fmsg":"Mensaje","contact.fsend":"Enviar Mensaje",
+    "contact.emailsubject":"Nuevo mensaje desde el sitio web",
+    "contact.success":"Mensaje enviado. Te respondemos en menos de 24 horas.",
+    "contact.channelstitle":"Otras Formas de Contacto",
+    "contact.wahint":"Ideal para Europa, América Latina y Brasil. Solemos responder en pocas horas.",
+    "contact.emailhint":"Preferido en Estados Unidos. Respondemos en menos de 24 horas.",
+    "contact.smshint":"Opción rápida para huéspedes de EE.UU. que prefieren SMS.",
+    "contact.location":"Ubicación","contact.locationval":"Lago do Acajatuba, Iranduba, Amazonas, Brasil",
+    "contact.locationhint":"Acceso solo por río. Ver indicaciones abajo.",
+    "contact.hours":"Horario de Atención",
+    "contact.hoursval":"Lunes a domingo, de 7 a 21h (hora de Manaos, GMT-4). Fuera de ese horario, deja tu mensaje y te contestamos a primera hora.",
+    "contact.maptitle":"Cómo Llegarnos",
+    "contact.mapsub":"Estamos a orillas del Lago do Acajatuba, a unos 70 km de Manaos por el Río Negro.",
+    "contact.route1title":"En Lancha (Directo)",
+    "contact.route1":"Salida desde el área portuaria de Manaos. Unos 90 minutos en lancha directamente hasta el muelle del lodge. Podemos organizar el traslado.",
+    "contact.route2title":"En Auto + Bote",
+    "contact.route2":"Recorrido por la AM-070 hasta el punto de encuentro (aprox. 1h30 desde Manaos), luego 25 minutos en bote. Hay estacionamiento disponible."
+  });
+})();
