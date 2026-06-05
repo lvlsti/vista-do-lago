@@ -22,27 +22,7 @@
   let isTyping = false;
   let toastShown = false;
 
-  // Boto-rosa SVG (vetor simplificado)
-  const BOTO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" width="32" height="32" fill="none">
-    <!-- corpo -->
-    <ellipse cx="27" cy="30" rx="14" ry="9" fill="#f4a7b9"/>
-    <!-- cabeça/focinho -->
-    <path d="M13 28 Q8 24 10 20 Q14 16 18 21" fill="#f4a7b9"/>
-    <path d="M10 20 Q9 17 12 16 Q15 15 15 19" fill="#e8849a"/>
-    <!-- nadadeira dorsal -->
-    <path d="M22 21 Q24 14 29 17 Q27 22 22 21Z" fill="#e8849a"/>
-    <!-- nadadeira lateral -->
-    <path d="M34 32 Q40 29 41 33 Q38 37 34 35Z" fill="#e8849a"/>
-    <!-- cauda -->
-    <path d="M38 30 Q44 26 46 28 Q44 32 40 31Z" fill="#f4a7b9"/>
-    <path d="M38 30 Q44 32 46 34 Q44 36 40 32Z" fill="#e8849a"/>
-    <!-- olho -->
-    <circle cx="12" cy="19" r="1.5" fill="#1a1218"/>
-    <circle cx="12.5" cy="18.5" r="0.5" fill="#fff"/>
-    <!-- bolhas -->
-    <circle cx="8" cy="16" r="1" fill="#c9a96e" opacity="0.7"/>
-    <circle cx="6" cy="13" r="0.7" fill="#c9a96e" opacity="0.5"/>
-  </svg>`;
+  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="36" height="36" style="object-fit:contain;border-radius:50%;" alt="Boto">';
 
   // --- CSS ---
   const style = document.createElement("style");
@@ -189,7 +169,7 @@
   const fab = document.createElement("button");
   fab.id = "vdl-fab";
   fab.setAttribute("aria-label", "Chat com assistente");
-  fab.innerHTML = BOTO_SVG + '<span id="vdl-fab-close-icon">✕</span>';
+  fab.innerHTML = BOTO_IMG + '<span id="vdl-fab-close-icon">✕</span>';
 
   // Toast
   const toast = document.createElement("div");
@@ -205,7 +185,7 @@
   chat.id = "vdl-chat";
   chat.innerHTML = `
     <div id="vdl-chat-header">
-      <div id="vdl-chat-header-boto">${BOTO_SVG}</div>
+      <div id="vdl-chat-header-boto">${BOTO_IMG}</div>
       <div id="vdl-chat-header-info">
         <div id="vdl-chat-header-title">${L.title}</div>
         <div id="vdl-chat-header-sub">● Online</div>
