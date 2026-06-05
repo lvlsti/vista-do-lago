@@ -230,8 +230,16 @@
         body: JSON.stringify({ sessionId, message: text, history, lang: LANG })
       });
       const raw = await res.json();
-      // n8n lastNode pode retornar {json:{...}} ou direto
-      const data = (raw && raw.json) ? raw.json : raw;
+      // n8n lastNode pode retornar {json:{...}}, [{json:{...}}] ou direto
+      let data;
+      if (Array.isArray(raw) && raw[0] && raw[0].json) {
+        data = raw[0].json;
+      } else if (raw && raw.json) {
+        data = raw.json;
+      } else {
+        data = raw;
+      }
+      console.log('[VDL Agent] response:', JSON.stringify(data).substring(0, 200));
       hideTyping();
       const reply = data.reply || data.message || "...";
       addMsg(reply, "bot");
