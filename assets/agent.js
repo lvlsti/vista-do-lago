@@ -387,7 +387,7 @@
         var imgName = data.single_image.name || 'Bangalô';
         var photoCard = document.createElement('div');
         photoCard.className = 'vdl-photo-card'; photoCard.style.cssText = 'align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;display:block;';
-        photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy"><div class="vdl-photo-card-footer"><span class="vdl-photo-card-name">' + imgName + '</span><span class="vdl-photo-card-expand">🔍 Ampliar</span></div>';
+        photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy" style="width:100%;height:140px;object-fit:cover;display:block;"><div style="padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:11px;font-weight:700;color:#1a1218;">' + imgName + '</span><span style="font-size:10px;color:#c9a96e;font-weight:600;">🔍 Ampliar</span></div>';
         photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
         msgContainer.appendChild(photoCard); console.log('[VDL] photoCard appendido, children:', msgContainer.children.length);
         msgContainer.scrollTop = msgContainer.scrollHeight;
