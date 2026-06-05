@@ -385,14 +385,32 @@
       if (data.single_image && data.single_image.url) {
         var imgUrl = data.single_image.url.replace(/ /g, '%20');
         var imgName = data.single_image.name || 'Bangalô';
+        // Card container
         var photoCard = document.createElement('div');
-        photoCard.className = 'vdl-photo-card'; photoCard.style.cssText = 'align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;display:block;';
-        photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy" style="width:100%;height:140px;object-fit:cover;display:block;"><div style="padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:11px;font-weight:700;color:#1a1218;">' + imgName + '</span><span style="font-size:10px;color:#c9a96e;font-weight:600;">🔍 Ampliar</span></div>';
+        photoCard.style.cssText = 'align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;';
+        // Imagem
+        var imgEl = document.createElement('img');
+        imgEl.src = imgUrl;
+        imgEl.alt = imgName;
+        imgEl.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;';
+        imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
+        // Footer
+        var footer = document.createElement('div');
+        footer.style.cssText = 'padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;';
+        var nameSpan = document.createElement('span');
+        nameSpan.style.cssText = 'font-size:11px;font-weight:700;color:#1a1218;font-family:Montserrat,sans-serif;';
+        nameSpan.textContent = imgName;
+        var expandSpan = document.createElement('span');
+        expandSpan.style.cssText = 'font-size:10px;color:#c9a96e;font-weight:600;font-family:Montserrat,sans-serif;';
+        expandSpan.textContent = '🔍 Ampliar';
+        footer.appendChild(nameSpan);
+        footer.appendChild(expandSpan);
+        photoCard.appendChild(imgEl);
+        photoCard.appendChild(footer);
         photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
-        msgContainer.appendChild(photoCard); console.log('[VDL] photoCard appendido, children:', msgContainer.children.length);
+        msgContainer.appendChild(photoCard);
         msgContainer.scrollTop = msgContainer.scrollHeight;
-        var imgEl = photoCard.querySelector('img');
-        if (imgEl) imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
+        console.log('[VDL] photoCard criado, img.src:', imgEl.src);
       }
       history.push({ role: "assistant", content: reply });
     } catch (e) {
