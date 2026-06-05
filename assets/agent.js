@@ -386,7 +386,7 @@
       if (data.single_image && data.single_image.noPhoto) {
         var noPhotoMsgs = {
           pt: '📸 Ainda não temos fotos do ' + data.single_image.name + ' cadastradas, mas posso te contar tudo sobre ele! Quer saber mais detalhes?',
-          en: '📸 We don't have photos of ' + data.single_image.name + ' yet, but I can tell you all about it! Want to know more?',
+          en: '📸 We don\'t have photos of ' + data.single_image.name + ' yet, but I can tell you all about it! Want to know more?',
           es: '📸 Aún no tenemos fotos del ' + data.single_image.name + ', pero puedo contarte todo sobre él. ¿Quieres saber más?'
         };
         addMsg(noPhotoMsgs[prev_lang] || noPhotoMsgs['pt'], 'bot');
