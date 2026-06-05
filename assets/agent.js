@@ -330,7 +330,7 @@
         var imgDiv = document.createElement('div');
         imgDiv.className = 'vdl-msg bot';
         imgDiv.style.cssText = 'padding:0;overflow:hidden;border-radius:14px;max-width:260px;';
-        imgDiv.innerHTML = '<img src="' + data.single_image.url + '" alt="' + (data.single_image.name||'Bangalô') + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
+        imgDiv.innerHTML = '<img src="' + data.single_image.url.replace(/ /g, '%20') + '" alt="' + (data.single_image.name||'Bangalô') + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
         msgContainer.appendChild(imgDiv);
         msgContainer.scrollTop = msgContainer.scrollHeight;
       }
