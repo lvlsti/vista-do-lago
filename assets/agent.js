@@ -22,7 +22,7 @@
   let isTyping = false;
   let toastShown = false;
 
-  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="36" height="36" style="object-fit:contain;border-radius:50%;" alt="Boto">';
+  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" style="object-fit:cover;border-radius:50%;display:block;" alt="Boto">';
 
   // --- CSS ---
   const style = document.createElement("style");
@@ -30,7 +30,7 @@
     #vdl-fab {
       position:fixed;bottom:28px;right:28px;z-index:9999;
       width:58px;height:58px;border-radius:50%;
-      background:linear-gradient(135deg,#1a1218 0%,#2d1f26 100%);
+      background:none;
       border:2px solid #c9a96e;cursor:pointer;
       display:flex;align-items:center;justify-content:center;
       box-shadow:0 4px 20px rgba(0,0,0,.4);
