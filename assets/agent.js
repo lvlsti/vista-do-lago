@@ -291,7 +291,7 @@
       const card = document.createElement("div");
       card.className = "vdl-card";
       card.innerHTML = `
-        ${c.image ? '<img src="'+c.image+'" alt="'+c.name+'" loading="lazy">' : ''}
+        ${c.image ? '<img src="'+c.image+'" alt="'+c.name+'" loading="lazy" referrerpolicy="no-referrer">' : ''}
         <div class="vdl-card-body">
           <div class="vdl-card-title">${c.name}</div>
           <div class="vdl-card-desc">${c.desc || ''}</div>
@@ -385,15 +385,24 @@
       if (data.single_image && data.single_image.url) {
         var imgUrl = data.single_image.url.replace(/ /g, '%20');
         var imgName = data.single_image.name || 'Bangalô';
-        // Card container
+        // Card container — flex-shrink:0 prevents the flex-column from squashing it to 0px height
         var photoCard = document.createElement('div');
-        photoCard.style.cssText = 'align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;';
+        photoCard.style.cssText = 'flex-shrink:0;align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;';
         // Imagem
         var imgEl = document.createElement('img');
-        imgEl.src = imgUrl;
         imgEl.alt = imgName;
-        imgEl.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;';
+        imgEl.loading = 'lazy';
+        imgEl.referrerPolicy = 'no-referrer';
+        imgEl.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;background:#ece6df;';
         imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
+        imgEl.onerror = function() {
+          var fb = document.createElement('a');
+          fb.href = imgUrl; fb.target = '_blank'; fb.rel = 'noopener';
+          fb.textContent = '🖼️ ' + imgName + ' — ver foto ↗';
+          fb.style.cssText = 'display:block;padding:14px;font:600 12px Montserrat,sans-serif;color:#1a1218;background:#fff;text-decoration:none;';
+          photoCard.replaceChildren(fb);
+        };
+        imgEl.src = imgUrl;
         // Footer
         var footer = document.createElement('div');
         footer.style.cssText = 'padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;';
