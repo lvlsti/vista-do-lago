@@ -389,7 +389,7 @@
         photoCard.className = 'vdl-photo-card';
         photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy"><div class="vdl-photo-card-footer"><span class="vdl-photo-card-name">' + imgName + '</span><span class="vdl-photo-card-expand">🔍 Ampliar</span></div>';
         photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
-        msgContainer.appendChild(photoCard);
+        msgContainer.appendChild(photoCard); console.log('[VDL] photoCard appendido, children:', msgContainer.children.length);
         msgContainer.scrollTop = msgContainer.scrollHeight;
         var imgEl = photoCard.querySelector('img');
         if (imgEl) imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
