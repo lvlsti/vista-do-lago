@@ -22,7 +22,7 @@
   let isTyping = false;
   let toastShown = false;
 
-  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" style="object-fit:cover;border-radius:50%;display:block;" alt="Boto">';
+  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" id="vdl-fab-img" style="object-fit:cover;border-radius:50%;" alt="Boto">';
 
   // --- CSS ---
   const style = document.createElement("style");
@@ -41,7 +41,7 @@
     #vdl-fab.visible{opacity:1;pointer-events:auto;}
     #vdl-fab.open { background:linear-gradient(135deg,#8b1a2a 0%,#c0392b 100%); border-color:#e8849a; }
     #vdl-fab.open svg { display:none; }
-    #vdl-fab.open img { display:none; }
+    #vdl-fab.open #vdl-fab-img { display:none !important; }
     #vdl-fab-close-icon { display:none; font-size:22px; color:#fff; line-height:1; }
     #vdl-fab.open #vdl-fab-close-icon { display:block; }
 
