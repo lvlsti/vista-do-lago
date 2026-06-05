@@ -386,7 +386,7 @@
         var imgUrl = data.single_image.url.replace(/ /g, '%20');
         var imgName = data.single_image.name || 'Bangalô';
         var photoCard = document.createElement('div');
-        photoCard.className = 'vdl-photo-card';
+        photoCard.className = 'vdl-photo-card'; photoCard.style.cssText = 'align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;display:block;';
         photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy"><div class="vdl-photo-card-footer"><span class="vdl-photo-card-name">' + imgName + '</span><span class="vdl-photo-card-expand">🔍 Ampliar</span></div>';
         photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
         msgContainer.appendChild(photoCard); console.log('[VDL] photoCard appendido, children:', msgContainer.children.length);
