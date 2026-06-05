@@ -227,7 +227,13 @@
       const res = await fetch(N8N_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sessionId, message: text, history, lang: LANG })
+        body: JSON.stringify({ 
+          sessionId, 
+          message: text, 
+          history, 
+          lang: LANG,
+          cachedRoomsData: JSON.parse(sessionStorage.getItem("vdl_rooms_" + sessionId) || "[]")
+        })
       });
       const raw = await res.json();
       // n8n lastNode pode retornar {json:{...}}, [{json:{...}}] ou direto
@@ -239,7 +245,10 @@
       } else {
         data = raw;
       }
-      console.log('[VDL Agent] response:', JSON.stringify(data).substring(0, 200));
+      // Guardar roomsData na sessão para uso em mensagens futuras
+      if (data.roomsData && data.roomsData.length) {
+        sessionStorage.setItem("vdl_rooms_" + sessionId, JSON.stringify(data.roomsData));
+      }
       hideTyping();
       const reply = data.reply || data.message || "...";
       addMsg(reply, "bot");
