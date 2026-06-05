@@ -266,7 +266,7 @@
     toastShown = true;
     setTimeout(function() {
       toast.classList.add("show");
-      setTimeout(function() { hideToast(); }, 3000);
+      setTimeout(function() { hideToast(); }, 5000);
     }, 800);
   }
 
