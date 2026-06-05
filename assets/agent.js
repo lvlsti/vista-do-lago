@@ -370,6 +370,7 @@
         })
       });
       const raw = await res.json();
+      var prev_lang = LANG;
       let data;
       if (Array.isArray(raw) && raw[0] && raw[0].json) { data = raw[0].json; }
       else if (raw && raw.json) { data = raw.json; }
@@ -382,7 +383,14 @@
       addMsg(reply, "bot");
       console.log('[VDL] single_image:', JSON.stringify(data.single_image), '| keys:', Object.keys(data).join(','));
       if (data.cards && data.cards.length) { addCards(data.cards); }
-      if (data.single_image && data.single_image.url) {
+      if (data.single_image && data.single_image.noPhoto) {
+        var noPhotoMsgs = {
+          pt: '📸 Ainda não temos fotos do ' + data.single_image.name + ' cadastradas, mas posso te contar tudo sobre ele! Quer saber mais detalhes?',
+          en: '📸 We don't have photos of ' + data.single_image.name + ' yet, but I can tell you all about it! Want to know more?',
+          es: '📸 Aún no tenemos fotos del ' + data.single_image.name + ', pero puedo contarte todo sobre él. ¿Quieres saber más?'
+        };
+        addMsg(noPhotoMsgs[prev_lang] || noPhotoMsgs['pt'], 'bot');
+      } else if (data.single_image && data.single_image.url) {
         var imgUrl = data.single_image.url.replace(/ /g, '%20');
         var imgName = data.single_image.name || 'Bangalô';
         // Card container — flex-shrink:0 prevents the flex-column from squashing it to 0px height
