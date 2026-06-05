@@ -30,7 +30,7 @@
     #vdl-fab {
       position:fixed;bottom:28px;right:28px;z-index:9999;
       width:58px;height:58px;border-radius:50%;
-      background:none;
+      background:#1a1218;
       border:2px solid #c9a96e;cursor:pointer;
       display:flex;align-items:center;justify-content:center;
       box-shadow:0 4px 20px rgba(0,0,0,.4);
@@ -41,6 +41,7 @@
     #vdl-fab.visible{opacity:1;pointer-events:auto;}
     #vdl-fab.open { background:linear-gradient(135deg,#8b1a2a 0%,#c0392b 100%); border-color:#e8849a; }
     #vdl-fab.open svg { display:none; }
+    #vdl-fab.open img { display:none; }
     #vdl-fab-close-icon { display:none; font-size:22px; color:#fff; line-height:1; }
     #vdl-fab.open #vdl-fab-close-icon { display:block; }
 
