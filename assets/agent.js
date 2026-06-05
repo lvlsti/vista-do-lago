@@ -255,8 +255,8 @@
   lightbox.id = 'vdl-lightbox';
   lightbox.innerHTML = '<button id="vdl-lightbox-close">✕</button><img id="vdl-lightbox-img" src="" alt=""><div id="vdl-lightbox-name"></div>';
   document.body.appendChild(lightbox);
-  document.getElementById('vdl-lightbox-close').addEventListener('click', function(){ lightbox.classList.remove('show'); });
-  lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lightbox.classList.remove('show'); });
+  document.getElementById('vdl-lightbox-close').addEventListener('click', function(e){ e.stopPropagation(); lightbox.classList.remove('show'); });
+  lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lightbox.classList.remove('show'); e.stopPropagation(); });
 
   function openLightbox(url, name) {
     document.getElementById('vdl-lightbox-img').src = url;
@@ -416,7 +416,7 @@
         footer.appendChild(expandSpan);
         photoCard.appendChild(imgEl);
         photoCard.appendChild(footer);
-        photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
+        photoCard.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(imgUrl, imgName); });
         msgContainer.appendChild(photoCard);
         msgContainer.scrollTop = msgContainer.scrollHeight;
         console.log('[VDL] photoCard criado, img.src:', imgEl.src);
