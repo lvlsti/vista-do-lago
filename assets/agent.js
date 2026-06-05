@@ -252,6 +252,7 @@
       hideTyping();
       const reply = data.reply || data.message || "...";
       addMsg(reply, "bot");
+      console.log('[VDL] single_image:', JSON.stringify(data.single_image), '| keys:', Object.keys(data).join(','));
       // Mostrar cards ou foto individual
       if (data.cards && data.cards.length) {
         addCards(data.cards);
