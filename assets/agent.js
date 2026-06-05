@@ -333,6 +333,8 @@
         imgDiv.innerHTML = '<img src="' + data.single_image.url.replace(/ /g, '%20') + '" alt="' + (data.single_image.name||'Bangalô') + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
         msgContainer.appendChild(imgDiv);
         msgContainer.scrollTop = msgContainer.scrollHeight;
+        var imgEl = imgDiv.querySelector('img');
+        if (imgEl) imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
       }
       history.push({ role: "assistant", content: reply });
     } catch (e) {
