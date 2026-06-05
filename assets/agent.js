@@ -163,6 +163,48 @@
       font-family:inherit;transition:background .2s;
     }
     #vdl-wa-btn:hover{background:#f0faf4;}
+
+    /* Foto card */
+    .vdl-photo-card{
+      align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;
+      box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;position:relative;
+      margin-top:4px;transition:transform .2s ease;
+    }
+    .vdl-photo-card:hover{transform:scale(1.02);}
+    .vdl-photo-card img{width:100%;height:140px;object-fit:cover;display:block;}
+    .vdl-photo-card-footer{
+      padding:8px 10px;background:#fff;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .vdl-photo-card-name{font-size:11px;font-weight:700;color:#1a1218;letter-spacing:.5px;}
+    .vdl-photo-card-expand{font-size:10px;color:#c9a96e;font-weight:600;letter-spacing:.5px;}
+
+    /* Lightbox */
+    #vdl-lightbox{
+      position:fixed;inset:0;z-index:99999;
+      background:rgba(0,0,0,.88);
+      display:flex;align-items:center;justify-content:center;
+      opacity:0;pointer-events:none;transition:opacity .25s ease;
+    }
+    #vdl-lightbox.show{opacity:1;pointer-events:auto;}
+    #vdl-lightbox img{
+      max-width:92vw;max-height:85vh;border-radius:10px;
+      box-shadow:0 8px 40px rgba(0,0,0,.5);
+      transform:scale(.92);transition:transform .25s ease;
+    }
+    #vdl-lightbox.show img{transform:scale(1);}
+    #vdl-lightbox-close{
+      position:absolute;top:20px;right:24px;
+      color:#fff;font-size:28px;cursor:pointer;
+      background:none;border:none;line-height:1;opacity:.8;
+    }
+    #vdl-lightbox-close:hover{opacity:1;}
+    #vdl-lightbox-name{
+      position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+      color:#fff;font-size:13px;font-weight:600;letter-spacing:1px;
+      background:rgba(0,0,0,.45);padding:6px 16px;border-radius:20px;
+      white-space:nowrap;
+    }
   `;
   document.head.appendChild(style);
 
@@ -207,6 +249,20 @@
   document.body.appendChild(fab);
   document.body.appendChild(toast);
   document.body.appendChild(chat);
+
+  // Lightbox
+  var lightbox = document.createElement('div');
+  lightbox.id = 'vdl-lightbox';
+  lightbox.innerHTML = '<button id="vdl-lightbox-close">✕</button><img id="vdl-lightbox-img" src="" alt=""><div id="vdl-lightbox-name"></div>';
+  document.body.appendChild(lightbox);
+  document.getElementById('vdl-lightbox-close').addEventListener('click', function(){ lightbox.classList.remove('show'); });
+  lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lightbox.classList.remove('show'); });
+
+  function openLightbox(url, name) {
+    document.getElementById('vdl-lightbox-img').src = url;
+    document.getElementById('vdl-lightbox-name').textContent = name || '';
+    lightbox.classList.add('show');
+  }
 
   const msgContainer = chat.querySelector("#vdl-messages");
 
@@ -327,13 +383,15 @@
       console.log('[VDL] single_image:', JSON.stringify(data.single_image), '| keys:', Object.keys(data).join(','));
       if (data.cards && data.cards.length) { addCards(data.cards); }
       if (data.single_image && data.single_image.url) {
-        var imgDiv = document.createElement('div');
-        imgDiv.className = 'vdl-msg bot';
-        imgDiv.style.cssText = 'padding:0;overflow:hidden;border-radius:14px;max-width:260px;';
-        imgDiv.innerHTML = '<img src="' + data.single_image.url.replace(/ /g, '%20') + '" alt="' + (data.single_image.name||'Bangalô') + '" style="width:100%;display:block;border-radius:14px;" loading="lazy">';
-        msgContainer.appendChild(imgDiv);
+        var imgUrl = data.single_image.url.replace(/ /g, '%20');
+        var imgName = data.single_image.name || 'Bangalô';
+        var photoCard = document.createElement('div');
+        photoCard.className = 'vdl-photo-card';
+        photoCard.innerHTML = '<img src="' + imgUrl + '" alt="' + imgName + '" loading="lazy"><div class="vdl-photo-card-footer"><span class="vdl-photo-card-name">' + imgName + '</span><span class="vdl-photo-card-expand">🔍 Ampliar</span></div>';
+        photoCard.addEventListener('click', function(){ openLightbox(imgUrl, imgName); });
+        msgContainer.appendChild(photoCard);
         msgContainer.scrollTop = msgContainer.scrollHeight;
-        var imgEl = imgDiv.querySelector('img');
+        var imgEl = photoCard.querySelector('img');
         if (imgEl) imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
       }
       history.push({ role: "assistant", content: reply });
