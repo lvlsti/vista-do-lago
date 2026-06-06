@@ -467,6 +467,7 @@
           msgContainer.appendChild(carousel);
         }
         msgContainer.scrollTop = msgContainer.scrollHeight;
+      }
       history.push({ role: "assistant", content: reply });
     } catch (e) {
       hideTyping();
