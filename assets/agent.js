@@ -258,11 +258,19 @@
   document.getElementById('vdl-lightbox-close').addEventListener('click', function(e){ e.stopPropagation(); lightbox.classList.remove('show'); });
   lightbox.addEventListener('click', function(e){ if(e.target === lightbox) lightbox.classList.remove('show'); e.stopPropagation(); });
 
-  function openLightbox(url, name) {
-    document.getElementById('vdl-lightbox-img').src = url;
-    document.getElementById('vdl-lightbox-name').textContent = name || '';
+  var lbUrls = [], lbIdx = 0;
+  function openLightbox(url, name, urls, idx) {
+    lbUrls = urls || [url]; lbIdx = idx || 0;
+    document.getElementById('vdl-lightbox-img').src = lbUrls[lbIdx].replace(/ /g,'%20');
+    document.getElementById('vdl-lightbox-name').textContent = (name || '') + (lbUrls.length > 1 ? ' (' + (lbIdx+1) + '/' + lbUrls.length + ')' : '');
     lightbox.classList.add('show');
   }
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('show')) return;
+    if (e.key === 'ArrowRight' && lbUrls.length > 1){ lbIdx=(lbIdx+1)%lbUrls.length; openLightbox(lbUrls[lbIdx],'',lbUrls,lbIdx); }
+    if (e.key === 'ArrowLeft' && lbUrls.length > 1){ lbIdx=(lbIdx-1+lbUrls.length)%lbUrls.length; openLightbox(lbUrls[lbIdx],'',lbUrls,lbIdx); }
+    if (e.key === 'Escape') lightbox.classList.remove('show');
+  });
 
   const msgContainer = chat.querySelector("#vdl-messages");
 
@@ -386,49 +394,79 @@
       if (data.single_image && data.single_image.noPhoto) {
         var noPhotoMsgs = {
           pt: '📸 Ainda não temos fotos do ' + data.single_image.name + ' cadastradas, mas posso te contar tudo sobre ele! Quer saber mais detalhes?',
-          en: '📸 We don\'t have photos of ' + data.single_image.name + ' yet, but I can tell you all about it! Want to know more?',
-          es: '📸 Aún no tenemos fotos del ' + data.single_image.name + ', pero puedo contarte todo sobre él. ¿Quieres saber más?'
+          en: 'We don\'t have photos of ' + data.single_image.name + ' yet, but I can tell you all about it! Want to know more?',
+          es: 'Aún no tenemos fotos del ' + data.single_image.name + ', pero puedo contarte todo sobre él. ¿Quieres saber más?'
         };
         addMsg(noPhotoMsgs[prev_lang] || noPhotoMsgs['pt'], 'bot');
-      } else if (data.single_image && data.single_image.url) {
-        var imgUrl = data.single_image.url.replace(/ /g, '%20');
+      } else if (data.single_image && (data.single_image.url || (data.single_image.urls && data.single_image.urls.length))) {
         var imgName = data.single_image.name || 'Bangalô';
-        // Card container — flex-shrink:0 prevents the flex-column from squashing it to 0px height
-        var photoCard = document.createElement('div');
-        photoCard.style.cssText = 'flex-shrink:0;align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;';
-        // Imagem
-        var imgEl = document.createElement('img');
-        imgEl.alt = imgName;
-        imgEl.loading = 'lazy';
-        imgEl.referrerPolicy = 'no-referrer';
-        imgEl.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;background:#ece6df;';
-        imgEl.onload = function() { msgContainer.scrollTop = msgContainer.scrollHeight; };
-        imgEl.onerror = function() {
-          var fb = document.createElement('a');
-          fb.href = imgUrl; fb.target = '_blank'; fb.rel = 'noopener';
-          fb.textContent = '🖼️ ' + imgName + ' — ver foto ↗';
-          fb.style.cssText = 'display:block;padding:14px;font:600 12px Montserrat,sans-serif;color:#1a1218;background:#fff;text-decoration:none;';
-          photoCard.replaceChildren(fb);
-        };
-        imgEl.src = imgUrl;
-        // Footer
-        var footer = document.createElement('div');
-        footer.style.cssText = 'padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;';
-        var nameSpan = document.createElement('span');
-        nameSpan.style.cssText = 'font-size:11px;font-weight:700;color:#1a1218;font-family:Montserrat,sans-serif;';
-        nameSpan.textContent = imgName;
-        var expandSpan = document.createElement('span');
-        expandSpan.style.cssText = 'font-size:10px;color:#c9a96e;font-weight:600;font-family:Montserrat,sans-serif;';
-        expandSpan.textContent = '🔍 Ampliar';
-        footer.appendChild(nameSpan);
-        footer.appendChild(expandSpan);
-        photoCard.appendChild(imgEl);
-        photoCard.appendChild(footer);
-        photoCard.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(imgUrl, imgName); });
-        msgContainer.appendChild(photoCard);
+        // Suporte a array de URLs (carrossel) ou URL única
+        var imgUrls = data.single_image.urls || (data.single_image.url ? [data.single_image.url] : []);
+        imgUrls = imgUrls.map(function(u){ return u.replace(/ /g, '%20'); });
+        if (imgUrls.length === 0) return;
+
+        if (imgUrls.length === 1) {
+          // Foto única — card simples
+          var photoCard = document.createElement('div');
+          photoCard.style.cssText = 'flex-shrink:0;align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);cursor:pointer;margin-top:4px;';
+          var imgEl = document.createElement('img');
+          imgEl.alt = imgName; imgEl.loading = 'lazy'; imgEl.referrerPolicy = 'no-referrer';
+          imgEl.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;background:#ece6df;';
+          imgEl.onload = function(){ msgContainer.scrollTop = msgContainer.scrollHeight; };
+          imgEl.onerror = function(){
+            var fb = document.createElement('a');
+            fb.href = imgUrls[0]; fb.target = '_blank'; fb.rel = 'noopener';
+            fb.textContent = '🖼️ ' + imgName + ' — ver foto ↗';
+            fb.style.cssText = 'display:block;padding:14px;font:600 12px Montserrat,sans-serif;color:#1a1218;background:#fff;text-decoration:none;';
+            photoCard.replaceChildren(fb);
+          };
+          imgEl.src = imgUrls[0];
+          var footer = document.createElement('div');
+          footer.style.cssText = 'padding:8px 10px;background:#fff;display:flex;align-items:center;justify-content:space-between;';
+          var nameSpan = document.createElement('span');
+          nameSpan.style.cssText = 'font-size:11px;font-weight:700;color:#1a1218;font-family:Montserrat,sans-serif;';
+          nameSpan.textContent = imgName;
+          var expandSpan = document.createElement('span');
+          expandSpan.style.cssText = 'font-size:10px;color:#c9a96e;font-weight:600;font-family:Montserrat,sans-serif;';
+          expandSpan.textContent = '🔍 Ampliar';
+          footer.appendChild(nameSpan); footer.appendChild(expandSpan);
+          photoCard.appendChild(imgEl); photoCard.appendChild(footer);
+          photoCard.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(imgUrls[0], imgName, imgUrls, 0); });
+          msgContainer.appendChild(photoCard);
+        } else {
+          // Carrossel
+          var carousel = document.createElement('div');
+          carousel.style.cssText = 'flex-shrink:0;align-self:flex-start;max-width:220px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);margin-top:4px;background:#1a1218;';
+          var carIdx = 0;
+          var carImg = document.createElement('img');
+          carImg.referrerPolicy = 'no-referrer'; carImg.loading = 'lazy';
+          carImg.style.cssText = 'width:100%;height:140px;object-fit:cover;display:block;background:#ece6df;';
+          carImg.src = imgUrls[0];
+          // Setas
+          var carNav = document.createElement('div');
+          carNav.style.cssText = 'display:flex;align-items:center;justify-content:space-between;padding:6px 10px;background:#fff;';
+          var btnPrev = document.createElement('button');
+          btnPrev.style.cssText = 'background:none;border:none;cursor:pointer;font-size:16px;color:#1a1218;padding:0 4px;';
+          btnPrev.textContent = '‹';
+          var carCounter = document.createElement('span');
+          carCounter.style.cssText = 'font-size:11px;font-weight:700;color:#1a1218;font-family:Montserrat,sans-serif;';
+          carCounter.textContent = imgName + ' (1/' + imgUrls.length + ')';
+          var btnNext = document.createElement('button');
+          btnNext.style.cssText = 'background:none;border:none;cursor:pointer;font-size:16px;color:#1a1218;padding:0 4px;';
+          btnNext.textContent = '›';
+          var expandBtn = document.createElement('span');
+          expandBtn.style.cssText = 'font-size:10px;color:#c9a96e;font-weight:600;font-family:Montserrat,sans-serif;cursor:pointer;';
+          expandBtn.textContent = '🔍';
+          function updateCar(){ carImg.src = imgUrls[carIdx]; carCounter.textContent = imgName + ' (' + (carIdx+1) + '/' + imgUrls.length + ')'; }
+          btnPrev.addEventListener('click', function(e){ e.stopPropagation(); carIdx = (carIdx - 1 + imgUrls.length) % imgUrls.length; updateCar(); });
+          btnNext.addEventListener('click', function(e){ e.stopPropagation(); carIdx = (carIdx + 1) % imgUrls.length; updateCar(); });
+          expandBtn.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(imgUrls[carIdx], imgName, imgUrls, carIdx); });
+          carNav.appendChild(btnPrev); carNav.appendChild(carCounter); carNav.appendChild(expandBtn); carNav.appendChild(btnNext);
+          carousel.appendChild(carImg); carousel.appendChild(carNav);
+          carousel.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(imgUrls[carIdx], imgName, imgUrls, carIdx); });
+          msgContainer.appendChild(carousel);
+        }
         msgContainer.scrollTop = msgContainer.scrollHeight;
-        console.log('[VDL] photoCard criado, img.src:', imgEl.src);
-      }
       history.push({ role: "assistant", content: reply });
     } catch (e) {
       hideTyping();
