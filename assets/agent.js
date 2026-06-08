@@ -19,21 +19,28 @@
   if (!sessionId) { sessionId = "s_" + Date.now() + "_" + Math.random().toString(36).slice(2, 8); sessionStorage.setItem("vdl_session", sessionId); }
 
   let history = [];
-  let summarySent = false;
+  let lastSummaryCount = 0;
+  let lastSummaryAt = 0;
 
   function sendConversationSummary(reason) {
     try {
-      if (summarySent) return;
       if (!history || history.length === 0) return;
-      var flagKey = "vdl_summary_sent_" + sessionId;
-      if (sessionStorage.getItem(flagKey)) return;
-      summarySent = true;
-      sessionStorage.setItem(flagKey, "1");
+      // Só reenvia se houver mensagens novas desde o último envio (evita spam)
+      if (history.length <= lastSummaryCount) return;
+      var now = Date.now();
+      // Evita disparos múltiplos em sequência rápida (ex: pagehide + beforeunload juntos)
+      if (now - lastSummaryAt < 15000) return;
+      lastSummaryCount = history.length;
+      lastSummaryAt = now;
       var payload = JSON.stringify({ sessionId: sessionId, lang: LANG, reason: reason, history: history });
+      var sent = false;
       if (navigator.sendBeacon) {
-        var blob = new Blob([payload], { type: "application/json" });
-        navigator.sendBeacon(N8N_WEBHOOK_FIM, blob);
-      } else {
+        try {
+          var blob = new Blob([payload], { type: "application/json" });
+          sent = navigator.sendBeacon(N8N_WEBHOOK_FIM, blob);
+        } catch (e2) { sent = false; }
+      }
+      if (!sent) {
         fetch(N8N_WEBHOOK_FIM, { method: "POST", headers: { "Content-Type": "application/json" }, body: payload, keepalive: true }).catch(function(){});
       }
     } catch (e) { /* silencioso — não deve afetar a experiência do usuário */ }
@@ -539,6 +546,11 @@
   if (document.readyState === "complete") { calcThreshold(); checkFab(); }
 
   // Envia o resumo da conversa quando o visitante sai do site (fecha aba, navega para fora, etc.)
+  // Em celulares, "pagehide"/"beforeunload" nem sempre disparam (app fechado, troca de app, etc.),
+  // por isso usamos também a Page Visibility API, que é o sinal mais confiável em mobile.
   window.addEventListener("pagehide", function() { sendConversationSummary("saiu_do_site"); });
   window.addEventListener("beforeunload", function() { sendConversationSummary("saiu_do_site"); });
+  document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "hidden") sendConversationSummary("saiu_do_site");
+  });
 })();
