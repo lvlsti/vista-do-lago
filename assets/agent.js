@@ -29,7 +29,8 @@
       if (history.length <= lastSummaryCount) return;
       var now = Date.now();
       // Evita disparos múltiplos em sequência rápida (ex: pagehide + beforeunload juntos)
-      if (now - lastSummaryAt < 15000) return;
+      // O fechamento explícito pelo botão (fechou_chat) sempre envia — throttle só em eventos passivos
+      if (reason !== "fechou_chat" && now - lastSummaryAt < 15000) return;
       lastSummaryCount = history.length;
       lastSummaryAt = now;
       var payload = JSON.stringify({ sessionId: sessionId, lang: LANG, reason: reason, history: history });
