@@ -4,6 +4,7 @@
    ============================================================ */
 (function () {
   const N8N_WEBHOOK = "https://n8n.lvl-solucoesti.com/webhook/agente-vista";
+  const N8N_WEBHOOK_FIM = "https://n8n.lvl-solucoesti.com/webhook/agente-vista-fim";
   const WA_URL = "https://api.whatsapp.com/send?phone=5592984545630&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Vista%20do%20Lago%20Jungle%20Lodge!";
   const LANG = localStorage.getItem("vdl_lang") || navigator.language.slice(0, 2) || "en";
 
@@ -18,6 +19,25 @@
   if (!sessionId) { sessionId = "s_" + Date.now() + "_" + Math.random().toString(36).slice(2, 8); sessionStorage.setItem("vdl_session", sessionId); }
 
   let history = [];
+  let summarySent = false;
+
+  function sendConversationSummary(reason) {
+    try {
+      if (summarySent) return;
+      if (!history || history.length === 0) return;
+      var flagKey = "vdl_summary_sent_" + sessionId;
+      if (sessionStorage.getItem(flagKey)) return;
+      summarySent = true;
+      sessionStorage.setItem(flagKey, "1");
+      var payload = JSON.stringify({ sessionId: sessionId, lang: LANG, reason: reason, history: history });
+      if (navigator.sendBeacon) {
+        var blob = new Blob([payload], { type: "application/json" });
+        navigator.sendBeacon(N8N_WEBHOOK_FIM, blob);
+      } else {
+        fetch(N8N_WEBHOOK_FIM, { method: "POST", headers: { "Content-Type": "application/json" }, body: payload, keepalive: true }).catch(function(){});
+      }
+    } catch (e) { /* silencioso — não deve afetar a experiência do usuário */ }
+  }
   let isOpen = false;
   let isTyping = false;
   let toastShown = false;
@@ -352,6 +372,7 @@
   }
 
   function closeChat() {
+    if (history.length > 0) sendConversationSummary("fechou_chat");
     isOpen = false;
     chat.classList.remove("open");
     fab.classList.remove("open");
@@ -516,4 +537,8 @@
   window.addEventListener("scroll", checkFab, { passive: true });
   window.addEventListener("resize", function() { calcThreshold(); checkFab(); });
   if (document.readyState === "complete") { calcThreshold(); checkFab(); }
+
+  // Envia o resumo da conversa quando o visitante sai do site (fecha aba, navega para fora, etc.)
+  window.addEventListener("pagehide", function() { sendConversationSummary("saiu_do_site"); });
+  window.addEventListener("beforeunload", function() { sendConversationSummary("saiu_do_site"); });
 })();
