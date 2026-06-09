@@ -25,12 +25,19 @@
   function sendConversationSummary(reason) {
     try {
       if (!history || history.length === 0) return;
-      // Só reenvia se houver mensagens novas desde o último envio (evita spam)
-      if (history.length <= lastSummaryCount) return;
       var now = Date.now();
-      // Evita disparos múltiplos em sequência rápida (ex: pagehide + beforeunload juntos)
-      // O fechamento explícito pelo botão (fechou_chat) sempre envia — throttle só em eventos passivos
-      if (reason !== "fechou_chat" && now - lastSummaryAt < 15000) return;
+      if (reason === "fechou_chat") {
+        // Fechamento explícito: sempre envia (ignora throttle e contagem)
+        // Único bloqueio: evita duplo disparo em menos de 3s
+        if (now - lastSummaryAt < 3000) return;
+      } else {
+        // Eventos passivos (pagehide, beforeunload, visibilitychange):
+        // só envia se houver mensagens novas E não disparou nos últimos 15s
+        if (history.length <= lastSummaryCount) return;
+        if (now - lastSummaryAt < 15000) return;
+      }
+      lastSummaryCount = history.length;
+      lastSummaryAt = now;
       lastSummaryCount = history.length;
       lastSummaryAt = now;
       var payload = JSON.stringify({ sessionId: sessionId, lang: LANG, reason: reason, history: history });
