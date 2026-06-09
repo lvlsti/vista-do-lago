@@ -588,10 +588,10 @@
       // ── Múltiplos bangalôs: comparação lado a lado ─────────────────────
       if (data.multi_images && data.multi_images.length >= 2) {
         var strip = document.createElement('div');
-        strip.style.cssText = 'align-self:flex-start;display:flex;gap:10px;overflow-x:auto;padding:4px 0 8px 0;max-width:100%;scroll-snap-type:x mandatory;';
+        strip.style.cssText = 'align-self:stretch;display:flex;gap:8px;padding:4px 0 8px 0;width:100%;';
         data.multi_images.forEach(function(mi) {
           var card = document.createElement('div');
-          card.style.cssText = 'flex-shrink:0;width:160px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);background:#fff;scroll-snap-align:start;cursor:pointer;';
+          card.style.cssText = 'flex:1 1 0;min-width:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);background:#fff;cursor:pointer;';
           var imgEl2 = document.createElement('img');
           imgEl2.loading = 'lazy'; imgEl2.referrerPolicy = 'no-referrer';
           imgEl2.style.cssText = 'width:100%;height:110px;object-fit:cover;display:block;background:#ece6df;';
