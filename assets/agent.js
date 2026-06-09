@@ -538,6 +538,48 @@
         }
         msgContainer.scrollTop = msgContainer.scrollHeight;
       }
+
+      // ── Múltiplos bangalôs: comparação lado a lado ─────────────────────
+      if (data.multi_images && data.multi_images.length >= 2) {
+        var strip = document.createElement('div');
+        strip.style.cssText = 'align-self:flex-start;display:flex;gap:10px;overflow-x:auto;padding:4px 0 8px 0;max-width:100%;scroll-snap-type:x mandatory;';
+        data.multi_images.forEach(function(mi) {
+          var card = document.createElement('div');
+          card.style.cssText = 'flex-shrink:0;width:160px;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.15);background:#fff;scroll-snap-align:start;cursor:pointer;';
+          var imgEl2 = document.createElement('img');
+          imgEl2.loading = 'lazy'; imgEl2.referrerPolicy = 'no-referrer';
+          imgEl2.style.cssText = 'width:100%;height:110px;object-fit:cover;display:block;background:#ece6df;';
+          var urls2 = (mi.urls || []).map(function(u){ return u.replace(/ /g,'%20'); });
+          if (mi.noPhoto || urls2.length === 0) {
+            imgEl2.style.cssText += 'display:none;';
+            var noImg = document.createElement('div');
+            noImg.style.cssText = 'width:100%;height:110px;display:flex;align-items:center;justify-content:center;background:#f0ebe4;font-size:28px;';
+            noImg.textContent = '🌿';
+            card.appendChild(noImg);
+          } else {
+            imgEl2.src = urls2[0];
+            imgEl2.onload = function(){ msgContainer.scrollTop = msgContainer.scrollHeight; };
+            card.appendChild(imgEl2);
+          }
+          var footer2 = document.createElement('div');
+          footer2.style.cssText = 'padding:6px 8px;';
+          var nameEl = document.createElement('div');
+          nameEl.style.cssText = 'font-size:11px;font-weight:700;color:#1a1218;font-family:Montserrat,sans-serif;margin-bottom:4px;';
+          nameEl.textContent = mi.name;
+          var verBtn = document.createElement('div');
+          verBtn.style.cssText = 'font-size:10px;color:#c9a96e;font-weight:600;font-family:Montserrat,sans-serif;';
+          verBtn.textContent = urls2.length > 1 ? '🔍 ' + urls2.length + ' fotos' : (urls2.length === 1 ? '🔍 Ver foto' : '📸 Sem foto');
+          footer2.appendChild(nameEl); footer2.appendChild(verBtn);
+          card.appendChild(footer2);
+          if (urls2.length > 0) {
+            (function(u, n){ card.addEventListener('click', function(e){ e.stopPropagation(); openLightbox(u[0], n, u, 0); }); })(urls2, mi.name);
+          }
+          strip.appendChild(card);
+        });
+        msgContainer.appendChild(strip);
+        msgContainer.scrollTop = msgContainer.scrollHeight;
+      }
+
       history.push({ role: "assistant", content: reply });
     } catch (e) {
       hideTyping();
