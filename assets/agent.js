@@ -59,7 +59,7 @@
       var sent = false;
       if (navigator.sendBeacon) {
         try {
-          var blob = new Blob([payload], { type: "application/json" });
+          var blob = new Blob([payload], { type: "text/plain;charset=UTF-8" });
           sent = navigator.sendBeacon(N8N_WEBHOOK_FIM, blob);
         } catch (e2) { sent = false; }
       }
