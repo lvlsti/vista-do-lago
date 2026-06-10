@@ -693,11 +693,6 @@
   if (document.readyState === "complete") { calcThreshold(); checkFab(); }
 
   // Envia o resumo da conversa quando o visitante sai do site (fecha aba, navega para fora, etc.)
-  // Em celulares, "pagehide"/"beforeunload" nem sempre disparam (app fechado, troca de app, etc.),
-  // por isso usamos também a Page Visibility API, que é o sinal mais confiável em mobile.
   window.addEventListener("pagehide", function() { sendConversationSummary("saiu_do_site"); });
   window.addEventListener("beforeunload", function() { sendConversationSummary("saiu_do_site"); });
-  document.addEventListener("visibilitychange", function() {
-    if (document.visibilityState === "hidden") sendConversationSummary("saiu_do_site");
-  });
 })();
