@@ -627,8 +627,6 @@
       }
 
       history.push({ role: "assistant", content: reply });
-      // Envia resumo periódico após cada 2 trocas (4 mensagens) para garantir recebimento por email
-      if (history.length >= 4) sendConversationSummary("durante_conversa");
     } catch (e) {
       if (abortTimer) clearTimeout(abortTimer);
       hideTyping();
