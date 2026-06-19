@@ -1124,9 +1124,12 @@
     "post.parintins.p8":"Here's the thing: Parintins is a destination in its own right, but to get there you'll be flying into Manaus anyway, the gateway to the Amazon. So why stop at the festival? Before or after all the colour and noise of the Bumbódromo, come and see the quieter side of the Amazon: the hush of the rainforest, the dark mirror of the Rio Negro, the easy warmth of a river community. Vista do Lago Jungle Lodge sits about an hour and a half from Manaus, in the Acajatuba community on the Rio Negro. It's the perfect place to slow right down, swim with pink dolphins and just breathe the jungle, either side of the festival.",
     "post.parintins.cta":"Come for the festival, stay for the Amazon. Pair the rush of Parintins with a few slow days deep in the Rio Negro at Vista do Lago Jungle Lodge, your base for the real Amazon, right outside Manaus.",
     "post.parintins.ctabtn":"Book Your Stay",
-    "post.parintins.cap1":"The Bumbódromo packed out on a festival night. Photo: Yesydrodriguez / Wikimedia Commons (CC BY-SA 3.0).",
-    "post.parintins.cap2":"A giant allegorical float down on the arena floor. Photo: Alexey Kurilenko / Wikimedia Commons (CC BY 2.0).",
-    "post.parintins.credit":"Cover photo: MTur Destinos / Wikimedia Commons (public domain). Bull photo: Ministério da Cultura / Wikimedia Commons (CC BY 2.0)."
+    "post.parintins.cap1":"The Bumbódromo of Parintins lit up, seen from above on a festival night.",
+    "post.parintins.cap2":"Boi Garantido in full swing, its red crowd behind it.",
+    "post.parintins.toadah":"Hear the Sound of Parintins",
+    "post.parintins.toadap":"The festival doesn't just fill your eyes — it gets into your chest. The toadas are the songs that drive the arena, sung by thousands at once. Press play on the one that carried Parintins to the world:",
+    "post.parintins.toadacap":"\"Tic, Tic, Tac\" by Carrapicho — a toada written for Boi Garantido that became a worldwide hit in the 1990s.",
+    "post.parintins.credit":"Photos: Festival Folclórico de Parintins (promotional)."
   });
   Object.assign(I18N.es, {
     "blog.p4.title":"Festival de Parintins 2026: El Mayor Espectáculo de la Amazonia",
@@ -1158,9 +1161,12 @@
     "post.parintins.p8":"La cosa es así: Parintins es un destino por derecho propio, pero para llegar igual vas a volar a Manaos, la puerta de entrada a la Amazonia. ¿Entonces por qué quedarte solo en el festival? Antes o después del color y el ruido del Bumbódromo, ven a conocer el otro lado de la Amazonia: el silencio de la selva, el espejo oscuro del Río Negro, la calidez sencilla de una comunidad ribereña. Vista do Lago Jungle Lodge está a cerca de una hora y media de Manaos, en la comunidad de Acajatuba, en el Río Negro. Es el lugar ideal para bajar el ritmo, nadar con delfines rosados y respirar la selva, antes o después del festival.",
     "post.parintins.cta":"Ven por el festival, quédate por la Amazonia. Combina la adrenalina de Parintins con unos días tranquilos en pleno Río Negro en Vista do Lago Jungle Lodge, tu base para la Amazonia de verdad, a las puertas de Manaos.",
     "post.parintins.ctabtn":"Reserva Tu Estadía",
-    "post.parintins.cap1":"El Bumbódromo a reventar en una noche de festival. Foto: Yesydrodriguez / Wikimedia Commons (CC BY-SA 3.0).",
-    "post.parintins.cap2":"Un carro alegórico gigante en el suelo de la arena. Foto: Alexey Kurilenko / Wikimedia Commons (CC BY 2.0).",
-    "post.parintins.credit":"Foto de portada: MTur Destinos / Wikimedia Commons (dominio público). Foto del toro: Ministério da Cultura / Wikimedia Commons (CC BY 2.0)."
+    "post.parintins.cap1":"El Bumbódromo de Parintins iluminado, visto desde lo alto en una noche de festival.",
+    "post.parintins.cap2":"El Boi Garantido en plena evolución, con su hinchada roja al fondo.",
+    "post.parintins.toadah":"Escucha el Sonido de Parintins",
+    "post.parintins.toadap":"El festival no solo te llena los ojos — se te mete en el pecho. Las toadas son las canciones que mueven la arena, cantadas por miles a la vez. Dale play a la que llevó Parintins al mundo:",
+    "post.parintins.toadacap":"\"Tic, Tic, Tac\" de Carrapicho — una toada escrita para el Boi Garantido que se volvió un éxito mundial en los años 90.",
+    "post.parintins.credit":"Fotos: divulgación / Festival Folclórico de Parintins."
   });
   Object.assign(I18N.pt, {
     "blog.p4.title":"Festival de Parintins 2026: O Maior Espetáculo da Amazônia",
@@ -1192,8 +1198,11 @@
     "post.parintins.p8":"A questão é a seguinte: Parintins é um destino por si só, mas pra chegar lá você já vai voar até Manaus, a porta de entrada da Amazônia. Então por que parar no festival? Antes ou depois da cor e do barulho do Bumbódromo, venha conhecer o outro lado da Amazônia: o silêncio da floresta, o espelho escuro do Rio Negro, o acolhimento simples de uma comunidade ribeirinha. A Vista do Lago Jungle Lodge fica a cerca de uma hora e meia de Manaus, na comunidade de Acajatuba, no Rio Negro. É o lugar certo pra desacelerar de vez, nadar com botos e só respirar a floresta, antes ou depois do festival.",
     "post.parintins.cta":"Venha pelo festival e fique pela Amazônia. Junte a agitação de Parintins a uns dias tranquilos no coração do Rio Negro na Vista do Lago Jungle Lodge, sua base para a Amazônia de verdade, pertinho de Manaus.",
     "post.parintins.ctabtn":"Reserve Sua Estadia",
-    "post.parintins.cap1":"O Bumbódromo lotado numa noite de festival. Foto: Yesydrodriguez / Wikimedia Commons (CC BY-SA 3.0).",
-    "post.parintins.cap2":"Uma alegoria gigante no chão da arena. Foto: Alexey Kurilenko / Wikimedia Commons (CC BY 2.0).",
-    "post.parintins.credit":"Foto da capa: MTur Destinos / Wikimedia Commons (domínio público). Foto do boi: Ministério da Cultura / Wikimedia Commons (CC BY 2.0)."
+    "post.parintins.cap1":"O Bumbódromo de Parintins iluminado, visto do alto numa noite de festival.",
+    "post.parintins.cap2":"O Boi Garantido em plena evolução, com a galera vermelha ao fundo.",
+    "post.parintins.toadah":"Ouça o Som de Parintins",
+    "post.parintins.toadap":"O festival não enche só os olhos — ele entra no peito. As toadas são as músicas que movem a arena, cantadas por milhares ao mesmo tempo. Dá o play na que levou Parintins pro mundo:",
+    "post.parintins.toadacap":"\"Tic, Tic, Tac\", do Carrapicho — uma toada escrita para o Boi Garantido que virou sucesso mundial nos anos 90.",
+    "post.parintins.credit":"Fotos: divulgação / Festival Folclórico de Parintins."
   });
 })();
