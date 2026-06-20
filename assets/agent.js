@@ -70,18 +70,24 @@
   }
   let isOpen = false;
   let isTyping = false;
-  let toastShown = false;
+  let toastStarted = false;
 
-  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" id="vdl-fab-img" style="object-fit:cover;border-radius:50%;" alt="Boto">';
+  const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" style="object-fit:cover;border-radius:50%;" alt="Boto">';
+  const FAB_IMG = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" style="width:30px;height:30px;display:block;" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.5z"/><circle cx="8.5" cy="11.7" r="1.1" fill="#fff" stroke="none"/><circle cx="12" cy="11.7" r="1.1" fill="#fff" stroke="none"/><circle cx="15.5" cy="11.7" r="1.1" fill="#fff" stroke="none"/></svg>';
 
   // --- CSS ---
   const style = document.createElement("style");
   style.textContent = `
+    @keyframes vdlGlow {
+      0%   { box-shadow:0 4px 16px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,.55); }
+      70%  { box-shadow:0 4px 16px rgba(0,0,0,.35), 0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow:0 4px 16px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,0); }
+    }
     #vdl-fab {
       position:fixed;bottom:28px;right:28px;z-index:9999;
       width:58px;height:58px;border-radius:50%;
-      background:#1a1218;
-      border:2px solid #c9a96e;cursor:pointer;
+      background:#25D366;
+      border:2px solid #1faa54;cursor:pointer;
       display:flex;align-items:center;justify-content:center;
       box-shadow:0 4px 20px rgba(0,0,0,.4);
       transition:transform .3s ease,opacity .4s ease;
@@ -89,11 +95,19 @@
     }
     #vdl-fab:hover{transform:scale(1.08);}
     #vdl-fab.visible{opacity:1;pointer-events:auto;}
-    #vdl-fab.open { background:linear-gradient(135deg,#8b1a2a 0%,#c0392b 100%); border-color:#e8849a; }
+    #vdl-fab.visible:not(.open){ animation:vdlGlow 2.2s ease-out infinite; }
+    #vdl-fab.open { background:linear-gradient(135deg,#8b1a2a 0%,#c0392b 100%); border-color:#e8849a; animation:none; }
     #vdl-fab.open svg { display:none; }
     #vdl-fab.open #vdl-fab-img { display:none !important; }
     #vdl-fab-close-icon { display:none; font-size:22px; color:#fff; line-height:1; }
     #vdl-fab.open #vdl-fab-close-icon { display:block; }
+    #vdl-fab-badge {
+      position:absolute;top:-3px;right:-3px;min-width:18px;height:18px;
+      padding:0 4px;box-sizing:border-box;border-radius:9px;
+      background:#e24b4a;color:#fff;font:700 11px/1 'Montserrat',sans-serif;
+      display:flex;align-items:center;justify-content:center;border:2px solid #fff;
+    }
+    #vdl-fab.open #vdl-fab-badge, #vdl-fab.seen #vdl-fab-badge { display:none; }
 
     /* Toast */
     #vdl-toast {
@@ -275,7 +289,8 @@
   const fab = document.createElement("button");
   fab.id = "vdl-fab";
   fab.setAttribute("aria-label", "Chat com assistente");
-  fab.innerHTML = BOTO_IMG + '<span id="vdl-fab-close-icon">✕</span>';
+  fab.innerHTML = FAB_IMG + '<span id="vdl-fab-close-icon">✕</span><span id="vdl-fab-badge">1</span>';
+  if (localStorage.getItem("vdl_chat_seen")) fab.classList.add("seen");
 
   // Toast
   const toast = document.createElement("div");
@@ -418,13 +433,20 @@
     if (t) t.remove();
   }
 
+  function startToastCycle() {
+    if (toastStarted) return;
+    toastStarted = true;
+    setTimeout(showToast, 800);
+    setInterval(function() {
+      if (!isOpen && fab.classList.contains("visible")) showToast();
+    }, 30000);
+  }
+
   function showToast() {
-    if (toastShown) return;
-    toastShown = true;
-    setTimeout(function() {
-      toast.classList.add("show");
-      setTimeout(function() { hideToast(); }, 5000);
-    }, 800);
+    if (isOpen) return;
+    toast.classList.add("show");
+    clearTimeout(toast._hideTimer);
+    toast._hideTimer = setTimeout(hideToast, 5000);
   }
 
   function hideToast() {
@@ -436,6 +458,9 @@
     isOpen = true;
     chat.classList.add("open");
     fab.classList.add("open");
+    fab.classList.add("seen");
+    try { localStorage.setItem("vdl_chat_seen", "1"); } catch (e) {}
+    hideToast();
     // Mobile: esconder FAB para não sobrepor o input
     if (window.innerWidth <= 520) {
       document.body.style.overflow = "hidden";
@@ -680,7 +705,7 @@
     if (window.scrollY >= threshold) {
       if (!fab.classList.contains("visible")) {
         fab.classList.add("visible");
-        showToast();
+        startToastCycle();
       }
     } else {
       fab.classList.remove("visible");
