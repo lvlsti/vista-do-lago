@@ -73,6 +73,7 @@
   let toastStarted = false;
 
   const BOTO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/boto-icon.png" width="58" height="58" style="object-fit:cover;border-radius:50%;" alt="Boto">';
+  const LOGO_IMG = '<img src="https://raw.githubusercontent.com/lvlsti/vista-do-lago/main/assets/logo-vdl.png" style="width:100%;height:100%;object-fit:contain;display:block;" alt="Vista do Lago Jungle Lodge">';
   const FAB_IMG = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" style="width:30px;height:30px;display:block;" aria-hidden="true"><path d="M20.5 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.5A8 8 0 1 1 20.5 11.5z"/><circle cx="8.5" cy="11.7" r="1.1" fill="#fff" stroke="none"/><circle cx="12" cy="11.7" r="1.1" fill="#fff" stroke="none"/><circle cx="15.5" cy="11.7" r="1.1" fill="#fff" stroke="none"/></svg>';
 
   // --- CSS ---
@@ -155,7 +156,7 @@
       padding:14px 16px;display:flex;align-items:center;gap:12px;
       flex-shrink:0;
     }
-    #vdl-chat-header-boto { width:38px;height:38px;border-radius:50%;background:rgba(201,169,110,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    #vdl-chat-header-boto { width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:5px;box-sizing:border-box;box-shadow:0 1px 4px rgba(0,0,0,.25); }
     #vdl-chat-header-info{flex:1;}
     #vdl-chat-header-title{color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
     #vdl-chat-header-sub{color:rgba(255,255,255,.55);font-size:11px;margin-top:2px;}
@@ -306,7 +307,7 @@
   chat.id = "vdl-chat";
   chat.innerHTML = `
     <div id="vdl-chat-header">
-      <div id="vdl-chat-header-boto">${BOTO_IMG}</div>
+      <div id="vdl-chat-header-boto">${LOGO_IMG}</div>
       <div id="vdl-chat-header-info">
         <div id="vdl-chat-header-title">${L.title}</div>
         <div id="vdl-chat-header-sub">● Online</div>
