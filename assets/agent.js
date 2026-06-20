@@ -156,7 +156,7 @@
       padding:14px 16px;display:flex;align-items:center;gap:12px;
       flex-shrink:0;
     }
-    #vdl-chat-header-boto { width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:5px;box-sizing:border-box;box-shadow:0 1px 4px rgba(0,0,0,.25); }
+    #vdl-chat-header-boto { width:40px;height:40px;border-radius:50%;background:#0e0a0c;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:4px;box-sizing:border-box;border:1px solid rgba(201,169,110,.5); }
     #vdl-chat-header-info{flex:1;}
     #vdl-chat-header-title{color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
     #vdl-chat-header-sub{color:rgba(255,255,255,.55);font-size:11px;margin-top:2px;}
