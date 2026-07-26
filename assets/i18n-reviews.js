@@ -1,6 +1,6 @@
 /* ============================================================
-   i18n — Pagina de Avaliacoes (avaliar.html)
-   Fora do menu. Texto revisado pela skill humanize-text (EN/ES/PT).
+   i18n — Pagina de Avaliacoes (reviews.html)
+   Fora do menu. URL: /reviews . Texto revisado pela skill humanize-text (EN/ES/PT).
    ============================================================ */
 (function () {
   if (typeof I18N === "undefined") return;
