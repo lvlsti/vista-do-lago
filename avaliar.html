@@ -55,17 +55,22 @@
 .rev-head p{font-size:14px;color:var(--body,#5a4a4a);line-height:1.7}
 
 .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.rev-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid rgba(0,0,0,.08);padding:34px 26px 30px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.rev-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(0,0,0,.10);border-color:rgba(201,169,110,.55)}
-.rev-card .ico{width:58px;height:58px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:24px;margin-bottom:16px;background:#faf6f1}
-.rev-card.g .ico{color:#4285f4}
-.rev-card.t .ico{color:#00af87}
-.rev-card.f .ico{color:#1877f2}
-.rev-card h3{font-family:"Playfair Display",serif;font-weight:600;font-size:20px;color:var(--ink,#2c2020);margin-bottom:8px}
-.rev-card .mini-stars{color:#c9a96e;font-size:11px;letter-spacing:3px;margin-bottom:12px}
-.rev-card p{font-size:13.5px;color:var(--body,#5a4a4a);line-height:1.65;margin-bottom:20px;flex:1}
-.rev-card .go{display:inline-block;font:700 11px Montserrat,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#1d1825;border:1px solid #1d1825;padding:12px 22px;transition:background .25s ease,color .25s ease}
+.rev-card{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:#fff;border:1px solid rgba(0,0,0,.08);padding:0 26px 30px;text-decoration:none;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.rev-card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(0,0,0,.12);border-color:rgba(201,169,110,.55)}
+.rev-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px}
+.rev-card.g::before{background:linear-gradient(90deg,#4285f4 0 25%,#ea4335 25% 50%,#fbbc05 50% 75%,#34a853 75% 100%)}
+.rev-card.t::before{background:#00af87}
+.rev-card.f::before{background:#1877f2}
+.rev-card .logo{width:100%;height:104px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;border-bottom:1px solid rgba(0,0,0,.06)}
+.rev-card .logo img{display:block;max-width:172px;width:auto}
+.rev-card.g .logo img{height:32px}
+.rev-card.t .logo img{height:26px}
+.rev-card.f .logo img{height:25px}
+.rev-card .mini-stars{color:#c9a96e;font-size:12px;letter-spacing:3px;margin-bottom:12px}
+.rev-card p{font-size:13.5px;color:var(--body,#5a4a4a);line-height:1.65;margin-bottom:22px;flex:1}
+.rev-card .go{display:inline-block;font:700 11px Montserrat,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#1d1825;border:1px solid #1d1825;padding:13px 24px;transition:background .25s ease,color .25s ease}
 .rev-card:hover .go{background:#1d1825;color:#fff}
+.rev-time{display:block;text-align:center;margin-top:22px;font:600 11px Montserrat,sans-serif;letter-spacing:1px;color:#9a8a8a}
 
 .rev-follow{margin-top:64px;text-align:center;border-top:1px solid rgba(0,0,0,.08);padding-top:52px}
 .rev-follow h2{font-family:"Playfair Display",serif;font-weight:500;font-size:22px;color:var(--ink,#2c2020);margin-bottom:10px}
@@ -149,7 +154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="rev-hero">
   <span class="eyebrow" data-i18n="av.eyebrow">Guest Feedback</span>
   <h1 data-i18n="av.h1">Thank you for staying with us</h1>
-  <p data-i18n="av.sub">It was a joy to have you here on the Rio Negro. If the journey was worth it, telling others in a couple of lines helps us more than you'd think.</p>
+  <p data-i18n="av.sub">You're home by now, but on this side of the river we still remember your stay. If the journey was worth it, tell the people who are still making up their minds.</p>
   <div class="stars" aria-hidden="true">★★★★★</div>
 </section>
 
@@ -159,10 +164,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- AGRADECIMENTO + POR QUE IMPORTA -->
     <div class="rev-intro">
       <h2 data-i18n="av.s1t">Your visit stayed with us</h2>
-      <p data-i18n="av.s1b">Getting to Vista do Lago takes some doing, and we know it: the flight, Manaus, then the boat. That's what made having you here special. We hope you've kept the sound of the forest at first light, and that late afternoon out on the lake.</p>
+      <p data-i18n="av.s1b">Getting to Vista do Lago takes some doing: the flight, Manaus, then the boat. People who make that trip arrive wanting to be here, and it changes the way the house welcomes them. We hope you've kept the sound of the forest at first light, and that late afternoon out on the lake.</p>
       <div class="rule"></div>
       <h2 data-i18n="av.s2t">Why your review matters</h2>
-      <div data-i18n-html="av.s2b"><p>We're a family-run lodge in the middle of the Amazon. There's no big marketing campaign behind us — nearly everyone who finds their way here came because someone wrote about us first. Your review helps the next traveller decide, and it helps our team — the guides, the kitchen, the boatmen — keep making a living from tourism here in the community. It takes two minutes. For us, it changes a lot.</p></div>
+      <div data-i18n-html="av.s2b"><p>We're a family-run lodge in the middle of the Amazon. There's no advertising budget behind us — nearly everyone who finds their way here came because someone wrote about us first. When you say how it went, you help the next traveller decide, and you help our team — the guides, the kitchen, the boatmen — keep making a living from tourism here in the community. Two minutes of your day. On our side, it changes a lot.</p></div>
     </div>
 
     <!-- CARDS DAS PLATAFORMAS -->
@@ -173,29 +178,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="rev-grid">
       <a class="rev-card g" href="https://search.google.com/local/writereview?placeid=ChIJeZGe7zx9bJIRHbI2HuE1TWU" target="_blank" rel="noopener">
-        <span class="ico"><i class="fa-brands fa-google"></i></span>
-        <h3>Google</h3>
+        <span class="logo"><img src="assets/logo-google.svg" alt="Google" width="172" height="32" loading="lazy"></span>
         <div class="mini-stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="av.gdesc">The first place people look when they search for the lodge.</p>
         <span class="go" data-i18n="av.gbtn">Review on Google</span>
       </a>
 
       <a class="rev-card t" href="https://www.tripadvisor.com/Hotel_Review-g25382039-d18817240-Reviews-Vista_Do_Lago_Jungle_Lodge-Paricatuba_State_of_Amazonas.html" target="_blank" rel="noopener">
-        <span class="ico"><i class="fa-brands fa-tripadvisor"></i></span>
-        <h3>TripAdvisor</h3>
+        <span class="logo"><img src="assets/logo-tripadvisor.svg" alt="TripAdvisor" width="172" height="26" loading="lazy"></span>
         <div class="mini-stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="av.tdesc">Where most travellers from abroad do their research before booking.</p>
         <span class="go" data-i18n="av.tbtn">Review on TripAdvisor</span>
       </a>
 
       <a class="rev-card f" href="https://www.facebook.com/share/15dsPbvoKL/" target="_blank" rel="noopener">
-        <span class="ico"><i class="fa-brands fa-facebook-f"></i></span>
-        <h3>Facebook</h3>
+        <span class="logo"><img src="assets/logo-facebook.svg" alt="Facebook" width="172" height="25" loading="lazy"></span>
         <div class="mini-stars" aria-hidden="true">★★★★★</div>
         <p data-i18n="av.fdesc">Leave a recommendation on our page.</p>
         <span class="go" data-i18n="av.fbtn">Recommend on Facebook</span>
       </a>
     </div>
+
+    <span class="rev-time" data-i18n="av.time">Two minutes, and you're done.</span>
 
     <!-- REDES SOCIAIS -->
     <div class="rev-follow">
