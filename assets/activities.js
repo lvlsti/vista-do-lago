@@ -1,5 +1,35 @@
 /* ============================================================
-   Carrossel das paginas de atividade.
+   1) VOLTAR PARA ONDE PAROU
+   Na listagem, guarda qual card o hospede abriu. Quando ele volta,
+   a pagina rola ate aquele card em vez de jogar tudo pro topo.
+   So age se ele veio mesmo de uma pagina de atividade, senao uma
+   visita normal a listagem comecaria no meio da pagina.
+   ============================================================ */
+(function () {
+  var grid = document.querySelector(".ac-grid");
+  if (!grid) return;
+  var CHAVE = "vdl_act_volta";
+
+  document.addEventListener("click", function (e) {
+    var c = e.target && e.target.closest ? e.target.closest(".ac-card") : null;
+    if (c) { try { sessionStorage.setItem(CHAVE, c.getAttribute("href")); } catch (_) {} }
+  });
+
+  var alvo = null;
+  try { alvo = sessionStorage.getItem(CHAVE); sessionStorage.removeItem(CHAVE); } catch (_) {}
+  if (!alvo || !/\/activities\//.test(document.referrer)) return;
+
+  var card = document.querySelector('.ac-card[href="' + alvo + '"]');
+  if (!card) return;
+  requestAnimationFrame(function () {
+    card.scrollIntoView({ block: "center", behavior: "auto" });
+    card.classList.add("ac-volta");
+    setTimeout(function () { card.classList.remove("ac-volta"); }, 1800);
+  });
+})();
+
+/* ============================================================
+   2) CARROSSEL das paginas de atividade.
    Fotos e videos no mesmo trilho. O iframe do YouTube so e criado
    quando o hospede clica no play, entao a pagina abre leve.
    ============================================================ */

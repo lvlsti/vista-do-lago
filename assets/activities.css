@@ -33,6 +33,8 @@
 .ac-card p{font-size:13.5px;color:var(--body,#5a4a4a);line-height:1.6;margin-bottom:14px}
 .ac-card .open{display:inline-block;font:700 10px Montserrat,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#a07c7d}
 .ac-card:hover .open{color:#c9a96e}
+/* card de onde o hospede saiu, destacado por um instante ao voltar */
+.ac-card.ac-volta{border-color:#c9a96e;box-shadow:0 0 0 3px rgba(201,169,110,.35),0 16px 38px rgba(0,0,0,.12)}
 
 /* ---------- regras ---------- */
 .ac-rules{margin-top:70px;background:#fff;border:1px solid rgba(0,0,0,.08);padding:34px 38px}

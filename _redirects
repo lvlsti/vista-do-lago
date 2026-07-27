@@ -1,0 +1,7 @@
+# Redirecionamentos do Worker (assets estaticos do Cloudflare).
+# Formato: <de> <para> <codigo>
+
+# 26/07/2026: "Focagem de jacare" virou "Focagem noturna", porque a saida
+# mostra o que a floresta der na noite (jacare, macaco, preguica, coruja,
+# cobra) e prometer jacare criava expectativa que nem sempre se cumpre.
+/activities/caiman-spotting /activities/night-spotting 301
