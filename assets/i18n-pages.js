@@ -1619,3 +1619,74 @@
     "post.yandra.credit":"Foto: Vista do Lago Jungle Lodge. Vídeo: @yandramawe (Instagram), compartilhado com autorização."
   });
 })();
+
+/* ---- BLOG CARD + POST: SUMAÚMA ---- */
+(function(){
+  if(typeof I18N === "undefined") return;
+  Object.assign(I18N.en, {
+    "blog.p8.title":"The Sumaúma: The Giant Tree Everyone Wants to See",
+    "blog.p8.excerpt":"Up to 60 metres tall, with roots like walls and a crown above the whole forest. Why the mother tree of the Amazon is the sight our guests ask for most — and where to find her on the trail.",
+    "blog.p8.meta":"July 2026 · 4 min read",
+    "post.sumauma.h1":"The Sumaúma: The Giant Tree Everyone Wants to See in the Amazon",
+    "post.sumauma.meta":"July 2026 · Vista do Lago Jungle Lodge · 4 min read",
+    "post.sumauma.p1":"There's a moment on the jungle trail when everyone goes quiet. The guide stops, points up, and you follow the trunk with your eyes — up, and up, and up — until it disappears into the canopy far above the rest of the forest. That's the sumaúma. It's the tallest tree in the Amazon, and after all these years it's still the thing guests ask us about the most.",
+    "post.sumauma.h2":"What Is the Sumaúma?",
+    "post.sumauma.p2":"The sumaúma (Ceiba pentandra), also spelled samaúma and known in English as the kapok or silk-cotton tree, is the giant of the Amazon. It can reach 60 metres — roughly a 20-storey building — with a trunk several metres across and a crown that spreads out above everything else like a green umbrella. Some of them have been standing for centuries, which means the tree you're looking at was already here long before any of this had a name on a map.",
+    "post.sumauma.h3":"Roots Like Walls",
+    "post.sumauma.p3":"The first thing that gets people is the base. Amazonian soil is surprisingly thin, so instead of driving roots deep, the sumaúma grows enormous buttress roots — flat, wall-like fins that fan out from the trunk and can stand taller than a person. They hold the whole giant upright and steady. Walk between them and you feel like you've stepped into a room made by the forest itself.",
+    "post.sumauma.cap1":"The buttress roots — flat walls of wood that hold the giant upright.",
+    "post.sumauma.h4":"The Mother of the Forest",
+    "post.sumauma.p4":"For many Amazonian peoples, the sumaúma isn't just a big tree — it's the mother of the forest, the one that connects the ground to the sky. Old stories say it holds up the heavens, and that it's where spirits gather. River communities have long used the hollow between the roots as a natural drum: a few knocks and the sound carries far through the trees. Even today, cutting one down is something people avoid.",
+    "post.sumauma.h5":"A Whole World in One Tree",
+    "post.sumauma.p5":"A single sumaúma is its own neighbourhood. Bromeliads and orchids grow along its branches, frogs breed in the little pools they collect, bats and bees handle the flowers at night, and monkeys and toucans use the canopy as a highway. When the pods burst, they release a light, silky fibre — the kapok — that floats off on the wind and once filled pillows and life jackets around the world.",
+    "post.sumauma.h6":"Seeing One With Us",
+    "post.sumauma.p6":"The good news: you don't need an expedition. Our guided rainforest trail is part of every stay, and along the way your guide will show you the forest giants — the sumaúma among them — while explaining the plants, the tracks and the sounds you'd never notice on your own. Bring a camera, but be warned: no photo really captures the scale. You have to stand at the base and look up.",
+    "post.sumauma.cta":"Come stand at the foot of a giant. The sumaúma is waiting on the trail at Vista do Lago Jungle Lodge — along with the rest of the forest that grew up around her.",
+    "post.sumauma.ctabtn":"Book Your Stay",
+    "post.sumauma.credit":"Photos via Wikimedia Commons: sumaúma canopy by Figmireia (CC BY 4.0); buttress roots by Fährtenleser (CC BY-SA 4.0)."
+  });
+  Object.assign(I18N.es, {
+    "blog.p8.title":"La Sumaúma: El Árbol Gigante que Todos Quieren Ver",
+    "blog.p8.excerpt":"Hasta 60 metros de altura, con raíces como muros y una copa por encima de toda la selva. Por qué el árbol madre de la Amazonia es lo que más nos piden — y dónde encontrarlo en el sendero.",
+    "blog.p8.meta":"Julio 2026 · 4 min de lectura",
+    "post.sumauma.h1":"La Sumaúma: El Árbol Gigante que Todos Quieren Ver en la Amazonia",
+    "post.sumauma.meta":"Julio 2026 · Vista do Lago Jungle Lodge · 4 min de lectura",
+    "post.sumauma.p1":"Hay un momento en el sendero por la selva en que todos se quedan callados. El guía se detiene, señala hacia arriba y tú sigues el tronco con la mirada — arriba, más arriba y más arriba — hasta que desaparece entre las copas, muy por encima del resto de la selva. Esa es la sumaúma. Es el árbol más alto de la Amazonia y, después de todos estos años, sigue siendo lo que más nos preguntan los huéspedes.",
+    "post.sumauma.h2":"¿Qué Es la Sumaúma?",
+    "post.sumauma.p2":"La sumaúma (Ceiba pentandra), también escrita samaúma y conocida en inglés como kapok o silk-cotton tree, es el gigante de la Amazonia. Puede llegar a 60 metros — más o menos un edificio de 20 pisos — con un tronco de varios metros de ancho y una copa que se abre por encima de todo lo demás como un paraguas verde. Algunas llevan siglos en pie, lo que significa que el árbol que estás mirando ya estaba aquí mucho antes de que todo esto tuviera nombre en un mapa.",
+    "post.sumauma.h3":"Raíces como Muros",
+    "post.sumauma.p3":"Lo primero que impresiona es la base. El suelo amazónico es sorprendentemente delgado, así que en vez de hundir raíces en profundidad, la sumaúma desarrolla enormes raíces tabulares — aletas planas, como muros, que se abren desde el tronco y pueden ser más altas que una persona. Sostienen a todo el gigante firme y derecho. Camina entre ellas y sentirás que entraste en una sala hecha por la propia selva.",
+    "post.sumauma.cap1":"Las raíces tabulares — muros planos de madera que sostienen al gigante.",
+    "post.sumauma.h4":"La Madre de la Selva",
+    "post.sumauma.p4":"Para muchos pueblos amazónicos, la sumaúma no es solo un árbol grande — es la madre de la selva, la que conecta la tierra con el cielo. Las historias antiguas dicen que sostiene el firmamento y que allí se reúnen los espíritus. Las comunidades ribereñas usan desde hace mucho el hueco entre las raíces como un tambor natural: unos golpes y el sonido viaja lejos entre los árboles. Todavía hoy, cortar una es algo que la gente evita.",
+    "post.sumauma.h5":"Un Mundo Entero en un Árbol",
+    "post.sumauma.p5":"Una sola sumaúma es un barrio en sí misma. Bromelias y orquídeas crecen en sus ramas, las ranas se reproducen en las pequeñas pozas que se forman ahí, murciélagos y abejas se encargan de las flores por la noche, y monos y tucanes usan la copa como carretera. Cuando las vainas revientan, sueltan una fibra ligera y sedosa — el kapok — que se va con el viento y que un día llenó almohadas y chalecos salvavidas por todo el mundo.",
+    "post.sumauma.h6":"Verla con Nosotros",
+    "post.sumauma.p6":"La buena noticia: no hace falta una expedición. Nuestro sendero guiado por la selva está incluido en toda estadía y, en el camino, tu guía te mostrará los gigantes del bosque — la sumaúma entre ellos — mientras explica las plantas, las huellas y los sonidos que por tu cuenta jamás notarías. Lleva cámara, pero te aviso: ninguna foto captura de verdad la escala. Hay que pararse en la base y mirar hacia arriba.",
+    "post.sumauma.cta":"Ven a pararte al pie de un gigante. La sumaúma te espera en el sendero de Vista do Lago Jungle Lodge — junto con el resto de la selva que creció a su alrededor.",
+    "post.sumauma.ctabtn":"Reserva Tu Estadía",
+    "post.sumauma.credit":"Fotos vía Wikimedia Commons: copa de la sumaúma de Figmireia (CC BY 4.0); raíces tabulares de Fährtenleser (CC BY-SA 4.0)."
+  });
+  Object.assign(I18N.pt, {
+    "blog.p8.title":"A Sumaúma: A Árvore Gigante que Todo Mundo Quer Ver",
+    "blog.p8.excerpt":"Até 60 metros de altura, com raízes que parecem paredes e uma copa acima de toda a floresta. Por que a árvore mãe da Amazônia é o que mais nos pedem — e onde encontrá-la na trilha.",
+    "blog.p8.meta":"Julho 2026 · 4 min de leitura",
+    "post.sumauma.h1":"A Sumaúma: A Árvore Gigante que Todo Mundo Quer Ver na Amazônia",
+    "post.sumauma.meta":"Julho 2026 · Vista do Lago Jungle Lodge · 4 min de leitura",
+    "post.sumauma.p1":"Tem um momento na trilha em que todo mundo se cala. O guia para, aponta pra cima e você acompanha o tronco com os olhos — sobe, sobe e sobe — até ele sumir na copa, bem acima do resto da floresta. Essa é a sumaúma. É a árvore mais alta da Amazônia e, depois de todos esses anos, continua sendo o que os hóspedes mais perguntam pra gente.",
+    "post.sumauma.h2":"O Que É a Sumaúma?",
+    "post.sumauma.p2":"A sumaúma (Ceiba pentandra), também escrita samaúma e conhecida em inglês como kapok, é a gigante da Amazônia. Ela chega a 60 metros — mais ou menos um prédio de 20 andares — com tronco de vários metros de largura e uma copa que se abre acima de tudo como um guarda-chuva verde. Algumas estão de pé há séculos, o que quer dizer que a árvore que você está olhando já estava aqui muito antes de tudo isso ter nome em algum mapa.",
+    "post.sumauma.h3":"Raízes que Parecem Paredes",
+    "post.sumauma.p3":"A primeira coisa que impressiona é a base. O solo amazônico é surpreendentemente raso, então, em vez de enterrar raízes fundo, a sumaúma cria sapopemas enormes — raízes tabulares, chatas feito paredes, que se abrem a partir do tronco e chegam a ficar mais altas que uma pessoa. São elas que seguram a gigante firme e reta. Ande entre elas e você sente que entrou numa sala construída pela própria floresta.",
+    "post.sumauma.cap1":"As sapopemas — paredes de madeira que sustentam a gigante.",
+    "post.sumauma.h4":"A Mãe da Floresta",
+    "post.sumauma.p4":"Para muitos povos amazônicos, a sumaúma não é só uma árvore grande — é a mãe da floresta, aquela que liga o chão ao céu. As histórias antigas dizem que ela sustenta o firmamento e que é ali que os espíritos se reúnem. As comunidades ribeirinhas há muito usam o vão entre as raízes como um tambor natural: umas batidas e o som viaja longe pela mata. Até hoje, derrubar uma é coisa que o povo evita.",
+    "post.sumauma.h5":"Um Mundo Inteiro numa Árvore Só",
+    "post.sumauma.p5":"Uma única sumaúma é um bairro inteiro. Bromélias e orquídeas crescem nos galhos, sapos se reproduzem nas pocinhas que se formam ali, morcegos e abelhas cuidam das flores à noite, e macacos e tucanos usam a copa como estrada. Quando as vagens estouram, soltam uma fibra leve e sedosa — a paina — que vai embora no vento e que um dia encheu travesseiros e coletes salva-vidas mundo afora.",
+    "post.sumauma.h6":"Ver de Perto com a Gente",
+    "post.sumauma.p6":"A boa notícia: não precisa de expedição nenhuma. Nossa trilha guiada na floresta faz parte de toda estadia e, no caminho, o guia mostra os gigantes da mata — a sumaúma entre eles — enquanto explica as plantas, os rastros e os sons que você nunca notaria sozinho. Leve a câmera, mas já aviso: foto nenhuma dá conta do tamanho. Tem que ficar na base e olhar pra cima.",
+    "post.sumauma.cta":"Venha ficar aos pés de uma gigante. A sumaúma espera por você na trilha da Vista do Lago Jungle Lodge — junto com o resto da floresta que cresceu em volta dela.",
+    "post.sumauma.ctabtn":"Reserve Sua Estadia",
+    "post.sumauma.credit":"Fotos via Wikimedia Commons: copa da sumaúma de Figmireia (CC BY 4.0); sapopemas de Fährtenleser (CC BY-SA 4.0)."
+  });
+})();
