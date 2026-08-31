@@ -1690,3 +1690,84 @@
     "post.sumauma.credit":"Fotos via Wikimedia Commons: copa da sumaúma de Figmireia (CC BY 4.0); sapopemas de Fährtenleser (CC BY-SA 4.0)."
   });
 })();
+
+
+/* ---- BLOG CARD + POST: MOSQUITOS / AGUA PRETA ---- */
+(function(){
+  if(typeof I18N === "undefined") return;
+  Object.assign(I18N.en, {
+    "blog.p9.title":"Fewer Mosquitoes on the Rio Negro: Why the Black Water Makes the Difference",
+    "blog.p9.excerpt":"Why one river runs dark and the other muddy — and why that single difference means far fewer mosquitoes on our side of the Amazon. The answer to the question guests ask us most.",
+    "blog.p9.meta":"July 2026 · 5 min read",
+    "post.mosq.h1":"Fewer Mosquitoes on the Rio Negro: Why the Black Water Makes the Difference",
+    "post.mosq.meta":"July 2026 · Vista do Lago Jungle Lodge · 5 min read",
+    "post.mosq.p1":"It's the question we get more than almost any other, usually right before someone books: \"Am I going to be eaten alive by mosquitoes?\" It's a fair thing to worry about — the Amazon has a reputation. But here's what most people don't know before they come: it depends enormously on which river you're on. And on the Rio Negro, where we are, the difference is something guests notice on the very first evening.",
+    "post.mosq.h2":"Two Rivers, Two Completely Different Waters",
+    "post.mosq.p2":"Near Manaus, two giant rivers run side by side. The Rio Negro is dark — the colour of strong tea or black coffee — because it drains ancient, sandy soils where leaves and plant matter decompose slowly and release tannins and humic acids into the water. The Rio Solimões is the opposite: pale and muddy, heavy with fine sediment that it carries all the way down from the Andes. One river is stained by the forest; the other is loaded with mountain silt.",
+    "post.mosq.cap1":"Dark on one side, muddy on the other — the two waters meeting near Manaus.",
+    "post.mosq.h3":"Why the Rio Negro Has So Few Mosquitoes",
+    "post.mosq.p3":"Those tannins do something remarkable: they make the water acidic, with a pH somewhere around 4 to 5 — closer to orange juice than to a swimming pool. Mosquito larvae, including the carapanã and muriçoca everyone worries about, struggle badly in water that acidic and that poor in nutrients. There simply isn't enough for them to feed on, and the conditions work against the eggs. Fewer larvae survive, so fewer adults take to the air.",
+    "post.mosq.p4":"The Solimões side is the mirror image. All that Andean sediment is packed with nutrients, and the river spills out into shallow, warm floodplain lakes full of floating vegetation — close to a perfect nursery for mosquitoes. It's the same reason that region is so extraordinarily rich in fish and wildlife. Fertile water is generous to everything, insects very much included.",
+    "post.mosq.p5":"This isn't lodge marketing, by the way — it's long-established Amazonian ecology, and river people have known it for generations. It's part of why blackwater stretches of the Amazon have historically seen far less mosquito-borne disease than the whitewater floodplains.",
+    "post.mosq.h4":"What It Actually Feels Like Here",
+    "post.mosq.p6":"In practice, it means the evening is yours. You can sit on the deck at sunset, have dinner with the group, listen to the forest at night and take a boat out after dark without spending the whole time swatting at the air. Guests bring it up constantly when they tell us how the stay went — it's usually one of the first things they mention, and often a genuine surprise compared to what they expected of the Amazon.",
+    "post.mosq.cap2":"Evenings on the deck, on the black water of the Rio Negro.",
+    "post.mosq.h5":"Being Honest: It's Fewer, Not Zero",
+    "post.mosq.p7":"We'd rather set the right expectation than oversell it. This is still the rainforest, so you will meet insects — more so on the jungle trail, in the flooded forest, at certain times of year and around dawn and dusk. Bring repellent and light long sleeves for the evening walks and you'll be comfortable. And if you take the Meeting of the Waters trip, you may well notice the difference for yourself once you cross to the muddy side.",
+    "post.mosq.h6":"Why We're Where We Are",
+    "post.mosq.p8":"Vista do Lago sits on the Rio Negro, in the Acajatuba community, about an hour and a half from Manaus. The black water is why the swimming here is so good, why the pink dolphins come close, why the nights are quiet — and yes, why you'll sleep a lot better than you were expecting. If a comfortable Amazon is what you're after, this side of the river is the one you want.",
+    "post.mosq.cta":"Come and experience the Amazon the comfortable way — dark, calm water, quiet nights and far fewer mosquitoes. Vista do Lago Jungle Lodge, on the Rio Negro.",
+    "post.mosq.ctabtn":"Book Your Stay",
+    "post.mosq.credit":"Cover photo: Hector Bottai / Wikimedia Commons (CC BY-SA 4.0). Meeting of the Waters photo: Dennis G. Jarvis / Wikimedia Commons (CC BY-SA 2.0). Deck photo: Vista do Lago Jungle Lodge."
+  });
+  Object.assign(I18N.es, {
+    "blog.p9.title":"Menos Mosquitos en el Río Negro: Por Qué el Agua Negra Cambia Todo",
+    "blog.p9.excerpt":"Por qué un río corre oscuro y el otro turbio — y por qué esa sola diferencia significa muchísimos menos mosquitos de nuestro lado de la Amazonia. La respuesta a la pregunta que más nos hacen.",
+    "blog.p9.meta":"Julio 2026 · 5 min de lectura",
+    "post.mosq.h1":"Menos Mosquitos en el Río Negro: Por Qué el Agua Negra Cambia Todo",
+    "post.mosq.meta":"Julio 2026 · Vista do Lago Jungle Lodge · 5 min de lectura",
+    "post.mosq.p1":"Es la pregunta que más nos hacen, casi siempre justo antes de reservar: \"¿Me van a comer vivo los mosquitos?\". Y es una preocupación legítima — la Amazonia tiene fama. Pero hay algo que casi nadie sabe antes de venir: depende muchísimo de en qué río estés. Y en el Río Negro, donde estamos nosotros, la diferencia se nota desde la primera noche.",
+    "post.mosq.h2":"Dos Ríos, Dos Aguas Completamente Distintas",
+    "post.mosq.p2":"Cerca de Manaos, dos ríos enormes corren lado a lado. El Río Negro es oscuro — del color del té cargado o del café negro — porque drena suelos antiguos y arenosos, donde las hojas y la materia vegetal se descomponen despacio y liberan taninos y ácidos húmicos en el agua. El Río Solimões es todo lo contrario: claro y turbio, cargado de sedimento fino que arrastra desde los Andes. Un río está teñido por la selva; el otro, cargado de limo de montaña.",
+    "post.mosq.cap1":"Oscuro de un lado, turbio del otro — las dos aguas encontrándose cerca de Manaos.",
+    "post.mosq.h3":"Por Qué el Río Negro Tiene Tan Pocos Mosquitos",
+    "post.mosq.p3":"Esos taninos hacen algo notable: vuelven el agua ácida, con un pH de alrededor de 4 a 5 — más cerca del jugo de naranja que de una piscina. Las larvas de mosquito, incluidos los carapanãs y muriçocas que a todos preocupan, lo pasan muy mal en un agua tan ácida y tan pobre en nutrientes. Sencillamente no hay de qué alimentarse, y las condiciones juegan en contra de los huevos. Sobreviven menos larvas, así que vuelan menos adultos.",
+    "post.mosq.p4":"El lado del Solimões es la imagen invertida. Todo ese sedimento andino viene lleno de nutrientes, y el río se desborda en lagos de llanura poco profundos, cálidos y llenos de vegetación flotante — casi una guardería perfecta para los mosquitos. Es la misma razón por la que esa región es tan extraordinariamente rica en peces y fauna. El agua fértil es generosa con todo, insectos incluidos.",
+    "post.mosq.p5":"Y no es marketing de hotel: es ecología amazónica bien conocida, y la gente del río lo sabe desde hace generaciones. Es parte de por qué los tramos de agua negra de la Amazonia han registrado históricamente mucha menos enfermedad transmitida por mosquitos que las llanuras de agua blanca.",
+    "post.mosq.h4":"Cómo se Siente de Verdad Aquí",
+    "post.mosq.p6":"En la práctica, significa que la noche es tuya. Puedes sentarte en el deck al atardecer, cenar con el grupo, escuchar la selva de noche y salir en bote después del anochecer sin pasarte el rato espantando bichos. Los huéspedes lo mencionan todo el tiempo cuando nos cuentan cómo les fue — suele ser de las primeras cosas que dicen, y muchas veces una sorpresa frente a lo que esperaban de la Amazonia.",
+    "post.mosq.cap2":"Atardeceres en el deck, sobre el agua negra del Río Negro.",
+    "post.mosq.h5":"Siendo Honestos: Son Menos, No Cero",
+    "post.mosq.p7":"Preferimos ajustar la expectativa antes que prometer de más. Esto sigue siendo selva, así que te vas a encontrar con insectos — más en el sendero, en el bosque inundado, en ciertas épocas del año y al amanecer y al atardecer. Lleva repelente y manga larga liviana para las caminatas nocturnas y estarás cómodo. Y si haces el paseo al Encuentro de las Aguas, seguramente notarás la diferencia tú mismo al cruzar al lado turbio.",
+    "post.mosq.h6":"Por Qué Estamos Donde Estamos",
+    "post.mosq.p8":"Vista do Lago está en el Río Negro, en la comunidad de Acajatuba, a cerca de una hora y media de Manaos. El agua negra es la razón de que aquí se nade tan bien, de que los delfines rosados se acerquen, de que las noches sean tranquilas — y sí, de que vayas a dormir mucho mejor de lo que esperabas. Si buscas una Amazonia cómoda, este es el lado del río que quieres.",
+    "post.mosq.cta":"Ven a vivir la Amazonia de la forma cómoda — agua oscura y calma, noches tranquilas y muchos menos mosquitos. Vista do Lago Jungle Lodge, en el Río Negro.",
+    "post.mosq.ctabtn":"Reserva Tu Estadía",
+    "post.mosq.credit":"Foto de portada: Hector Bottai / Wikimedia Commons (CC BY-SA 4.0). Foto del Encuentro de las Aguas: Dennis G. Jarvis / Wikimedia Commons (CC BY-SA 2.0). Foto del deck: Vista do Lago Jungle Lodge."
+  });
+  Object.assign(I18N.pt, {
+    "blog.p9.title":"Menos Mosquitos no Rio Negro: Por Que a Água Preta Muda Tudo",
+    "blog.p9.excerpt":"Por que um rio é escuro e o outro é barrento — e por que só essa diferença faz ter muito menos carapanã do nosso lado da Amazônia. A resposta pra pergunta que mais recebemos.",
+    "blog.p9.meta":"Julho 2026 · 5 min de leitura",
+    "post.mosq.h1":"Menos Mosquitos no Rio Negro: Por Que a Água Preta Muda Tudo",
+    "post.mosq.meta":"Julho 2026 · Vista do Lago Jungle Lodge · 5 min de leitura",
+    "post.mosq.p1":"É a pergunta que mais recebemos, quase sempre pouco antes de a pessoa fechar a reserva: \"vou ser comido vivo pelos mosquitos?\". E é uma preocupação justa — a Amazônia tem fama. Só que tem uma coisa que quase ninguém sabe antes de vir: depende muito de em qual rio você está. E no Rio Negro, onde a gente fica, a diferença o hóspede sente logo na primeira noite.",
+    "post.mosq.h2":"Dois Rios, Duas Águas Completamente Diferentes",
+    "post.mosq.p2":"Perto de Manaus, dois rios enormes correm lado a lado. O Rio Negro é escuro — da cor de chá forte ou de café preto — porque drena solos antigos e arenosos, onde folhas e matéria vegetal se decompõem devagar e soltam taninos e ácidos húmicos na água. O Rio Solimões é o oposto: claro e barrento, carregado de sedimento fino que ele traz lá dos Andes. Um rio é tingido pela floresta; o outro vem cheio de barro da montanha.",
+    "post.mosq.cap1":"Escuro de um lado, barrento do outro — as duas águas se encontrando perto de Manaus.",
+    "post.mosq.h3":"Por Que o Rio Negro Tem Tão Poucos Carapanãs",
+    "post.mosq.p3":"Esses taninos fazem uma coisa notável: deixam a água ácida, com pH lá pelos 4 a 5 — mais perto de suco de laranja do que de piscina. As larvas de mosquito, incluindo o carapanã e a muriçoca que todo mundo teme, se dão muito mal numa água tão ácida e tão pobre em nutrientes. Simplesmente não tem do que se alimentar, e as condições jogam contra os ovos. Menos larvas sobrevivem, então menos adultos levantam voo.",
+    "post.mosq.p4":"Do lado do Solimões é o contrário. Todo aquele sedimento andino vem cheio de nutrientes, e o rio se espalha em lagos de várzea rasos, quentes e cheios de vegetação flutuante — quase um berçário perfeito pra mosquito. É pelo mesmo motivo que a região é tão absurdamente rica em peixe e bicho. Água fértil é generosa com tudo, insetos inclusive.",
+    "post.mosq.p5":"E não é conversa de pousada: é ecologia amazônica bem conhecida, e o ribeirinho sabe disso há gerações. É parte do motivo de os trechos de água preta da Amazônia registrarem historicamente bem menos doença transmitida por mosquito do que as várzeas de água branca.",
+    "post.mosq.h4":"Como É de Verdade Aqui",
+    "post.mosq.p6":"Na prática, quer dizer que a noite é sua. Dá pra sentar no deck no pôr do sol, jantar com o pessoal, ouvir a floresta à noite e sair de barco depois de escurecer sem passar o tempo todo espantando bicho. Os hóspedes falam disso o tempo todo quando contam como foi a estadia — costuma ser das primeiras coisas que eles mencionam, e quase sempre uma surpresa em relação ao que esperavam da Amazônia.",
+    "post.mosq.cap2":"Fim de tarde no deck, sobre a água preta do Rio Negro.",
+    "post.mosq.h5":"Sendo Honesto: É Menos, Não é Zero",
+    "post.mosq.p7":"A gente prefere alinhar a expectativa a prometer demais. Aqui ainda é floresta, então você vai encontrar insetos — mais na trilha, no igapó, em certas épocas do ano e no começo da manhã e no fim da tarde. Leve repelente e uma manga comprida leve pras caminhadas da noite que você fica tranquilo. E se fizer o passeio do Encontro das Águas, é bem provável que sinta a diferença na pele quando cruzar pro lado barrento.",
+    "post.mosq.h6":"Por Que a Gente Fica Onde Fica",
+    "post.mosq.p8":"A Vista do Lago fica no Rio Negro, na comunidade de Acajatuba, a cerca de uma hora e meia de Manaus. A água preta é o motivo de o banho aqui ser tão bom, de os botos chegarem perto, de as noites serem tranquilas — e sim, de você dormir bem melhor do que imaginava. Se você quer uma Amazônia confortável, é deste lado do rio que ela está.",
+    "post.mosq.cta":"Venha viver a Amazônia do jeito confortável — água escura e calma, noites tranquilas e muito menos mosquito. Vista do Lago Jungle Lodge, no Rio Negro.",
+    "post.mosq.ctabtn":"Reserve Sua Estadia",
+    "post.mosq.credit":"Foto da capa: Hector Bottai / Wikimedia Commons (CC BY-SA 4.0). Foto do Encontro das Águas: Dennis G. Jarvis / Wikimedia Commons (CC BY-SA 2.0). Foto do deck: Vista do Lago Jungle Lodge."
+  });
+})();
