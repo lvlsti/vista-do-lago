@@ -219,6 +219,29 @@
   }, {threshold:0.12, rootMargin:"0px 0px -40px 0px"});
   document.querySelectorAll(".fade-up").forEach(el=>io.observe(el));
 
+  /* ---------- footer: marca a página atual (Help Center / Legal) ---------- */
+  (function(){
+    const cur = (function(){
+      const b = location.pathname.replace(/\/+$/,"").split("/").pop().replace(/\.html$/i,"").toLowerCase();
+      return (b==="" || b==="index") ? "home" : b;
+    })();
+    document.querySelectorAll(".help a, .legal a").forEach(a=>{
+      const key = a.getAttribute("data-i18n");
+      let target = null;
+      if(key==="foot.fhome"){
+        target = "home";
+      } else {
+        const h = (a.getAttribute("href")||"").split("#")[0].split("?")[0];
+        if(h){
+          const base = h.split("/").pop().replace(/\.html$/i,"").toLowerCase();
+          if(base==="index") target = "home";
+          else if(base) target = base;
+        }
+      }
+      a.classList.toggle("is-current", !!target && target===cur);
+    });
+  })();
+
   /* ---------- init ---------- */
   applyLang(lang);
 })();

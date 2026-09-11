@@ -516,8 +516,8 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
 .help li,.legal li{margin-bottom:12px}
 .help a,.legal a{font-size:13px;color:rgba(255,255,255,.42);transition:color .3s}
 .help a:hover,.legal a:hover{color:var(--accent)}
-.help a.is-current{color:rgba(255,255,255,.6)}
-.help a i{color:var(--rose);font-size:11px;margin-right:3px}
+.help a.is-current,.legal a.is-current{color:rgba(255,255,255,.6)}
+.help a.is-current::before,.legal a.is-current::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--rose);font-size:11px;margin-right:6px}
 .plan p{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px;line-height:1.6}
 .pay{display:flex;gap:12px;font-size:22px;color:rgba(255,255,255,.3)}
 .footer-bottom{padding:0 60px 26px;max-width:var(--maxw);margin:0 auto;display:flex;flex-direction:column}
