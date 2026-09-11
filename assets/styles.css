@@ -499,7 +499,7 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
    FOOTER
    ============================================================ */
 .footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding-top:80px;color:rgba(255,255,255,.6)}
-.footer-grid{max-width:var(--maxw);margin:0 auto;padding:0 60px 60px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:50px}
+.footer-grid{max-width:var(--maxw);margin:0 auto;padding:0 60px 60px;display:grid;grid-template-columns:1.5fr 1.1fr .95fr .75fr 1.1fr;gap:40px}
 .footer-grid > *{min-width:0}
 .footer h5{font:700 10px var(--sans);letter-spacing:3px;text-transform:uppercase;color:#fff;margin-bottom:22px}
 .footer-brand img{height:46px;margin-bottom:18px}
@@ -513,9 +513,9 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
 .reach a:hover{color:var(--accent)}
 .contact-link{display:inline-block;margin-top:8px;font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:3px}
 .contact-link:hover{color:var(--accent)}
-.help li{margin-bottom:12px}
-.help a{font-size:13px;color:rgba(255,255,255,.42);transition:color .3s}
-.help a:hover{color:var(--accent)}
+.help li,.legal li{margin-bottom:12px}
+.help a,.legal a{font-size:13px;color:rgba(255,255,255,.42);transition:color .3s}
+.help a:hover,.legal a:hover{color:var(--accent)}
 .help a.is-current{color:rgba(255,255,255,.6)}
 .help a i{color:var(--rose);font-size:11px;margin-right:3px}
 .plan p{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px;line-height:1.6}
