@@ -520,12 +520,14 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
 .help a i{color:var(--rose);font-size:11px;margin-right:3px}
 .plan p{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px;line-height:1.6}
 .pay{display:flex;gap:12px;font-size:22px;color:rgba(255,255,255,.3)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:22px 60px;max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-.footer-bottom .copy-block{display:flex;flex-direction:column;gap:5px}
-.footer-bottom .copy{font-size:11px;color:rgba(255,255,255,.32)}
-.footer-bottom .dev{font-size:11px;color:rgba(255,255,255,.32)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 60px 24px;max-width:var(--maxw);margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.footer-bottom .copy-block{display:flex;flex-direction:row;justify-content:space-between;align-items:center;width:100%;gap:16px;flex-wrap:wrap}
+.footer-bottom .copy{font-size:11px;color:rgba(255,255,255,.32);text-align:center}
+.footer-bottom .copy:first-child{text-align:left}
+.footer-bottom .dev{font-size:11px;color:rgba(255,255,255,.32);text-align:right}
 .footer-bottom .dev a{color:rgba(255,255,255,.55);font-weight:600;transition:color .3s ease}
 .footer-bottom .dev a:hover{color:var(--accent)}
+.footer-bottom .totop{order:-1;align-self:flex-end;margin-top:-4px}
 .totop{background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);padding:9px 18px;font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;transition:all .3s}
 .totop:hover{border-color:var(--accent);color:var(--accent)}
 
@@ -596,7 +598,10 @@ button.cb-reserve-page-button:hover{background:#c89c9e !important;transform:tran
   .insta-head{padding:52px 24px 32px}
   .final-cta .inner{padding:56px 26px}
   .footer-grid{grid-template-columns:1fr;gap:36px;padding:0 26px 48px}
-  .footer-bottom{padding:22px 26px;flex-direction:column;text-align:center}
+  .footer-bottom{padding:20px 26px 24px;flex-direction:column;text-align:center}
+  .footer-bottom .copy-block{flex-direction:column;gap:8px}
+  .footer-bottom .copy,.footer-bottom .copy:first-child,.footer-bottom .dev{text-align:center}
+  .footer-bottom .totop{align-self:center}
 }
 @media(max-width:480px){
   .card-grid{grid-template-columns:1fr}
