@@ -1770,4 +1770,20 @@
     "post.mosq.ctabtn":"Reserve Sua Estadia",
     "post.mosq.credit":"Fotos via Wikimedia Commons: água preta de Hector Bottai (CC BY-SA 4.0), Encontro das Águas de Dennis G. Jarvis (CC BY-SA 2.0), Rio Negro ao entardecer de Ednei Fialho Lopes (CC BY-SA 4.0)."
   });
+
+  Object.assign(I18N.en, {
+    "about.commeyebrow":"Inside the community",
+    "about.commh":"You're never isolated — you're surrounded by families",
+    "about.commp":"The lodge sits <strong>inside the Nossa Senhora do Perpétuo Socorro community</strong>, a living riverside village. You're free to walk through the community, meet the families and feel the Amazon up close — always welcomed by the people who live here. Here you're not just a guest: you're the visitor of a community that welcomes you with open arms."
+  });
+  Object.assign(I18N.es, {
+    "about.commeyebrow":"Dentro de la comunidad",
+    "about.commh":"Nunca estás aislado — estás rodeado de familias",
+    "about.commp":"El lodge está <strong>dentro de la comunidad Nossa Senhora do Perpétuo Socorro</strong>, una comunidad ribereña viva. Tienes total libertad para recorrer la comunidad, conocer a las familias y sentir la Amazonía de cerca — siempre con la acogida de quienes viven aquí. Aquí no eres solo un huésped: eres la visita de una comunidad que te recibe con los brazos abiertos."
+  });
+  Object.assign(I18N.pt, {
+    "about.commeyebrow":"Dentro da comunidade",
+    "about.commh":"Você não fica isolado — está cercado por famílias",
+    "about.commp":"A pousada fica <strong>dentro da Comunidade Nossa Senhora do Perpétuo Socorro</strong>, uma comunidade ribeirinha viva. Você tem total liberdade para caminhar pela comunidade, conhecer as famílias e sentir a Amazônia de perto — sempre com o acolhimento de quem vive aqui. Aqui você não é só hóspede: é visita de uma comunidade que te recebe de braços abertos."
+  });
 })();

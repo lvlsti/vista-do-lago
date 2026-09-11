@@ -176,6 +176,13 @@
   .about-gallery img, .about-gallery img.wide { height: 220px; }
   .about-values { grid-template-columns: 1fr; }
 }
+.about-community{display:flex;gap:22px;align-items:flex-start;background:#1d1825;color:#f3ece3;border-radius:14px;padding:30px 34px;margin:42px 0}
+.about-community > i{font-size:30px;color:#c9a96e;flex-shrink:0;margin-top:4px}
+.about-community .ac-eyebrow{display:block;font:700 10px/1 Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#c9a96e;margin-bottom:11px}
+.about-community h3{font-family:"Playfair Display",serif;font-weight:400;font-size:23px;color:#fff;margin:0 0 11px;line-height:1.22}
+.about-community p{font-size:14px;line-height:1.75;color:rgba(243,236,227,.9);margin:0}
+.about-community p strong{color:#e8c9ca}
+@media(max-width:600px){.about-community{flex-direction:column;gap:14px;padding:26px 24px}}
 </style>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -287,6 +294,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p data-i18n-html="about.p6">O que faz da Vista do Lago diferente de qualquer hotel é simples: a família ainda está aqui. O <strong>Senhor Carlos Costa</strong> e <strong>Dona Miracy</strong> são os patriarcas. Pais do Carlos Junior, sogros da Adriana e tios do Abel. Os filhos do Carlos Junior e da Adriana, <strong>Fernanda</strong> e <strong>Heitor</strong>, já fazem parte do dia a dia. A Fernanda ajuda na operação do hotel e o Heitor, ainda pequeno, já adora conversar com os visitantes. O ciclo continua.</p>
 
     <p data-i18n="about.p7">A pousada fica dentro da Comunidade Nossa Senhora do Perpétuo Socorro, uma comunidade ribeirinha próxima ao Arquipélago de Anavilhanas, o maior arquipélago de água doce do mundo. A decisão de construir dentro da própria comunidade foi intencional: a gente queria que o hóspede sentisse esse calor amazônico de verdade, com liberdade de andar pela comunidade e interagir com os moradores, que são sempre receptivos. Quando você se hospeda aqui, não é só hóspede de uma pousada. É visita de uma comunidade viva.</p>
+
+    <aside class="about-community">
+      <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+      <div>
+        <span class="ac-eyebrow" data-i18n="about.commeyebrow">Dentro da comunidade</span>
+        <h3 data-i18n="about.commh">Você não fica isolado — está cercado por famílias</h3>
+        <p data-i18n-html="about.commp">A pousada fica <strong>dentro da Comunidade Nossa Senhora do Perpétuo Socorro</strong>, uma comunidade ribeirinha viva. Você tem total liberdade para caminhar pela comunidade, conhecer as famílias e sentir a Amazônia de perto — sempre com o acolhimento de quem vive aqui. Aqui você não é só hóspede: é visita de uma comunidade que te recebe de braços abertos.</p>
+      </div>
+    </aside>
 
     <h2 data-i18n="about.h4">O Que Acreditamos</h2>
 
