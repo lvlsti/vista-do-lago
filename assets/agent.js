@@ -85,7 +85,7 @@
       100% { box-shadow:0 4px 16px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,0); }
     }
     #vdl-fab {
-      position:fixed;bottom:28px;right:28px;z-index:9999;
+      position:fixed;bottom:56px;right:28px;z-index:9999;
       width:58px;height:58px;border-radius:50%;
       background:#25D366;
       border:2px solid #1faa54;cursor:pointer;
@@ -112,7 +112,7 @@
 
     /* Toast */
     #vdl-toast {
-      position:fixed;bottom:34px;right:96px;z-index:9998;
+      position:fixed;bottom:62px;right:96px;z-index:9998;
       background:#1a1218;color:#fff;
       padding:10px 16px;border-radius:24px;
       font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;
@@ -135,7 +135,7 @@
       transition:transform .3s cubic-bezier(.34,1.56,.64,1),opacity .25s ease;
       overflow:hidden;font-family:'Montserrat',sans-serif;
       /* Desktop */
-      bottom:94px;right:28px;width:380px;max-height:600px;
+      bottom:122px;right:28px;width:380px;max-height:600px;
     }
     #vdl-chat.open{transform:scale(1) translateY(0);opacity:1;pointer-events:auto;}
 
