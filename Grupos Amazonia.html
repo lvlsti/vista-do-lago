@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link rel="stylesheet" href="assets/styles.css?v=9">
-<link rel="stylesheet" href="assets/groups.css?v=5">
+<link rel="stylesheet" href="assets/groups.css?v=6">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -326,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="g-cell"><img src="assets/pkg-indigenous.jpg" alt="Local community" loading="lazy"></div>
       <div class="g-cell"><img src="assets/whystay-veranda.jpg" alt="Veranda with river view" loading="lazy"></div>
-      <div class="g-cell"><img src="assets/essence-front.jpg" alt="Guide on the trail" loading="lazy"></div>
+      <div class="g-cell"><img src="assets/exp-boto-1.jpg" alt="Pink river dolphin encounter" loading="lazy"></div>
       <div class="g-cell"><img src="assets/area-estar.jpg" alt="Social area" loading="lazy"></div>
       <div class="g-cell wide"><img src="assets/whystay-rain.jpg" alt="Lodge veranda in the rain" loading="lazy"></div>
       <div class="g-cell"><img src="assets/room-esper-interior.jpg" alt="Shared apartment" loading="lazy"></div>
@@ -409,6 +409,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- option details modal -->
+<div class="opt-modal" id="optModal" aria-hidden="true">
+  <div class="opt-dialog" role="dialog" aria-modal="true">
+    <button class="opt-close" aria-label="Close">&times;</button>
+    <span class="opt-eyebrow" data-i18n="groups.modeyebrow">Amazon Group Expedition</span>
+    <h3 class="opt-title" id="optTitle"></h3>
+    <div class="opt-head">
+      <div class="opt-price"><span id="optPrice"></span> <small data-i18n="groups.perperson">/ person</small></div>
+      <div class="opt-nights" id="optNights"></div>
+    </div>
+    <p class="opt-intro" data-i18n="groups.modintro">An all-inclusive Amazon group expedition on the Rio Negro — comfortable shared lodging, guided activities every night, full board and round-trip transfer. Here's everything this option includes:</p>
+    <h4 class="opt-ilabel" data-i18n="groups.modincl">What's included</h4>
+    <ul class="opt-list" id="optList"></ul>
+    <p class="opt-note" data-i18n="groups.modnote">Shared apartments are organized by gender. Spots are limited — confirm availability and reserve yours with our team on WhatsApp.</p>
+    <a class="btn opt-wa" id="optWa" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="groups.modcta">Reserve on WhatsApp</span></a>
+  </div>
+</div>
+
+<!-- image lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
+
 <!-- video modal -->
 <div class="video-modal" id="videoModal" aria-hidden="true">
   <button class="x" aria-label="Close">&times;</button>
@@ -420,10 +444,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <script src="assets/i18n.js"></script>
-<script src="assets/i18n-pages.js?v=3"></script>
+<script src="assets/i18n-pages.js?v=4"></script>
 <script src="assets/i18n-privacidade.js"></script>
 <script src="assets/i18n-termos.js"></script>
 <script src="assets/app.js?v=2" defer></script>
+<script src="assets/groups.js?v=1" defer></script>
 <script src="assets/agent.js?v=14"></script>
 </body>
 </html>
