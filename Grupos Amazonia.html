@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link rel="stylesheet" href="assets/styles.css?v=9">
-<link rel="stylesheet" href="assets/groups.css?v=7">
+<link rel="stylesheet" href="assets/groups.css?v=8">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -187,6 +187,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dur" data-i18n="groups.p3dur">3 Nights</div>
         <div class="amount">R$2,550 <small data-i18n="groups.perperson">/ person</small></div>
         <div class="pernight" data-i18n="groups.p3night">R$850 per night · 3 nights</div>
+        <p class="pc-teaser" data-i18n="groups.teaser3">6 guided activities + all-inclusive</p>
         <ul>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.pl1">Gender-organized shared apartment</span></li>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.pl2">6 guided activities (2 per night)</span></li>
@@ -209,6 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dur" data-i18n="groups.p4dur">4 Nights</div>
         <div class="amount">R$3,400 <small data-i18n="groups.perperson">/ person</small></div>
         <div class="pernight" data-i18n="groups.p4night">R$850 per night · 4 nights</div>
+        <p class="pc-teaser" data-i18n="groups.teaser4">8 guided activities + all-inclusive</p>
         <ul>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.pl1b">Gender-organized shared apartment</span></li>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.pl2b">8 guided activities (2 per night)</span></li>
@@ -232,6 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="dur" data-i18n="groups.p6dur">6 Nights</div>
         <div class="amount">R$5,100 <small data-i18n="groups.perperson">/ person</small></div>
         <div class="pernight" data-i18n="groups.p6night">R$850 per night · 6 nights</div>
+        <p class="pc-teaser" data-i18n="groups.teaser6">12 guided activities + all-inclusive</p>
         <ul>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.pl1b">Gender-organized shared apartment</span></li>
           <li><i class="fa-solid fa-check"></i><span data-i18n="groups.p6act">12 guided activities (2 per night)</span></li>
@@ -466,9 +469,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- activity detail view -->
     <div class="opt-view" id="optViewAct" hidden>
       <button class="opt-back" id="optBack"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="groups.modback">Back</span></button>
+      <div class="opt-actmedia"><img id="optActImg" src="" alt=""></div>
       <span class="opt-eyebrow" data-i18n="groups.modacteyebrow">Included activity</span>
       <h3 class="opt-title" id="optActTitle"></h3>
-      <p class="opt-actdesc" id="optActDesc"></p>
+      <div class="opt-actdesc" id="optActDesc"></div>
       <a class="opt-actlink" id="optActLink" href="#" target="_blank" rel="noopener"><span data-i18n="groups.modactfull">See full activity</span> <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
@@ -492,12 +496,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <script src="assets/i18n.js"></script>
-<script src="assets/i18n-pages.js?v=5"></script>
+<script src="assets/i18n-pages.js?v=6"></script>
 <script src="assets/i18n-privacidade.js"></script>
 <script src="assets/i18n-termos.js"></script>
 <script src="assets/i18n-activities.js"></script>
 <script src="assets/app.js?v=2" defer></script>
-<script src="assets/groups.js?v=2" defer></script>
+<script src="assets/groups.js?v=3" defer></script>
 <script src="assets/agent.js?v=14"></script>
 </body>
 </html>

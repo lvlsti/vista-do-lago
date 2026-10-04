@@ -21,7 +21,25 @@
     const actTitleEl = document.getElementById("optActTitle");
     const actDescEl = document.getElementById("optActDesc");
     const actLinkEl = document.getElementById("optActLink");
+    const actImgEl = document.getElementById("optActImg");
+    const actMediaEl = actImgEl ? actImgEl.closest(".opt-actmedia") : null;
     const backBtn = document.getElementById("optBack");
+
+    // activity slug -> representative photo in assets/
+    const ACT_IMG = {
+      "pink-dolphins": "exp-boto-1.jpg",
+      "jungle-trail": "exp-trilha-1.jpg",
+      "night-spotting": "exp-focagem-1.jpg",
+      "piranha-fishing": "exp-pesca-1.jpg",
+      "sunset": "act-sunset.jpg",
+      "turtle-project": "tartaruga.jpg",
+      "river-beach": "act-beach.jpg",
+      "village-visit": "exp-aldeia-1.jpg",
+      "cassava-house": "exp-farinha-1.jpg",
+      "jungle-overnight": "exp-trilha-2.jpg",
+      "handicraft-workshop": "exp-artesanato-1.jpg",
+      "ariau-ruins": "exp-ruinas-1.jpg"
+    };
 
     function dict() {
       let lang = "en";
@@ -48,7 +66,20 @@
     function showActivity(slug, name) {
       const d = dict();
       actTitleEl.textContent = d["ac." + slug + ".title"] || name;
-      actDescEl.textContent = d["ac." + slug + ".lead"] || "";
+      const body = d["ac." + slug + ".body"];
+      const lead = d["ac." + slug + ".lead"] || "";
+      actDescEl.innerHTML = body || (lead ? "<p>" + lead + "</p>" : "");
+      if (actImgEl && actMediaEl) {
+        const file = ACT_IMG[slug];
+        if (file) {
+          actImgEl.setAttribute("src", "assets/" + file);
+          actImgEl.setAttribute("alt", actTitleEl.textContent);
+          actMediaEl.hidden = false;
+        } else {
+          actImgEl.removeAttribute("src");
+          actMediaEl.hidden = true;
+        }
+      }
       actLinkEl.setAttribute("href", "activities/" + slug + ".html");
       viewPkg.hidden = true;
       viewAct.hidden = false;
