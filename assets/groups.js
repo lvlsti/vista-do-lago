@@ -57,13 +57,16 @@
       return null;
     }
 
-    function showPackage() {
+    let pkgScroll = 0;
+
+    function showPackage(restore) {
       viewAct.hidden = true;
       viewPkg.hidden = false;
-      if (dialog) dialog.scrollTop = 0;
+      if (dialog) dialog.scrollTop = restore ? pkgScroll : 0;
     }
 
     function showActivity(slug, name) {
+      pkgScroll = dialog ? dialog.scrollTop : 0;
       const d = dict();
       actTitleEl.textContent = d["ac." + slug + ".title"] || name;
       const body = d["ac." + slug + ".body"];
@@ -135,7 +138,7 @@
       document.body.style.overflow = "";
     }
 
-    if (backBtn) backBtn.addEventListener("click", showPackage);
+    if (backBtn) backBtn.addEventListener("click", () => showPackage(true));
 
     // Pricing cards -> popup (title = duration, price/list from the same card)
     document.querySelectorAll(".price-card .btn").forEach(btn => {

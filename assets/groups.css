@@ -50,8 +50,8 @@
 
 /* ---------- pricing ---------- */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1040px;margin:0 auto}
-.price-card{position:relative;border:1px solid rgba(0,0,0,.12);background:#fff;padding:44px 40px;display:flex;flex-direction:column;transition:box-shadow .4s ease,transform .4s ease}
-.price-card:hover{box-shadow:0 18px 50px rgba(0,0,0,.1);transform:translateY(-4px)}
+.price-card{position:relative;border:1px solid rgba(0,0,0,.12);background:#fff;padding:44px 40px;display:flex;flex-direction:column;transition:box-shadow .4s ease,transform .4s ease,background .35s ease,border-color .35s ease}
+.price-card:hover{box-shadow:0 18px 50px rgba(0,0,0,.1);transform:translateY(-4px);background:#fcf4f4;border-color:var(--accent)}
 .price-card.featured{border:2px solid var(--accent);box-shadow:0 22px 58px rgba(0,0,0,.15);transform:translateY(-10px)}
 .price-card.featured:hover{transform:translateY(-14px);box-shadow:0 26px 64px rgba(0,0,0,.18)}
 .price-card.featured .amount{color:var(--rose)}
@@ -68,8 +68,8 @@
 
 /* ---------- group dates ---------- */
 .dates-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1000px;margin:0 auto}
-.date-card{background:#fff;border:1px solid rgba(0,0,0,.1);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:9px;transition:box-shadow .3s ease,transform .3s ease}
-.date-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.1);transform:translateY(-4px)}
+.date-card{background:#fff;border:1px solid rgba(0,0,0,.1);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:9px;transition:box-shadow .3s ease,transform .3s ease,background .3s ease,border-color .3s ease}
+.date-card:hover{box-shadow:0 14px 40px rgba(0,0,0,.1);transform:translateY(-4px);background:#fcf4f4;border-color:var(--accent)}
 .date-card > i{font-size:22px;color:var(--rose);margin-bottom:2px}
 .date-card .dc-range{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);line-height:1.25}
 .date-card .dc-nights{font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--rose)}
@@ -160,8 +160,8 @@
 .opt-back{background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--rose);padding:0;margin-bottom:18px;transition:color .3s}
 .opt-back:hover{color:var(--ink)}
 .opt-back i{font-size:11px}
-.opt-actmedia{position:relative;margin:0 0 18px;overflow:hidden;border-radius:3px;aspect-ratio:16/10;background:var(--bg-alt)}
-.opt-actmedia img{width:100%;height:100%;object-fit:cover;display:block}
+.opt-actmedia{margin:0 0 18px;text-align:center}
+.opt-actmedia img{display:inline-block;max-width:100%;max-height:300px;width:auto;height:auto;border-radius:3px}
 .opt-actdesc{font-size:13.5px;color:var(--body);line-height:1.7;margin:0 0 22px}
 .opt-actdesc p{margin:0 0 12px}
 .opt-actdesc p:last-child{margin-bottom:0}
