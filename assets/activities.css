@@ -89,6 +89,8 @@
 .ac-cta a:hover{background:#c9a96e}
 
 @media(max-width:768px){
+  /* detail pages: header scrolls away (not fixed) so it never covers the photo on mobile */
+  .ac-body .site-header{position:absolute}
   .ac-hero{padding:130px 20px 58px}
   .ac-main{padding:54px 0 64px}
   .ac-page{padding:96px 0 64px}
