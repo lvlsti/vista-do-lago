@@ -13,7 +13,22 @@
     const nightsEl = document.getElementById("optNights");
     const priceEl = document.getElementById("optPrice");
     const listEl = document.getElementById("optList");
+    const actsEl = document.getElementById("optActs");
     const waEl = document.getElementById("optWa");
+    const dialog = modal.querySelector(".opt-dialog");
+    const viewPkg = document.getElementById("optViewPkg");
+    const viewAct = document.getElementById("optViewAct");
+    const actTitleEl = document.getElementById("optActTitle");
+    const actDescEl = document.getElementById("optActDesc");
+    const actLinkEl = document.getElementById("optActLink");
+    const backBtn = document.getElementById("optBack");
+
+    function dict() {
+      let lang = "en";
+      try { lang = localStorage.getItem("vdl_lang") || "en"; } catch (e) {}
+      if (typeof I18N !== "undefined") return I18N[lang] || I18N.en || {};
+      return {};
+    }
 
     function priceCardByNights(n) {
       const cards = document.querySelectorAll(".price-card");
@@ -24,14 +39,47 @@
       return null;
     }
 
+    function showPackage() {
+      viewAct.hidden = true;
+      viewPkg.hidden = false;
+      if (dialog) dialog.scrollTop = 0;
+    }
+
+    function showActivity(slug, name) {
+      const d = dict();
+      actTitleEl.textContent = d["ac." + slug + ".title"] || name;
+      actDescEl.textContent = d["ac." + slug + ".lead"] || "";
+      actLinkEl.setAttribute("href", "activities/" + slug + ".html");
+      viewPkg.hidden = true;
+      viewAct.hidden = false;
+      if (dialog) dialog.scrollTop = 0;
+    }
+
     function fillFromCard(card) {
       if (!card) return;
       const amt = card.querySelector(".amount").cloneNode(true);
       const sm = amt.querySelector("small");
       if (sm) sm.remove();
       priceEl.textContent = amt.textContent.trim();
+
+      // inclusions = the plain <ul> (not the activities list)
       listEl.innerHTML = "";
-      card.querySelectorAll("ul li").forEach(li => listEl.appendChild(li.cloneNode(true)));
+      const inc = card.querySelector("ul:not(.pkg-acts)");
+      if (inc) inc.querySelectorAll("li").forEach(li => listEl.appendChild(li.cloneNode(true)));
+
+      // activities = clickable items from the hidden .pkg-acts list
+      actsEl.innerHTML = "";
+      const acts = card.querySelector("ul.pkg-acts");
+      if (acts) acts.querySelectorAll("li").forEach(li => {
+        const slug = li.getAttribute("data-act") || "";
+        const name = li.textContent.trim();
+        const item = document.createElement("li");
+        item.className = "opt-act";
+        item.innerHTML = '<span></span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>';
+        item.querySelector("span").textContent = name;
+        item.addEventListener("click", () => showActivity(slug, name));
+        actsEl.appendChild(item);
+      });
     }
 
     function openModal(opts) {
@@ -44,6 +92,7 @@
       }
       fillFromCard(opts.card);
       waEl.setAttribute("href", opts.waHref);
+      showPackage();
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
@@ -54,6 +103,8 @@
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
     }
+
+    if (backBtn) backBtn.addEventListener("click", showPackage);
 
     // Pricing cards -> popup (title = duration, price/list from the same card)
     document.querySelectorAll(".price-card .btn").forEach(btn => {

@@ -151,6 +151,18 @@
 .opt-wa{width:100%;justify-content:center;gap:9px;background:#25D366;border-color:#25D366;color:#fff}
 .opt-wa:hover{background:#1faa54;border-color:#1faa54;color:#fff}
 .opt-wa i{font-size:16px}
+.opt-acts{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-direction:column;gap:3px}
+.opt-act{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;color:var(--ink);cursor:pointer;padding:10px 12px;border:1px solid rgba(0,0,0,.08);background:#fff;transition:background .25s ease,border-color .25s ease}
+.opt-act:hover{background:var(--bg-alt);border-color:var(--accent)}
+.opt-act > span{flex:1}
+.opt-act i{font-size:10px;color:var(--rose);flex-shrink:0}
+.opt-back{background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--rose);padding:0;margin-bottom:18px;transition:color .3s}
+.opt-back:hover{color:var(--ink)}
+.opt-back i{font-size:11px}
+.opt-actdesc{font-size:13.5px;color:var(--body);line-height:1.7;margin:0 0 22px}
+.opt-actlink{display:inline-flex;align-items:center;gap:8px;font:700 10px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:4px;transition:color .3s}
+.opt-actlink:hover{color:var(--rose)}
+.opt-actlink i{font-size:11px}
 
 /* ---------- image lightbox ---------- */
 .lightbox{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:28px}
