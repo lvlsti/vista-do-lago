@@ -89,6 +89,16 @@
 .itin-step h4{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);margin-bottom:6px}
 .itin-step p{font-size:13px;color:var(--body);line-height:1.6}
 
+/* ---------- itinerary: 3-phase rhythm ---------- */
+.itin-flow{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:20px;max-width:1000px;margin:0 auto;align-items:stretch}
+.itin-phase{position:relative;background:#fff;border:1px solid rgba(0,0,0,.1);padding:36px 30px;display:flex;flex-direction:column}
+.itin-phase .ip-icon{font-size:26px;color:var(--rose);margin-bottom:16px;line-height:1}
+.itin-phase h4{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);margin:0 0 12px}
+.itin-phase p{font-size:13.5px;color:var(--body);line-height:1.7;margin:0}
+.itin-phase.ip-feature{border:2px solid var(--accent);box-shadow:0 18px 44px rgba(0,0,0,.08)}
+.itin-phase .ip-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--accent);color:#1d1825;font:700 9px var(--sans);letter-spacing:2px;text-transform:uppercase;padding:7px 15px}
+@media(max-width:860px){.itin-flow{grid-template-columns:1fr;max-width:460px;gap:26px}}
+
 /* ---------- gallery ---------- */
 .g-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:10px}
 .g-cell{position:relative;overflow:hidden;cursor:pointer}
